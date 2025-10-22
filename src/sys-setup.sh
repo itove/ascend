@@ -20,4 +20,4 @@ echo "$userpass" | sudo passwd --stdin $username # Bypass PAM password policies
 sudo sed -i "\$a$proxy_ip $proxy_hostname" /etc/hosts
 
 # Append to [main] section in /etc/dnf/dnf.conf
-sudo sed -d "\$aproxy=socks5://$proxy_hostname:$proxy_port" /etc/dnf/dnf.conf
+sudo sed -i "\$aproxy=socks5://$proxy_hostname:$proxy_port" /etc/dnf/dnf.conf
