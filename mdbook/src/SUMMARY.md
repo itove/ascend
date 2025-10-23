@@ -4,6 +4,7 @@
 - [概念](./overview.md)
 - [系统配置](./sys-setup.md)
 - [代理](./proxy.md)
+- [MindIE](./mindie.md)
 - [下载权重](./dl-weights.md)
 
 # 其它资料
