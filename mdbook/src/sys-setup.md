@@ -46,8 +46,10 @@ docker cp PySocks-1.7.1-py3-none-any.whl mindie:/root/
 ```
 
 ```
-# in container
+# In container
 python3 -m pip install /root/PySocks-1.7.1-py3-none-any.whl
+
+cd $ATB_SPEED_HOME_PATH/
 # then install with proxy
 # --progress-bar off to avoid 'RuntimeError: can't start new thread'
 pip3 install -r requirements/models/requirements_llama3.txt --proxy socks5://172.20.10.35:1080 --progress-bar off
