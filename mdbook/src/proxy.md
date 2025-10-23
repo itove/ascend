@@ -45,7 +45,7 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
 ### pip proxy
-离线环境下，可下载`pysocks`并`cp`至容器[^pip-with-socks-proxy]
+离线环境下，可下载`pysocks`并`cp`至容器[^pip-with-socks-proxy] [^pysocks-dl] [^PySocks.whl]
 ```
 # Download pysocks
 $ python3.11 -m pip download pysocks
@@ -66,3 +66,5 @@ all_proxy="socks5://172.20.10.35:1080" pip3 install -r requirements/models/requi
 ```
 
 [^pip-with-socks-proxy]: [pip-with-socks-proxy](https://stackoverflow.com/a/68745571)
+[^pysocks-dl]: [Manually download PySocks](https://stackoverflow.com/a/79702190)
+[^PySocks.whl]: [PySocks](https://pypi.org/project/PySocks/#files)
