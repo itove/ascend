@@ -6,6 +6,7 @@
 - [代理](./proxy.md)
 - [MindIE](./mindie.md)
 - [下载权重](./dl-weights.md)
+- [权重分片](./sharding.md)
 
 # 其它资料
 - [DeepSeekV3-多机部署文档](./deepseekv3-multi-nodes-deploy.md)
