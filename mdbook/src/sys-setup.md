@@ -41,6 +41,7 @@ $ sudo systemctl restart docker
 ```
 # down load pysocks
 python3.11 -m pip download pysocks
+docker cp PySocks-1.7.1-py3-none-any.whl mindie:/root/
 
 ```
 
@@ -48,7 +49,8 @@ python3.11 -m pip download pysocks
 # in container
 python3 -m pip install /root/PySocks-1.7.1-py3-none-any.whl
 # then install with proxy
-pip3 install -r requirements/models/requirements_llama3.txt --proxy socks5://172.20.10.35:1080
+# --progress-bar off to avoid 'RuntimeError: can't start new thread'
+pip3 install -r requirements/models/requirements_llama3.txt --proxy socks5://172.20.10.35:1080 --progress-bar off
 # or
-all_proxy="socks5://172.20.10.35:1080" pip3 install -r requirements/models/requirements_llama3.txt
+all_proxy="socks5://172.20.10.35:1080" pip3 install -r requirements/models/requirements_llama3.txt --progress-bar off
 ```
