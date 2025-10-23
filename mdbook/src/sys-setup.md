@@ -10,3 +10,11 @@ $ echo "NEW_PASSWD" | passwd --stdin $username # 若系统`PAM`密码策略不�
 ```
 
 ## SSH key
+
+## Download weights
+```
+$ repo_id=deepseek-ai/DeepSeek-V2-Lite
+$ uv tool install huggingface_hub
+$ HF_ENDPOINT=https://hf-mirror.com hf download $repo_id
+
+```
