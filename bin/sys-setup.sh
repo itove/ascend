@@ -3,7 +3,7 @@
 # vim:ft=bash
 
 ############### Variables ###############
-username=al
+user=al
 userpass=NEW_PASSWD
 proxy_hostname=btn
 proxy_ip=172.20.10.29
@@ -12,9 +12,9 @@ proxy_port=1080
 ############### Functions ###############
 
 ############### Main Part ###############
-sudo useradd $username
-sudo usermod -aG wheel $username
-echo "$userpass" | sudo passwd --stdin $username # Bypass PAM password policies
+sudo useradd $user
+sudo usermod -aG wheel $user
+echo "$userpass" | sudo passwd --stdin $user # Bypass PAM password policies
 
 # Append proxy host
 sudo sed -i "\$a$proxy_ip $proxy_hostname" /etc/hosts
@@ -25,3 +25,6 @@ sudo mv /etc/yum.repos.d/back/kylin_aarch64.repo /etc/yum.repos.d/
 
 # Append to [main] section in /etc/dnf/dnf.conf
 sudo sed -i "\$aproxy=socks5://$proxy_hostname:$proxy_port" /etc/dnf/dnf.conf
+
+# Allow user to run docker commands
+sudo usermod -a -G docker $user
