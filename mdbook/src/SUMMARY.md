@@ -1,7 +1,7 @@
 # Summary
 
 # 国芯一号推理服务器部署文档
-- [概念](./overview.md)
+- [概述](./overview.md)
 - [系统配置](./sys-setup.md)
 - [代理](./proxy.md)
 - [MindIE](./mindie.md)

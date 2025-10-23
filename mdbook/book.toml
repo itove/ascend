@@ -2,4 +2,4 @@
 authors = ["Al Zee"]
 language = "en"
 src = "src"
-title = "ascend docs"
+title = "国芯一号推理服务器部署文档"
