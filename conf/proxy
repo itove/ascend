@@ -1,0 +1,12 @@
+SCHEME=socks5h
+SERVER=btn
+PORT=1080
+# ftp_proxy=
+export http_proxy=$SCHEME://$SERVER:$PORT
+export HTTP_PROXY=$SCHEME://$SERVER:$PORT
+export https_proxy=$SCHEME://$SERVER:$PORT
+export HTTPS_PROXY=$SCHEME://$SERVER:$PORT
+export all_proxy=$SCHEME://$SERVER:$PORT
+export ALL_PROXY=$SCHEME://$SERVER:$PORT
+export SOCKS_SERVER=$SERVER:$PORT
+export SOCKS_VERSION=5
