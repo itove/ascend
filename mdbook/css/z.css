@@ -1,0 +1,9 @@
+.language-meta{
+  display: none;
+}
+.footnote-reference:before{
+  content: "[";
+}
+.footnote-reference:after{
+  content: "]";
+}
