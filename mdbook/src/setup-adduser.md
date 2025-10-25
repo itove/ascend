@@ -6,21 +6,21 @@
 以创建一个名为`al`的用户为例
 
 ## 创建用户及密码
+其中`passwd`以`--stdin`方式执行，**若系统PAM密码策略不允许相对简单的密码，此方法可以绕过限制。**
 ```
-$ username=al
-$ useradd $username
-# 若系统PAM密码策略不允许相对简单的密码，此方法可以绕过
-$ echo "NEW_PASSWD" | passwd --stdin $username
+# username=al
+# useradd $username
+# echo "NEW_PASSWD" | passwd --stdin $username
 ```
 
 ## 添加用户至wheel组
 添加用户至`wheel`组，使其可运行`sudo`
 ```
-$ usermod -aG wheel $username
+# usermod -aG wheel $username
 ```
 
 ## 添加用户至docker组
 添加用户至`docker`组后，无需`sudo`，可直接运行`docker`相关命令，方便日常操作
 ```
-$ usermod -aG docker $username
+# usermod -aG docker $username
 ```

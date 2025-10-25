@@ -15,7 +15,6 @@ export all_proxy=$SCHEME://$SERVER:$PORT
 export ALL_PROXY=$SCHEME://$SERVER:$PORT
 export SOCKS_SERVER=$SERVER:$PORT
 export SOCKS_VERSION=5
-
 ```
 
 部分工具并不遵循以上环境变量，须相应配置：
@@ -25,7 +24,6 @@ export SOCKS_VERSION=5
 # /etc/dnf/dnf.conf
 # Append to [main] section
 proxy=socks5://btn:1080
-
 ```
 
 ### docker proxy
@@ -37,7 +35,6 @@ add:
 [Service]
 Environment="HTTP_PROXY=socks5://127.0.0.1:8080"
 Environment="HTTPS_PROXY=socks5://127.0.0.1:8080"
-
 ```
 
 ```
@@ -50,7 +47,6 @@ $ sudo systemctl restart docker
 # Download pysocks
 $ python3.11 -m pip download pysocks
 $ docker cp PySocks-1.7.1-py3-none-any.whl mindie:/root/
-
 ```
 
 ```
