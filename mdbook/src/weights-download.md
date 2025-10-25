@@ -79,6 +79,11 @@ $ mkdir gx
 $ sudo mount gx1:/mnt/data gx
 ```
 
+## 安装huggingface cli
+```
+$ uv tool install huggingface_hub
+```
+
 ## 下载权重
 ```
 $ mkdir -p gx/hf/cache gx/hf/models/deepseek-v3
