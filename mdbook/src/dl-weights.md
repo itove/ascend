@@ -83,5 +83,5 @@ $ sudo mount gx1:/mnt/data gx
 ```
 $ mkdir -p gx/hf/cache gx/hf/models/deepseek-v3
 $ cd gx/hf
-$ HF_ENDPOINT=https://hf-mirror.com hf download deepseek-ai/DeepSeek-V3 --cache-dir cache --local-dir hf/models/deepseek-v3
+$ while :; do HF_ENDPOINT=https://hf-mirror.com hf download deepseek-ai/DeepSeek-V3 --cache-dir cache --local-dir hf/models/deepseek-v3 && break; done
 ```
