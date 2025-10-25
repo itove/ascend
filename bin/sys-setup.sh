@@ -13,7 +13,6 @@ proxy_port=1080
 
 ############### Main Part ###############
 sudo useradd $user
-sudo usermod -aG wheel $user
 echo "$userpass" | sudo passwd --stdin $user # Bypass PAM password policies
 
 # Append proxy host
@@ -26,5 +25,6 @@ sudo mv /etc/yum.repos.d/back/kylin_aarch64.repo /etc/yum.repos.d/
 # Append to [main] section in /etc/dnf/dnf.conf
 sudo sed -i "\$aproxy=socks5://$proxy_hostname:$proxy_port" /etc/dnf/dnf.conf
 
-# Allow user to run docker commands
+sudo usermod -aG wheel $user
+# Allow user to run docker commands without sudo
 sudo usermod -a -G docker $user
