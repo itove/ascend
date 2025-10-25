@@ -5,7 +5,8 @@
 - [系统配置](./sys-setup.md)
 - [代理](./proxy.md)
 - [MindIE](./mindie.md)
-- [下载权重](./dl-weights.md)
+- [下载权重](./weights-download.md)
+- [权重转换](./weights-cast.md)
 - [权重分片](./sharding.md)
 
 # 其它资料
