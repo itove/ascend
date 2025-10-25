@@ -7,6 +7,7 @@
     - [硬件](./hardware.md)
     - [操作系统](./os.md)
     - [主机名及IP](./hosts.md)
+    - [工作站](./workstation.md)
     - [工具链](./tools.md)
 - [系统配置](./setup.md)
     - [创建用户](./setup-adduser.md)
