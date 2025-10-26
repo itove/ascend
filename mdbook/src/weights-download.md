@@ -88,5 +88,5 @@ $ uv tool install huggingface_hub
 ```
 $ mkdir -p gx/hf/cache gx/hf/models/deepseek-v3
 $ cd gx/hf
-$ while :; do HF_ENDPOINT=https://hf-mirror.com hf download deepseek-ai/DeepSeek-V3 --cache-dir cache --local-dir hf/models/deepseek-v3 && break; done
+$ while :; do HF_ENDPOINT=https://hf-mirror.com hf download deepseek-ai/DeepSeek-V3 --cache-dir cache --local-dir models/deepseek-v3 && break; done
 ```
