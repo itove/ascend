@@ -1,6 +1,6 @@
 # Summary
 
-# 国芯一号推理服务器部署文档
+# 国芯一号推理框架部署文档
 - [概述](./overview.md)
     - [惯例](./convention.md)
 - [运行环境](./arch.md)

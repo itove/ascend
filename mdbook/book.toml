@@ -2,4 +2,4 @@
 authors = ["Al Zee"]
 language = "en"
 src = "src"
-title = "国芯一号推理服务器部署文档"
+title = "国芯一号推理框架部署文档"
