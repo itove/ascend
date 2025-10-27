@@ -14,3 +14,6 @@
 
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
+
+## 其它
+- [万字综述：全面梳理 FP8 训练和推理技术](https://blog.csdn.net/m0_59235245/article/details/141611695)
