@@ -10,6 +10,7 @@
 - [推理开发](https://www.hiascend.com/developer/inference)
 - [DeepSeek-V3-MindSpore](https://www.hiascend.com/software/modelzoo/models/detail/865ba4b5c8044873800b70dace2dd136)
 - [MindIE Motor(MindIE Service)](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0001.html)
+- [ 昇腾高频问答FAQ-A09-推理部署相关-2507 ](https://blog.csdn.net/jieph01/article/details/149323452)
 
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
