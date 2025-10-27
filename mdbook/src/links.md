@@ -17,3 +17,5 @@
 
 ## 其它
 - [万字综述：全面梳理 FP8 训练和推理技术](https://blog.csdn.net/m0_59235245/article/details/141611695)
+- [arxiv.org: Ascend HiFloat8 Format for Deep Learning](https://arxiv.org/abs/2409.16626)
+- [DeepSeek-V3/R1 671B Deployment Guide: GPU Requirements](https://www.theriseunion.com/en/blog/DeepSeek-V3-R1-671B-GPU-Requirements.html)
