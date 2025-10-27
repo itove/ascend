@@ -22,6 +22,7 @@
     - [MindIE](./mindie.md)
         - [下载安装](./mindie-install.md)
         - [配置](./mindie-setup.md)
+        - [推荐配置](./mindie-config.md)
 - [权重 weights](./weights.md)
     - [下载权重](./weights-download.md)
     - [权重转换](./weights-cast.md)
