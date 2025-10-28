@@ -1,5 +1,5 @@
 ```
-MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json  bin/mindieservice_daemon
+MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json HCCL_DETERMINISTIC=true  bin/mindieservice_daemon
 
 ```
 npuDeviceID does not allow repetitive element
@@ -22,4 +22,16 @@ Collecting torch==2.4.1 (from -r requirements.txt (line 1))
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.7/89.7 MB 166.4 kB/s eta 0:00:00
 ERROR: Could not find a version that satisfies the requirement triton==3.0.0 (from versions: 3.5.0)
 ERROR: No matching distribution found for triton==3.0.0
+```
+
+
+MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json HCCL_DETERMINISTIC=true  bin/mindieservice_daemon
+```
+...
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d ' 
+...
+Daemon is killing...
+Killed
 ```
