@@ -42,3 +42,16 @@ Aborted (core dumped)
 
 <https://www.hiascend.com/document/detail/zh/mindie/21RC2/envdeployment/instg/mindie_instg_0026.html>
 > 若使用容器化部署启动，要求共享内存设置不小于1GB。
+
+
+mindie 2.0.T3.1
+```
+LLMInferEngine failed to init LLMInferModels
+ERR: Failed to init endpoint! Please check the service log or console output.
+Killed
+```
+                                                                                                           Killed
+mindie 2.2.T30
+```
+bin/mindieservice_daemon: error while loading shared libraries: libtorch.so: cannot open shared object file: No such file or directory
+```

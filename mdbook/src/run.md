@@ -16,6 +16,5 @@ cp /root/config.json /usr/local/Ascend/mindie/latest/mindie-service/conf/
 
 ```
 cd /usr/local/Ascend/mindie/latest/mindie-service/
-MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json  bin/mindieservice_daemon
-
+MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json HCCL_DETERMINISTIC=true bin/mindieservice_daemon
 ```
