@@ -4,6 +4,9 @@
 
 #tag=2.1.RC2-800I-A2-py311-openeuler24.03-lts
 tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
+#name=mindie
+#name=mindie2.1
+name=mindie2.0
 
 docker run -itd --user root --privileged --rm --name=mindie --net=host \
    --shm-size 500g \
