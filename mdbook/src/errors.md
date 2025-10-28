@@ -25,7 +25,6 @@ ERROR: No matching distribution found for triton==3.0.0
 ```
 
 
-MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json HCCL_DETERMINISTIC=true  bin/mindieservice_daemon
 ```
 ...
 [ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
@@ -34,4 +33,9 @@ MIES_CONTAINER_IP=172.20.84.67 RANK_TABLE_FILE=/data/rank_table.json HCCL_DETERM
 ...
 Daemon is killing...
 Killed
+```
+
+```
+The futex facility returned an unexpected error code.
+Aborted (core dumped)
 ```
