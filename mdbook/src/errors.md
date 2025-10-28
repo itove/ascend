@@ -39,3 +39,6 @@ Killed
 The futex facility returned an unexpected error code.
 Aborted (core dumped)
 ```
+
+<https://www.hiascend.com/document/detail/zh/mindie/21RC2/envdeployment/instg/mindie_instg_0026.html>
+> 若使用容器化部署启动，要求共享内存设置不小于1GB。
