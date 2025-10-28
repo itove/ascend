@@ -1,0 +1,583 @@
+INFO: Detected Ascend NPU
+INFO: current model_type: pa_bf16
+INFO: current test_mode: full_CEval
+INFO: use shot: 5
+INFO: current batch_size: 1
+INFO: current model_name: deepseekv2
+INFO: current weight_dir: /data2/hf/models/deepseek-v3-bf16/
+INFO: current model_type: pa
+INFO: current data_type: bf16
+INFO: current test_mode: full
+INFO: current dataset: CEval
+INFO: current trust_remote_code: False
+INFO: current using multiple node, use rank table file: /data/rank_table.json
+INFO: current world_size: 32
+INFO: current node_num: 4
+INFO: current local_world_size: 8
+INFO: current rank_id_start: 8
+INFO: current node_rank: 1
+INFO: current master_addr: 172.20.84.67
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+[2025-10-28 16:42:44,508] [37320] [281469874817312] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,513] [37320] [281469874817312] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,514] [37320] [281469874817312] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,514] [37320] [281469874817312] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+[2025-10-28 16:42:44,588] [37321] [281470593616160] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,516] [37320] [281469874817312] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:44,593] [37321] [281470593616160] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,593] [37321] [281470593616160] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,593] [37321] [281470593616160] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,595] [37321] [281470593616160] [llm] [INFO] [model_test.py-861] : precision test start
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+[2025-10-28 16:42:44,649] [37322] [281467878132000] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,654] [37322] [281467878132000] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,654] [37322] [281467878132000] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,654] [37322] [281467878132000] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,656] [37322] [281467878132000] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:44,662] [37316] [281465757124896] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,668] [37316] [281465757124896] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,668] [37316] [281465757124896] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,668] [37316] [281465757124896] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,668] [37319] [281460584106272] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,670] [37323] [281457770842400] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,674] [37319] [281460584106272] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,674] [37319] [281460584106272] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,674] [37319] [281460584106272] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,676] [37319] [281460584106272] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:44,676] [37323] [281457770842400] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,676] [37323] [281457770842400] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,676] [37323] [281457770842400] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,678] [37323] [281457770842400] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:44,714] [37318] [281472446515488] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,719] [37318] [281472446515488] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,720] [37318] [281472446515488] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,720] [37318] [281472446515488] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,722] [37318] [281472446515488] [llm] [INFO] [model_test.py-861] : precision test start
+/usr/local/lib/python3.11/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+[2025-10-28 16:42:44,670] [37316] [281465757124896] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:44,820] [37317] [281466663291168] [llm] [INFO] [model_test.py-524] : 
+model_name: deepseekv2
+model_type: pa
+data_type: bf16
+test_mode: full
+data_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/data/NPU/precision_test/full/bf16/deepseekv2
+time_limit: 0
+batch_size: 1
+result_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/results/NPU/precision_test/full/bf16/deepseekv2
+log_dir: /usr/local/Ascend/atb-models/tests/modeltest/outputs/logs
+[2025-10-28 16:42:44,825] [37317] [281466663291168] [llm] [INFO] [model_test.py-543] : ATB env get success.
+[2025-10-28 16:42:44,825] [37317] [281466663291168] [llm] [INFO] [model_test.py-548] : ATB_SPEED env get success
+[2025-10-28 16:42:44,826] [37317] [281466663291168] [llm] [WARNING] [model_test.py-564] : deepseekv2 not support CEval, please check
+[2025-10-28 16:42:44,828] [37317] [281466663291168] [llm] [INFO] [model_test.py-861] : precision test start
+[2025-10-28 16:42:49,492] [37320] [281469874817312] [llm] [INFO] [cpu_binding.py-212] : rank_id: 4, device_id: 4, numa_id: 0, shard_devices: [4, 5], cpus: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+[2025-10-28 16:42:49,495] [37320] [281469874817312] [llm] [INFO] [cpu_binding.py-238] : process 37320, new_affinity is [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], cpu count 24
+[2025-10-28 16:42:49,529] [37321] [281470593616160] [llm] [INFO] [cpu_binding.py-212] : rank_id: 5, device_id: 5, numa_id: 0, shard_devices: [4, 5], cpus: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+[2025-10-28 16:42:49,531] [37321] [281470593616160] [llm] [INFO] [cpu_binding.py-238] : process 37321, new_affinity is [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47], cpu count 24
+[2025-10-28 16:42:49,546] [37322] [281467878132000] [llm] [INFO] [cpu_binding.py-212] : rank_id: 6, device_id: 6, numa_id: 1, shard_devices: [6, 7], cpus: [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]
+[2025-10-28 16:42:49,548] [37322] [281467878132000] [llm] [INFO] [cpu_binding.py-238] : process 37322, new_affinity is [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71], cpu count 24
+[2025-10-28 16:42:49,586] [37316] [281465757124896] [llm] [INFO] [cpu_binding.py-212] : rank_id: 0, device_id: 0, numa_id: 3, shard_devices: [0, 1], cpus: [144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]
+[2025-10-28 16:42:49,589] [37316] [281465757124896] [llm] [INFO] [cpu_binding.py-238] : process 37316, new_affinity is [144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167], cpu count 24
+[2025-10-28 16:42:49,816] [37319] [281460584106272] [llm] [INFO] [cpu_binding.py-212] : rank_id: 3, device_id: 3, numa_id: 2, shard_devices: [2, 3], cpus: [96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143]
+[2025-10-28 16:42:49,818] [37319] [281460584106272] [llm] [INFO] [cpu_binding.py-238] : process 37319, new_affinity is [120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143], cpu count 24
+[2025-10-28 16:42:49,867] [37323] [281457770842400] [llm] [INFO] [cpu_binding.py-212] : rank_id: 7, device_id: 7, numa_id: 1, shard_devices: [6, 7], cpus: [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95]
+[2025-10-28 16:42:49,871] [37323] [281457770842400] [llm] [INFO] [cpu_binding.py-238] : process 37323, new_affinity is [72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95], cpu count 24
+[2025-10-28 16:42:49,895] [37318] [281472446515488] [llm] [INFO] [cpu_binding.py-212] : rank_id: 2, device_id: 2, numa_id: 2, shard_devices: [2, 3], cpus: [96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143]
+[2025-10-28 16:42:49,898] [37318] [281472446515488] [llm] [INFO] [cpu_binding.py-238] : process 37318, new_affinity is [96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119], cpu count 24
+[2025-10-28 16:42:49,919] [37317] [281466663291168] [llm] [INFO] [cpu_binding.py-212] : rank_id: 1, device_id: 1, numa_id: 3, shard_devices: [0, 1], cpus: [144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]
+[2025-10-28 16:42:49,922] [37317] [281466663291168] [llm] [INFO] [cpu_binding.py-238] : process 37317, new_affinity is [168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191], cpu count 24
+[2025-10-28 16:42:54,930] [37321] [281470593616160] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,051] [37320] [281469874817312] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,054] [37322] [281467878132000] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,215] [37316] [281465757124896] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,576] [37319] [281460584106272] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,766] [37318] [281472446515488] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,860] [37323] [281457770842400] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:42:55,894] [37317] [281466663291168] [llm] [INFO] [dist.py-81] : initialize_distributed has been Set
+[2025-10-28 16:43:56,817] [37316] [281465757124896] [llm] [INFO] [model_test.py-3150] : 8 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:0, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=8, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:43:56,817] [37316] [281465757124896] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:43:59,026] [37317] [281466663291168] [llm] [INFO] [model_test.py-3150] : 9 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:1, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=9, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:43:59,027] [37317] [281466663291168] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:43:59,943] [37318] [281472446515488] [llm] [INFO] [model_test.py-3150] : 10 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:2, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=10, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:43:59,943] [37318] [281472446515488] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:44:00,875] [37322] [281467878132000] [llm] [INFO] [model_test.py-3150] : 14 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:6, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=14, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:44:00,876] [37322] [281467878132000] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:44:01,803] [37319] [281460584106272] [llm] [INFO] [model_test.py-3150] : 11 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:3, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=11, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:44:01,803] [37319] [281460584106272] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:44:01,803] [37320] [281469874817312] [llm] [INFO] [model_test.py-3150] : 12 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:4, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=12, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:44:01,804] [37320] [281469874817312] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:44:03,366] [37321] [281470593616160] [llm] [INFO] [model_test.py-3150] : 13 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:5, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=13, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:44:03,366] [37321] [281470593616160] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+[2025-10-28 16:44:04,890] [37323] [281457770842400] [llm] [INFO] [model_test.py-3150] : 15 pa_runner: PARunner(model_path=/data2/hf/models/deepseek-v3-bf16/, input_text=None, max_position_embeddings=3584, max_input_length=3072, max_output_length=512, max_prefill_tokens=-1, load_tokenizer=True, enable_atb_torch=False, max_prefill_batch_size=1, max_batch_size=1, dtype=torch.bfloat16, block_size=128, model_config=ModelConfig(num_heads=4, num_kv_heads=1, num_kv_heads_origin=128, head_size=576, k_head_size=576, v_head_size=0, num_layers=61, device=npu:7, dtype=torch.bfloat16, soc_info=NPUSocInfo(soc_name='', soc_version=223, need_nz=False, matmul_nd_nz=False), kv_quant_type=None, fa_quant_type=None, mapping=Mapping(world_size=32, rank=15, pp_rank=0, pp_groups=[[0], [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20], [21], [22], [23], [24], [25], [26], [27], [28], [29], [30], [31]], micro_batch_size=1) , cla_share_factor=1, model_type=deepseekv2), max_memory=68719476736, 
+[2025-10-28 16:44:04,891] [37323] [281457770842400] [llm] [INFO] [cache.py-102] : kv cache will allocate 0.23455810546875GB memory
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+Traceback (most recent call last):
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 43, in <module>
+    main()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py", line 40, in main
+    DeepseekV2ModelTest.create_instance()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 339, in create_instance
+    test_instance.run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 348, in run
+    self.__run_multibs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 400, in __run_multibs
+    self.__run_single_bs()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 434, in __run_single_bs
+    self.__run()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 573, in __run
+    self.__run_precision()
+  File "/usr/local/Ascend/atb-models/tests/modeltest/base/model_test.py", line 880, in __run_precision
+    self.pa_runner.warm_up()
+  File "/usr/local/Ascend/atb-models/examples/run_pa.py", line 241, in warm_up
+    generate_req(req_list, self.model, self.max_batch_size, self.max_prefill_tokens, self.cache_manager)
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 438, in generate_req
+    req_finished, prefill_time = generate_token_with_clocking(model, cache_manager, batch)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 346, in generate_token_with_clocking
+    req_finished = generate_token(model, cache_manager, input_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/examples/server/generate.py", line 278, in generate_token
+    logits = model.forward(
+             ^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[ERROR] 2025-10-28-16:44:11 (PID:37316, Device:0, RankID:-1) ERR99999 UNKNOWN application exception
+[ERROR] 2025-10-28-16:44:16 (PID:37317, Device:1, RankID:-1) ERR99999 UNKNOWN application exception
+[2025-10-28 16:44:19,136] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37317 closing signal SIGTERM
+[2025-10-28 16:44:19,136] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37318 closing signal SIGTERM
+[2025-10-28 16:44:19,136] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37319 closing signal SIGTERM
+[2025-10-28 16:44:19,136] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37320 closing signal SIGTERM
+[2025-10-28 16:44:19,136] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37321 closing signal SIGTERM
+[2025-10-28 16:44:19,137] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37322 closing signal SIGTERM
+[2025-10-28 16:44:19,137] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 37323 closing signal SIGTERM
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-28 16:44:19,432] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 37316) of binary: /usr/bin/python3
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Traceback (most recent call last):
+  File "/usr/local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 346, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch/distributed/run.py", line 806, in main
+    run(args)
+  File "/usr/local/lib64/python3.11/site-packages/torch/distributed/run.py", line 797, in run
+    elastic_launch(
+  File "/usr/local/lib64/python3.11/site-packages/torch/distributed/launcher/api.py", line 134, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/usr/local/Ascend/atb-models/tests/modeltest/core/deepseekv2_test.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-10-28_16:44:19
+  host      : gx2
+  rank      : 8 (local_rank: 0)
+  exitcode  : 1 (pid: 37316)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+something wrong marked for CI
+precision test end marked for CI

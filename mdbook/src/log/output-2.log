@@ -1,0 +1,766 @@
+[2025-10-28 16:52:44.543+08:00] [41310] [41312] [mindie-server] ===init log===
+[2025-10-28 16:52:44.544+08:00] [41310] ===init log===
+Start to parse ranktable file
+Finished parsing ranktable file.
+Update worldSize and npuDeviceIds of backend config successfully for Multi Nodes Inference.
+[2025-10-28 16:52:49.265+08:00] [41327] [41327] [mindie-server] ===init log===
+[2025-10-28 16:52:49.265+08:00] [41325] [41325] [mindie-server] ===init log===
+[2025-10-28 16:52:49.266+08:00] [41327] ===init log===
+[2025-10-28 16:52:49.266+08:00] [41325] ===init log===
+[2025-10-28 16:52:49.267+08:00] [41331] [41331] [mindie-server] ===init log===
+[2025-10-28 16:52:49.267+08:00] [41329] [41329] [mindie-server] ===init log===
+[2025-10-28 16:52:49.268+08:00] [41331] ===init log===
+[2025-10-28 16:52:49.268+08:00] [41329] ===init log===
+[2025-10-28 16:52:49.268+08:00] [41333] [41333] [mindie-server] ===init log===
+[2025-10-28 16:52:49.268+08:00] [41333] ===init log===
+[2025-10-28 16:52:49.273+08:00] [41335] [41335] [mindie-server] ===init log===
+[2025-10-28 16:52:49.273+08:00] [41335] ===init log===
+[2025-10-28 16:52:49.274+08:00] [41337] [41337] [mindie-server] ===init log===
+[2025-10-28 16:52:49.274+08:00] [41349] [41349] [mindie-server] ===init log===
+[2025-10-28 16:52:49.274+08:00] [41337] ===init log===
+[2025-10-28 16:52:49.274+08:00] [41349] ===init log===
+[2025-10-28 16:54:17.859675] [error] [41455] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:17.860303] [error] [41455] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:17.860314] [error] [41455] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:11
+[2025-10-28 16:54:18.323665] [error] [41455] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:18.323751] [error] [41455] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:18.323761] [error] [41455] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:11
+[2025-10-28 16:54:18.341592] [error] [43101] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 11
+[2025-10-28 16:54:18.341656] [error] [43101] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:18.341669] [error] [43101] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:18.341678] [error] [43101] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:18.341683] [error] [43101] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:18.341690] [error] [43101] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:18.341695] [error] [43101] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:18.341701] [error] [43101] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:18.341707] [error] [43101] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:18.341713] [error] [43101] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:18.341772] [41331] [281456665489760] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:18.555759] [error] [41431] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:18.787616] [error] [41438] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:19.251568] [error] [41439] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:18.556246] [error] [41431] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:18.556256] [error] [41431] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:9
+[2025-10-28 16:54:19.331478] [error] [41431] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:19.331512] [error] [41431] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:19.331520] [error] [41431] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:9
+[2025-10-28 16:54:19.353160] [error] [43097] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 9
+[2025-10-28 16:54:19.353244] [error] [43097] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:19.353266] [error] [43097] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:19.353278] [error] [43097] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:19.353284] [error] [43097] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:19.353292] [error] [43097] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:19.353298] [error] [43097] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:19.353306] [error] [43097] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:19.353312] [error] [43097] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:19.353320] [error] [43097] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:19.353344] [41327] [281457900777824] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:18.788243] [error] [41438] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:18.788254] [error] [41438] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:8
+[2025-10-28 16:54:19.799643] [error] [41455] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:19.799700] [error] [41455] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:19.799709] [error] [41455] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:11
+[2025-10-28 16:54:20.27444] [error] [41438] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:20.27479] [error] [41438] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:20.27488] [error] [41438] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:8
+[2025-10-28 16:54:20.45571] [error] [43095] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 8
+[2025-10-28 16:54:20.45616] [error] [43095] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.45629] [error] [43095] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:20.45637] [error] [43095] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.45643] [error] [43095] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:20.45649] [error] [43095] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.45655] [error] [43095] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:20.45661] [error] [43095] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.45666] [error] [43095] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:20.45673] [error] [43095] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:20.045694] [41325] [281465724399968] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:19.252041] [error] [41439] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:19.252051] [error] [41439] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:13
+[2025-10-28 16:54:20.493661] [error] [41439] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:20.493693] [error] [41439] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:20.493701] [error] [41439] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:13
+[2025-10-28 16:54:20.508920] [error] [43099] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 13
+[2025-10-28 16:54:20.508973] [error] [43099] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.508994] [error] [43099] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:20.509005] [error] [43099] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.509012] [error] [43099] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:20.509019] [error] [43099] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.509025] [error] [43099] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:20.509031] [error] [43099] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:20.509037] [error] [43099] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:20.509044] [error] [43099] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:20.509068] [41335] [281458034995552] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:20.720354] [error] [41451] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:20.800213] [error] [41459] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:20.720907] [error] [41451] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:20.720917] [error] [41451] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:15
+[2025-10-28 16:54:20.800748] [error] [41459] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:20.800760] [error] [41459] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:14
+[2025-10-28 16:54:20.800389] [error] [41431] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:20.800425] [error] [41431] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:20.800432] [error] [41431] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:9
+[2025-10-28 16:54:21.188185] [error] [41438] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:21.188220] [error] [41438] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:21.188229] [error] [41438] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:8
+[2025-10-28 16:54:21.820267] [error] [41451] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:21.820304] [error] [41451] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:21.820313] [error] [41451] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:15
+[2025-10-28 16:54:21.839153] [error] [43105] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 15
+[2025-10-28 16:54:21.839188] [error] [43105] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.839201] [error] [43105] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:21.839209] [error] [43105] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.839215] [error] [43105] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:21.839221] [error] [43105] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.839226] [error] [43105] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:21.839232] [error] [43105] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.839238] [error] [43105] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:21.839243] [error] [43105] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:21.839266] [41349] [281460708012384] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:21.899656] [error] [41455] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:21.899696] [error] [41455] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:21.899704] [error] [41455] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:11
+[2025-10-28 16:54:21.902229] [41331] [281459407450464] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:21.902389] [error] [43101] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 11
+[2025-10-28 16:54:21.902416] [error] [43101] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.902429] [error] [43101] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:21.902438] [error] [43101] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.902443] [error] [43101] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:21.902449] [error] [43101] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.902454] [error] [43101] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:21.902460] [error] [43101] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:21.902465] [error] [43101] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:21.902470] [error] [43101] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:21.902481] [41331] [281456665489760] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:21.028+0800] [41331] [281460572221792] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:21.028+0800] [41331] [281460572221792] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:21.942+08:00] [41310] [41312] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41331 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-28 16:54:21.977562] [error] [41439] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:21.977597] [error] [41439] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:21.977606] [error] [41439] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:13
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-28 16:54:22.603485] [error] [41431] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:22.603520] [error] [41431] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:22.603528] [error] [41431] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:9
+[2025-10-28 16:54:22.605461] [41327] [281460778201440] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:22.605948] [error] [43097] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 9
+[2025-10-28 16:54:22.605988] [error] [43097] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.606007] [error] [43097] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:22.606018] [error] [43097] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.606024] [error] [43097] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:22.606032] [error] [43097] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.606037] [error] [43097] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:22.606044] [error] [43097] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.606050] [error] [43097] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:22.606056] [error] [43097] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:22.606076] [41327] [281457900777824] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:22.028+0800] [41327] [281461837853024] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:22.028+0800] [41327] [281461837853024] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:22.654+08:00] [41310] [41310] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41327 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-28 16:54:22.839514] [error] [41459] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:22.839553] [error] [41459] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:22.839560] [error] [41459] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:14
+[2025-10-28 16:54:22.863669] [error] [43107] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 14
+[2025-10-28 16:54:22.863722] [error] [43107] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.863741] [error] [43107] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:22.863751] [error] [43107] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.863756] [error] [43107] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:22.863763] [error] [43107] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.863768] [error] [43107] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:22.863775] [error] [43107] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.863780] [error] [43107] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:22.863787] [error] [43107] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:22.863814] [41337] [281454075572576] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:22.997357] [error] [41438] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:22.997400] [error] [41438] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:22.997408] [error] [41438] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:8
+[2025-10-28 16:54:22.999393] [41325] [281468504240480] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:22.999577] [error] [43095] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 8
+[2025-10-28 16:54:22.999602] [error] [43095] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.999615] [error] [43095] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:22.999623] [error] [43095] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.999628] [error] [43095] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:22.999634] [error] [43095] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.999639] [error] [43095] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:22.999644] [error] [43095] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:22.999650] [error] [43095] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:22.999655] [error] [43095] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:22.999669] [41325] [281465724399968] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:22.028+0800] [41325] [281469563957600] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:23.028+0800] [41325] [281469563957600] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:23.042+08:00] [41310] [41315] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41325 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-28 16:54:23.151644] [error] [41450] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:23.612469] [error] [41439] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:23.612506] [error] [41439] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:23.612514] [error] [41439] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:13
+[2025-10-28 16:54:23.614108] [41335] [281460913992032] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:23.614355] [error] [43099] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 13
+[2025-10-28 16:54:23.614377] [error] [43099] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.614388] [error] [43099] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:23.614396] [error] [43099] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.614402] [error] [43099] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:23.614409] [error] [43099] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.614414] [error] [43099] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:23.614419] [error] [43099] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.614425] [error] [43099] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:23.614430] [error] [43099] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:23.614442] [41335] [281458034995552] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:23.028+0800] [41335] [281461973578080] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:23.028+0800] [41335] [281461973578080] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:23.651+08:00] [41310] [41318] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41335 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-28 16:54:23.152154] [error] [41450] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:23.152164] [error] [41450] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:12
+[2025-10-28 16:54:23.847459] [error] [41450] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:23.847492] [error] [41450] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:23.847499] [error] [41450] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:12
+[2025-10-28 16:54:23.864566] [error] [43093] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 12
+[2025-10-28 16:54:23.864623] [error] [43093] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.864640] [error] [43093] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:23.864650] [error] [43093] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.864656] [error] [43093] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:23.864664] [error] [43093] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.864669] [error] [43093] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:23.864676] [error] [43093] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:23.864682] [error] [43093] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:23.864689] [error] [43093] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:23.864711] [41333] [281457806340448] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:23.460332] [error] [41451] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:23.460383] [error] [41451] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:23.460391] [error] [41451] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:15
+[2025-10-28 16:54:24.230] [error] [41451] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:24.271] [error] [41451] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:24.279] [error] [41451] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:15
+[2025-10-28 16:54:24.002161] [41349] [281463652479328] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.2524] [error] [43105] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 15
+[2025-10-28 16:54:24.2570] [error] [43105] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.2589] [error] [43105] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:24.2599] [error] [43105] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.2604] [error] [43105] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:24.2612] [error] [43105] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.2617] [error] [43105] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:24.2624] [error] [43105] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.2629] [error] [43105] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:24.2635] [error] [43105] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:24.002660] [41349] [281460708012384] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:24.028+0800] [41349] [281464474169696] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.028+0800] [41349] [281464474169696] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:24.043+08:00] [41310] [41319] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41349 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-28 16:54:23.691929] [error] [41459] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:23.691979] [error] [41459] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:23.691987] [error] [41459] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:14
+[2025-10-28 16:54:24.155726] [error] [41459] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:24.155768] [error] [41459] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:24.155776] [error] [41459] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:14
+[2025-10-28 16:54:24.157445] [41337] [281456956207456] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.157819] [error] [43107] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 14
+[2025-10-28 16:54:24.157860] [error] [43107] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.157883] [error] [43107] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:24.157894] [error] [43107] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.157900] [error] [43107] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:24.157906] [error] [43107] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.157911] [error] [43107] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:24.157918] [error] [43107] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.157923] [error] [43107] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:24.157929] [error] [43107] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:24.157951] [41337] [281454075572576] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:24.028+0800] [41337] [281458015793504] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.028+0800] [41337] [281458015793504] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:24.203+08:00] [41310] [41320] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41337 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-28 16:54:24.233308] [error] [41450] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:24.233351] [error] [41450] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:24.233359] [error] [41450] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:12
+[2025-10-28 16:54:24.313288] [error] [41450] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:24.313320] [error] [41450] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:24.313328] [error] [41450] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:12
+[2025-10-28 16:54:24.314856] [41333] [281460548301152] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.315117] [error] [43093] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 12
+[2025-10-28 16:54:24.315143] [error] [43093] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.315155] [error] [43093] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:24.315163] [error] [43093] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.315169] [error] [43093] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:24.315176] [error] [43093] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.315182] [error] [43093] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:24.315188] [error] [43093] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:24.315194] [error] [43093] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:24.315201] [error] [43093] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:24.315215] [41333] [281457806340448] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:24.028+0800] [41333] [281461580034400] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:24.028+0800] [41333] [281461580034400] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-28 16:54:24.358+08:00] [41310] [41321] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41333 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-28 16:54:25.396467] [error] [41449] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+mki_log log dir:/root/atb/log exist
+[2025-10-28 16:54:25.397075] [error] [41449] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:25.397087] [error] [41449] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:10
+[2025-10-28 16:54:25.400286] [error] [41449] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:25.400305] [error] [41449] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:25.400311] [error] [41449] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:10
+[2025-10-28 16:54:25.418275] [error] [43103] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 10
+[2025-10-28 16:54:25.418338] [error] [41449] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:25.418361] [error] [43103] [runner.cpp:115] AllReduceHcclRunner_2_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.418388] [error] [41449] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:25.418403] [error] [43103] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_2_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:25.418417] [error] [41449] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:10
+[2025-10-28 16:54:25.418428] [error] [43103] [runner.cpp:115] LinearRowParallelNoAddRunner_2_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.418440] [error] [43103] [graph_runner.cpp:906] AttentionRunner_2_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:25.418448] [error] [43103] [runner.cpp:115] AttentionRunner_2_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.418454] [error] [43103] [graph_runner.cpp:906] Prefill_layerRunner_2:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:25.418460] [error] [43103] [runner.cpp:115] Prefill_layerRunner_2:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.418466] [error] [43103] [operation_base.cpp:726] Prefill_layer_2 execute Prefill_layerRunner fail
+[2025-10-28 16:54:25.418473] [error] [43103] [operation_base.cpp:764] Prefill_layer_2 execute fail, error code: 3
+[2025-10-28 16:54:25.418494] [41329] [281467343073632] [llm] [ERROR] [model.cpp:420] execute node[2] fail, error code: 3
+[2025-10-28 16:54:25.421953] [error] [41449] [hccl_runner.cpp:103] HCCL CommInitClusterInfo ERROR19 should check rankTableFile config
+[2025-10-28 16:54:25.421981] [error] [41449] [comm_pool.h:43] CommPool commCreateFunc fail
+[2025-10-28 16:54:25.421988] [error] [41449] [hccl_runner.cpp:72] AllReduceHcclRunner:0 get hccl comm fail by rank:10
+[2025-10-28 16:54:25.423472] [41329] [281470186615136] [llm] [ERROR] [model.cpp:348] [MIE05E000002] Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:25.423749] [error] [43103] [all_reduce_hccl_runner.cpp:38] hcclComm is null, rank: 10
+[2025-10-28 16:54:25.423772] [error] [43103] [runner.cpp:115] AllReduceHcclRunner_3_0_18_1:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.423782] [error] [43103] [graph_runner.cpp:906] LinearRowParallelNoAddRunner_3_0_18:0  node[1] execute fail, runner name:AllReduceHcclRunner
+[2025-10-28 16:54:25.423789] [error] [43103] [runner.cpp:115] LinearRowParallelNoAddRunner_3_0_18:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.423795] [error] [43103] [graph_runner.cpp:906] AttentionRunner_3_0:0  node[18] execute fail, runner name:LinearRowParallelNoAddRunner
+[2025-10-28 16:54:25.423802] [error] [43103] [runner.cpp:115] AttentionRunner_3_0:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.423807] [error] [43103] [graph_runner.cpp:906] Prefill_layerRunner_3:0  node[0] execute fail, runner name:AttentionRunner
+[2025-10-28 16:54:25.423813] [error] [43103] [runner.cpp:115] Prefill_layerRunner_3:1 Execute Failed. st: 3
+[2025-10-28 16:54:25.423818] [error] [43103] [operation_base.cpp:726] Prefill_layer_3 execute Prefill_layerRunner fail
+[2025-10-28 16:54:25.423823] [error] [43103] [operation_base.cpp:764] Prefill_layer_3 execute fail, error code: 3
+[2025-10-28 16:54:25.423834] [41329] [281467343073632] [llm] [ERROR] [model.cpp:420] execute node[3] fail, error code: 3
+[2025-10-28 16:54:25.028+0800] [41329] [281471075938656] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Execute fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to findthe first error. For more details, see the MindIE official document. 
+
+[2025-10-28 16:54:25.028+0800] [41329] [281471075938656] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-28 16:54:25.475+08:00] [41310] [41322] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 41329 exit, Please check the service log or python log.
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Daemon is killing...

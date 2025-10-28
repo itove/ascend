@@ -27,6 +27,8 @@
     - [下载权重](./weights-download.md)
     - [权重转换](./weights-cast.md)
     - [权重分片](./sharding.md)
+- [Troubleshooting](./troubleshooting.md)
+    - [outputs](./log.md)
 
 # 其它资料
 - [DeepSeekV3-多机部署文档](./deepseekv3-multi-nodes-deploy.md)
