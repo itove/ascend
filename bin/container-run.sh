@@ -63,6 +63,11 @@ export HCCL_CONNECT_TIMEOUT=7200 # 该环境变量需要配置为整数，取值
 export WORLD_SIZE=32
 export HCCL_EXEC_TIMEOUT=0
 
+# 解决权重加载过慢问题
+export OMP_NUM_THREADS=1
+# 设置显存比
+export NPU_MEMORY_FRACTION=0.95
+
 #cp /root/config.json $MIES_INSTALL_PATH/conf/
 
 cd $MIES_INSTALL_PATH

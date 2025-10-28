@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# 解决权重加载过慢问题
+export OMP_NUM_THREADS=1
+# 设置显存比
+export NPU_MEMORY_FRACTION=0.95
+
 master_address=172.20.84.67
 rank_id_start=0
 
