@@ -60,4 +60,5 @@ set log output, it's because 2.0 use env RANKTABLEFILE.
 ```
 [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
 ```
+<https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Development%20Guide/aadgc/aclcppdevg_03_0615.html>
 <https://www.hiascend.com/forum/thread-02108180960559699008-1-1.html>
