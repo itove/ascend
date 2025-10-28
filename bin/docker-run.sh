@@ -2,6 +2,9 @@
 #
 # vim:ft=bash
 
+#tag=2.1.RC2-800I-A2-py311-openeuler24.03-lts
+tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
+
 docker run -itd --user root --privileged --rm --name=mindie --net=host \
    --shm-size 500g \
    --device=/dev/davinci0 \
@@ -22,5 +25,5 @@ docker run -itd --user root --privileged --rm --name=mindie --net=host \
    -v /etc/hccn.conf:/etc/hccn.conf \
    -v /mnt/data:/data \
    -v /mnt/data2:/data2 \
-   swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:2.1.RC2-800I-A2-py311-openeuler24.03-lts \
+   swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:$tag \
    bash
