@@ -19,3 +19,4 @@
 - [万字综述：全面梳理 FP8 训练和推理技术](https://blog.csdn.net/m0_59235245/article/details/141611695)
 - [arxiv.org: Ascend HiFloat8 Format for Deep Learning](https://arxiv.org/abs/2409.16626)
 - [DeepSeek-V3/R1 671B Deployment Guide: GPU Requirements](https://www.theriseunion.com/en/blog/DeepSeek-V3-R1-671B-GPU-Requirements.html)
+- [【MindIE】性能较差、推理较慢问题定位总结（持续更新~）](https://www.hiascend.com/forum/thread-02107196487257628005-1-1.html)
