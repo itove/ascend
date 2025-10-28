@@ -20,5 +20,7 @@ docker run -itd --user root --privileged --rm --name=mindie --net=host \
    -v /usr/local/sbin/npu-smi:/usr/local/sbin/npu-smi \
    -v /usr/local/sbin:/usr/local/sbin \
    -v /etc/hccn.conf:/etc/hccn.conf \
+   -v /mnt/data:/data \
+   -v /mnt/data2:/data2 \
    swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:2.1.RC2-800I-A2-py311-openeuler24.03-lts \
    bash
