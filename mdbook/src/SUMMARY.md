@@ -28,6 +28,7 @@
     - [权重转换](./weights-cast.md)
     - [权重分片](./sharding.md)
 - [Troubleshooting](./troubleshooting.md)
+    - [版本](./ver.md)
     - [outputs](./log.md)
 
 # 其它资料
