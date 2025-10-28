@@ -48,6 +48,7 @@ export MIES_CONTAINER_IP=172.20.84.67
 #export MIES_CONTAINER_IP=172.20.84.77
 #export MIES_CONTAINER_IP=172.20.84.189
 #export MIES_CONTAINER_IP=172.20.84.50
+
 # MindIE 2.1
 export RANK_TABLE_FILE=/data/rank_table.json
 # MindIE 2.0
