@@ -44,14 +44,19 @@ Aborted (core dumped)
 > 若使用容器化部署启动，要求共享内存设置不小于1GB。
 
 
+mindie 2.2.T30
+```
+bin/mindieservice_daemon: error while loading shared libraries: libtorch.so: cannot open shared object file: No such file or directory
+```
+
 mindie 2.0.T3.1
 ```
 LLMInferEngine failed to init LLMInferModels
 ERR: Failed to init endpoint! Please check the service log or console output.
 Killed
 ```
-                                                                                                           Killed
-mindie 2.2.T30
+set log output, it's because 2.0 use env RANKTABLEFILE.
+
 ```
-bin/mindieservice_daemon: error while loading shared libraries: libtorch.so: cannot open shared object file: No such file or directory
+[llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
 ```

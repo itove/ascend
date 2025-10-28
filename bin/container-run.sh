@@ -17,11 +17,11 @@ export ATB_OPERATION_EXECUTE_ASYNC=1
 export TASK_QUEUE_ENABLE=1
 export HCCL_BUFFSIZE=120
 # mindie-service日志
-export MINDIE_LOG_TO_STDOUT=true
+export MINDIE_LOG_TO_STDOUT=1
 export MINDIE_LOG_TO_FILE=1
 export MINDIE_LOG_LEVEL="error"
 # 运行时日志
-export ASCEND_SLOG_PRINT_TO_STDOUT=1
+export ASCEND_SLOG_PRINT_TO_STDOUT=0
 export ASCEND_GLOBAL_LOG_LEVEL=3
 export ASCEND_GLOBAL_EVENT_ENABLE=1
 # 加速库日志
@@ -44,6 +44,6 @@ export RANK_TABLE_FILE=/data/rank_table.json
 export RANKTABLEFILE=/data/rank_table.json
 export HCCL_DETERMINISTIC=true
 
-cp /root/config.json $MIES_INSTALL_PATH/conf/
+#cp /root/config.json $MIES_INSTALL_PATH/conf/
 cd $MIES_INSTALL_PATH
-bin/mindieservice_daemon
+bin/mindieservice_daemon 2>&1 | tee logs/output.log
