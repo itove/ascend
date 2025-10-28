@@ -10,7 +10,7 @@ rank_id_start=0
 
 cd /usr/local/Ascend/atb-models/tests/modeltest/
 
-bash run.sh pa_bf16 full_CEval 5 1 deepseekv2 /data2/hf/models/deepseek-v3-bf16/ /data/rank_table.json 32 4 $rank_id_start $master_address
+./run.sh pa_bf16 full_CEval 5 1 deepseekv2 /data2/hf/models/deepseek-v3-bf16/ /data/rank_table.json 32 4 $rank_id_start $master_address 2>&1 | tee $MIES_INSTALL_PATH/logs/test.log
 
 # bash run.sh pa_bf16 full_GSM8K 8 deepseekv2 /data2/hf/models/deepseek-v3-bf16/ /data/rank_table.json 32 4 $rank_id_start $master_address
 
