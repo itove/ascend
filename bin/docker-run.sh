@@ -8,7 +8,7 @@ tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts
 #name=mindie2.1
 name=mindie2.0
 
-docker run -itd --user root --privileged --rm --name=mindie --net=host \
+docker run -itd --user root --privileged --rm --name=$name --net=host \
    --shm-size 500g \
    --device=/dev/davinci0 \
    --device=/dev/davinci1 \
