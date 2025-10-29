@@ -18,7 +18,7 @@ curl --location 'http://172.20.84.67:1025/v1/chat/completions' \
     "model": "deepseek-v3",
     "messages": [{
         "role": "user",
-        "content": "who are you?"
+        "content": "你是谁"
     }]
 }
 '
