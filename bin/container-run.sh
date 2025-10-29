@@ -8,6 +8,16 @@
 
 ############### Main Part ###############
 
+#hostname=$(< /etc/hostname)
+declare -A addr
+addr[gx1]=172.20.84.67
+addr[gx2]=172.20.84.77
+addr[gx3]=172.20.84.189
+addr[gx4]=172.20.84.50
+
+echo hostname is: $HOSTNAME
+echo IP is: ${addr[$HOSTNAME]}
+
 #. set_env.sh
 
 export ASCEND_HOME=/usr/local/Ascend
@@ -44,10 +54,7 @@ export ASDOPS_LOG_LEVEL=ERROR
 export OCK_LOG_LEVEL=ERROR
 export OCK_LOG_TO_STDOUT=1
 
-export MIES_CONTAINER_IP=172.20.84.67
-#export MIES_CONTAINER_IP=172.20.84.77
-#export MIES_CONTAINER_IP=172.20.84.189
-#export MIES_CONTAINER_IP=172.20.84.50
+export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 # MindIE 2.1
 export RANK_TABLE_FILE=/data/rank_table.json
@@ -72,4 +79,5 @@ export NPU_MEMORY_FRACTION=0.95
 #cp /root/config.json $MIES_INSTALL_PATH/conf/
 
 cd $MIES_INSTALL_PATH
-bin/mindieservice_daemon 2>&1 | tee logs/output.log
+mkdir -p /data/log
+bin/mindieservice_daemon 2>&1 | tee /data/log/mindieservice-$HOSTNAME.log
