@@ -62,3 +62,7 @@ set log output, it's because 2.0 use env RANKTABLEFILE.
 ```
 <https://www.hiascend.com/document/detail/zh/Atlas200IDKA2DeveloperKit/23.0.RC2/Application%20Development%20Guide/aadgc/aclcppdevg_03_0615.html>
 <https://www.hiascend.com/forum/thread-02108180960559699008-1-1.html>
+
+```
+RuntimeError: NPU out of memory. Tried to allocate 450.00 MiB (NPU 7; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 17.66 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+```
