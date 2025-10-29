@@ -22,6 +22,7 @@ from huggingface_hub import get_hf_file_metadata
 #REPO_ID = "Qwen/Qwen3-Coder-480B-A35B-Instruct"
 REPO_ID = "deepseek-ai/DeepSeek-V3" 
 #REPO_ID = "deepseek-ai/DeepSeek-V3-0324" 
+#REPO_ID = "NousResearch/Meta-Llama-3-8B" 
 
 # Shared variables for inter-process communication
 manager = Manager()
