@@ -48,6 +48,7 @@ export ASDOPS_LOG_TO_STDOUT=1
 export ASDOPS_LOG_LEVEL=ERROR
 
 if [ ${mindie_ver%.*} = 2.0 ]; then 
+    echo export ENVs for MindIE version $mindie_ver
     # 加速库日志
     export ATB_LOG_TO_FILE=1 # deprecated, use MINDIE_LOG_TO_FILE 
     export ATB_LOG_TO_FILE_FLUSH=0
@@ -56,7 +57,6 @@ if [ ${mindie_ver%.*} = 2.0 ]; then
     # OCK后处理日志
     export OCK_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
     export OCK_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-
     export MINDIE_LLM_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
     export MINDIE_LLM_PYTHON_LOG_TO_STDOUT=ERROR # deprecated, use MINDIE_LOG_TO_STDOUT
     export MINDIE_LLM_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
@@ -65,6 +65,21 @@ if [ ${mindie_ver%.*} = 2.0 ]; then
     export MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
     export MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
     export RANKTABLEFILE=/data/rank_table.json
+else
+    unset ATB_LOG_TO_FILE=1 # deprecated, use MINDIE_LOG_TO_FILE 
+    unset ATB_LOG_TO_FILE_FLUSH=0
+    unset ATB_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset ATB_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
+    unset OCK_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
+    unset OCK_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset MINDIE_LLM_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
+    unset MINDIE_LLM_PYTHON_LOG_TO_STDOUT=ERROR # deprecated, use MINDIE_LOG_TO_STDOUT
+    unset MINDIE_LLM_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset MINDIE_LLM_PYTHON_LOG_PATH # deprecated, use MINDIE_LOG_PATH 
+    unset MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+    unset MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+    unset MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+    unset RANKTABLEFILE=/data/rank_table.json
 fi
 
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
@@ -85,6 +100,9 @@ export HCCL_EXEC_TIMEOUT=0
 export OMP_NUM_THREADS=1
 # 设置显存比
 export NPU_MEMORY_FRACTION=0.96
+
+mkdir -p $MINDIE_LOG_PATH 
+chmod 750 $MINDIE_LOG_PATH 
 
 cd $MIES_INSTALL_PATH
 
