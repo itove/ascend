@@ -82,3 +82,8 @@ The old environment variable MINDIE_LLM_LOG_TO_FILE will be deprecated on 2025/1
 The old environment variable OCK_LOG_LEVEL will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_LEVEL as soon as possible.
 The old environment variable OCK_LOG_TO_STDOUT will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_STDOUT as soon as possible.
 ```
+```
+...
+[2025-10-29 15:21:14.153985] [error] [1877] [multi_latent_attention_operation.cpp:91] headNum should be {8,16,32,64,128}
+...
+```
