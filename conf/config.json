@@ -1,11 +1,6 @@
 {
     "Version" : "1.0.0",
-    "LogConfig": {
-        "logLevel": "Info",
-        "logFileSize": 20,
-        "logFileNum": 20,
-        "logPath": "/usr/local/Ascend/mindie/latest/mindie-service/logs/mindservice.log"
-    },
+
     "ServerConfig" :
     {
         "ipAddress" : "172.20.84.67",
