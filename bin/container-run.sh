@@ -125,7 +125,7 @@ cd $MIES_INSTALL_PATH
 echo Copy and edit config.json...
 cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
-sed -i "/modelWeightPath/s/MODEL_PATH/$MODEL_PATH/" conf/config.json
+sed -i "/modelWeightPath/s:MODEL_PATH:$MODEL_PATH:" conf/config.json
 if [ $MULTI -ne 1 ]; then
     sed -i "/multiNodesInferEnabled/s/true/false/" conf/config.json
 fi
