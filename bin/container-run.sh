@@ -46,7 +46,6 @@ export LD_LIBRARY_PATH=${MIES_INSTALL_PATH}/lib:${MIES_INSTALL_PATH}/lib/grpc:${
 export PYTHONPATH=${MIES_INSTALL_PATH}/bin:${PYTHONPATH}
 export ATB_OPERATION_EXECUTE_ASYNC=1
 export TASK_QUEUE_ENABLE=1
-export HCCL_BUFFSIZE=120
 # mindie-service日志
 export MINDIE_LOG_TO_STDOUT=1
 export MINDIE_LOG_TO_FILE=1
@@ -110,6 +109,7 @@ if [ $MULTI -eq 1 ]; then
     # 四机：
     export WORLD_SIZE=32
     export HCCL_EXEC_TIMEOUT=0
+    export HCCL_BUFFSIZE=120
 fi
 
 # 解决权重加载过慢问题
