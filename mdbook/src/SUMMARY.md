@@ -30,7 +30,8 @@
 - [Troubleshooting](./troubleshooting.md)
     - [版本](./ver.md)
     - [配置](./conf.md)
-    - [outputs](./log.md)
+    - [log](./log.md)
+    - [Issue 1](./issue-1.md)
 
 # 其它资料
 - [DeepSeekV3-多机部署文档](./deepseekv3-multi-nodes-deploy.md)
