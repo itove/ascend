@@ -1,6 +1,13 @@
 #!/bin/bash
 #
 # vim:ft=bash
+#
+# example:
+# run signle node for small model with **custom** config.json
+# CONF_PATH=/config.json MULTI=0 MODEL_NAME=DeepSeek-R1-Distill-Llama-8B /data/container-run.sh
+#
+# run multi nodes for large model with **default** config.json
+# MODEL_NAME=DeepSeek-V3 /data/container-run.sh
 
 set -e
 
@@ -118,6 +125,9 @@ echo Copy and edit config.json...
 cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
 sed -i "/modelWeightPath/s/MODEL_NAME/$MODEL_NAME/" conf/config.json
+if [ $MULTI -ne 1 ]; then
+    sed -i "/multiNodesInferEnabled/s/true/false/" conf/config.json
+fi
 
 echo Starting mindieservice_daemon... 
 mkdir -p /data/log
