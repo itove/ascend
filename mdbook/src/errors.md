@@ -66,3 +66,19 @@ set log output, it's because 2.0 use env RANKTABLEFILE.
 ```
 RuntimeError: NPU out of memory. Tried to allocate 450.00 MiB (NPU 7; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 17.66 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
 ```
+
+2.1.RC2-800I-A2-py311-openeuler24.03-lts
+```
+The old environment variable ATB_LOG_TO_STDOUT will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_STDOUT as soon as possible.
+The old environment variable ATB_LOG_LEVEL will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_LEVEL as soon as possible.
+The old environment variable MINDIE_LLM_LOG_LEVEL will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_LEVEL as soon as possible.
+The old environment variable MINDIE_LLM_PYTHON_LOG_TO_STDOUT will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_STDOUT as soon as possible.
+The old environment variable MINDIE_LLM_LOG_TO_STDOUT will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_STDOUT as soon as possible.
+The old environment variable MINDIE_LLM_PYTHON_LOG_PATH will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_PATH as soon as possible.
+The old environment variable ATB_LOG_TO_FILE will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_FILE as soon as possible.
+The old environment variable MINDIE_LLM_PYTHON_LOG_LEVEL will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_LEVEL as soon as possible.
+The old environment variable MINDIE_LLM_PYTHON_LOG_TO_FILE will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_FILE as soon as possible.
+The old environment variable MINDIE_LLM_LOG_TO_FILE will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_FILE as soon as possible.
+The old environment variable OCK_LOG_LEVEL will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_LEVEL as soon as possible.
+The old environment variable OCK_LOG_TO_STDOUT will be deprecated on 2025/12/31. Please use the new environment variable MINDIE_LOG_TO_STDOUT as soon as possible.
+```
