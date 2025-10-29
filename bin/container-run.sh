@@ -92,4 +92,4 @@ sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
 
 echo Starting mindieservice_daemon... 
 mkdir -p /data/log
-bin/mindieservice_daemon 2>&1 | tee /data/log/mindieservice-$HOSTNAME.log
+bin/mindieservice_daemon 2>&1 | tee /data/log/mindie-$mindie_ver-$HOSTNAME.log
