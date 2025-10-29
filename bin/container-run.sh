@@ -5,7 +5,9 @@
 set -e
 
 CONF_PATH=${CONF_PATH:-/data/config.json}
+MULTI=${MULTI:-1}
 echo CONF_PATH is $CONF_PATH
+echo MULTI: $MULTI
 
 #hostname=$(< /etc/hostname)
 declare -A addr
@@ -88,16 +90,18 @@ fi
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 export RANK_TABLE_FILE=/data/rank_table.json
-export HCCL_DETERMINISTIC=true
 
-export ATB_LLM_HCCL_ENABLE=1
-export ATB_LLM_COMM_BACKEND="hccl"
-export HCCL_CONNECT_TIMEOUT=7200 # 该环境变量需要配置为整数，取值范围[120,7200]，单位s
-# 双机：
-#export WORLD_SIZE=16
-# 四机：
-export WORLD_SIZE=32
-export HCCL_EXEC_TIMEOUT=0
+if [ $MULTI -eq 1 ]; then
+    export HCCL_DETERMINISTIC=true
+    export ATB_LLM_HCCL_ENABLE=1
+    export ATB_LLM_COMM_BACKEND="hccl"
+    export HCCL_CONNECT_TIMEOUT=7200 # 该环境变量需要配置为整数，取值范围[120,7200]，单位s
+    # 双机：
+    #export WORLD_SIZE=16
+    # 四机：
+    export WORLD_SIZE=32
+    export HCCL_EXEC_TIMEOUT=0
+fi
 
 # 解决权重加载过慢问题
 export OMP_NUM_THREADS=1

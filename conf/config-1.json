@@ -9,7 +9,7 @@
         "managementPort" : 1026,
         "metricsPort" : 1027,
         "allowAllZeroIpListening" : false,
-        "maxLinkNum" : 1000,
+        "maxLinkNum" : 300,
         "httpsEnabled" : false,
         "fullTextEnabled" : false,
         "tlsCaPath" : "security/ca/",
