@@ -29,6 +29,7 @@
     - [权重分片](./sharding.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本](./ver.md)
+    - [配置](./conf.md)
     - [outputs](./log.md)
 
 # 其它资料
