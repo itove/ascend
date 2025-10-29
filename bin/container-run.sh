@@ -15,7 +15,9 @@ echo hostname is: $HOSTNAME
 echo IP is: ${addr[$HOSTNAME]}
 
 mindie_ver=$(readlink /usr/local/Ascend/mindie/latest)
+echo MindIE version: $mindie_ver
 
+echo export ENVs
 # ENVs
 # see https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0300.html
 export ASCEND_DIR=/usr/local/Ascend
