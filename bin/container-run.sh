@@ -97,9 +97,8 @@ fi
 
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
-export RANK_TABLE_FILE=/data/rank_table.json
-
 if [ $MULTI -eq 1 ]; then
+    export RANK_TABLE_FILE=/data/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
     export ATB_LLM_COMM_BACKEND="hccl"
