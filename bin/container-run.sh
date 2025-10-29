@@ -4,7 +4,7 @@
 
 set -e
 
-CONF_PATH={$CONF_PATH:-/data/config.json}
+CONF_PATH=${CONF_PATH:-/data/config.json}
 echo CONF_PATH is $CONF_PATH
 
 #hostname=$(< /etc/hostname)
