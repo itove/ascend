@@ -2,11 +2,7 @@
 #
 # vim:ft=bash
 
-############### Variables ###############
-
-############### Functions ###############
-
-############### Main Part ###############
+set -e
 
 #hostname=$(< /etc/hostname)
 declare -A addr
@@ -76,8 +72,10 @@ export OMP_NUM_THREADS=1
 # 设置显存比
 export NPU_MEMORY_FRACTION=0.95
 
-#cp /root/config.json $MIES_INSTALL_PATH/conf/
-
 cd $MIES_INSTALL_PATH
+
+cp /root/config.json conf/
+sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
+
 mkdir -p /data/log
 bin/mindieservice_daemon 2>&1 | tee /data/log/mindieservice-$HOSTNAME.log
