@@ -74,8 +74,10 @@ export NPU_MEMORY_FRACTION=0.95
 
 cd $MIES_INSTALL_PATH
 
+echo Copy and edit config.json...
 cp /data/config.json conf/
 sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
 
+echo Starting mindieservice_daemon... 
 mkdir -p /data/log
 bin/mindieservice_daemon 2>&1 | tee /data/log/mindieservice-$HOSTNAME.log
