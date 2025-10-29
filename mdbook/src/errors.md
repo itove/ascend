@@ -96,5 +96,16 @@ The old environment variable OCK_LOG_TO_STDOUT will be deprecated on 2025/12/31.
 ```
 to
 ```
-"dtype": "fp16"
+"dtype": "bf16"
+```
+
+```
+/mnt/data2/hf/models/deepseek-v3-bf16/config.json
+```
+```
+"quant_method": "fp8"
+```
+to
+```
+"quant_method": "bf16"
 ```
