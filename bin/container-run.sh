@@ -74,7 +74,7 @@ export NPU_MEMORY_FRACTION=0.95
 
 cd $MIES_INSTALL_PATH
 
-cp /root/config.json conf/
+cp /data/config.json conf/
 sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
 
 mkdir -p /data/log
