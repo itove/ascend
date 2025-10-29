@@ -20,14 +20,14 @@
             "server_id": "172.20.84.77",
             "container_ip": "172.20.84.77",
             "device": [
-                { "device_id": "0", "device_ip": "172.20.61.25", "rank_id": "8" },
-                { "device_id": "1", "device_ip": "172.20.61.26", "rank_id": "9" },
-                { "device_id": "2", "device_ip": "172.20.61.27", "rank_id": "10" },
-                { "device_id": "3", "device_ip": "172.20.61.28", "rank_id": "11" },
-                { "device_id": "4", "device_ip": "172.20.61.29", "rank_id": "12" },
-                { "device_id": "5", "device_ip": "172.20.61.30", "rank_id": "13" },
-                { "device_id": "6", "device_ip": "172.20.61.31", "rank_id": "14" },
-                { "device_id": "7", "device_ip": "172.20.61.32", "rank_id": "15" }
+                { "device_id": "0", "device_ip": "172.20.60.25", "rank_id": "8" },
+                { "device_id": "1", "device_ip": "172.20.60.26", "rank_id": "9" },
+                { "device_id": "2", "device_ip": "172.20.60.27", "rank_id": "10" },
+                { "device_id": "3", "device_ip": "172.20.60.28", "rank_id": "11" },
+                { "device_id": "4", "device_ip": "172.20.60.29", "rank_id": "12" },
+                { "device_id": "5", "device_ip": "172.20.60.30", "rank_id": "13" },
+                { "device_id": "6", "device_ip": "172.20.60.31", "rank_id": "14" },
+                { "device_id": "7", "device_ip": "172.20.60.32", "rank_id": "15" }
             ]
         },
         {
