@@ -87,3 +87,14 @@ The old environment variable OCK_LOG_TO_STDOUT will be deprecated on 2025/12/31.
 [2025-10-29 15:21:14.153985] [error] [1877] [multi_latent_attention_operation.cpp:91] headNum should be {8,16,32,64,128}
 ...
 ```
+
+```
+/mnt/data2/hf/models/deepseek-v3-bf16/inference/configs/config_671B.json
+```
+```
+"dtype": "fp8"
+```
+to
+```
+"dtype": "fp16"
+```
