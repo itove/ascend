@@ -4,18 +4,19 @@
 #
 # example:
 # run signle node for small model with **custom** config.json
-# CONF_PATH=/config.json MULTI=0 MODEL_NAME=DeepSeek-R1-Distill-Llama-8B /data/container-run.sh
+# CONF_PATH=/config.json MULTI=0 MODEL_PATH=/data/hf/models/DeepSeek-R1-Distill-Llama-8B /data/container-run.sh
 #
 # run multi nodes for large model with **default** config.json
-# MODEL_NAME=DeepSeek-V3 /data/container-run.sh
+# MODEL_PATH=DeepSeek-V3 /data/container-run.sh
 
 set -e
 
 CONF_PATH=${CONF_PATH:-/data/config.json}
 MULTI=${MULTI:-1}
-MODEL_NAME=${MODEL_NAME:-DeepSeek-V3}
+MODEL_PATH=${MODEL_PATH:-/data2/hf/models/DeepSeek-V3}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
+echo MODEL_PATH is: $MODEL_PATH
 
 #hostname=$(< /etc/hostname)
 declare -A addr
@@ -124,7 +125,7 @@ cd $MIES_INSTALL_PATH
 echo Copy and edit config.json...
 cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
-sed -i "/modelWeightPath/s/MODEL_NAME/$MODEL_NAME/" conf/config.json
+sed -i "/modelWeightPath/s/MODEL_PATH/$MODEL_PATH/" conf/config.json
 if [ $MULTI -ne 1 ]; then
     sed -i "/multiNodesInferEnabled/s/true/false/" conf/config.json
 fi

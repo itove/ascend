@@ -69,7 +69,7 @@
                 {
                     "modelInstanceType" : "Standard",
                     "modelName" : "deepseek-v3",
-                    "modelWeightPath" : "/data2/hf/models/MODEL_NAME",
+                    "modelWeightPath" : "MODEL_PATH",
                     "worldSize" : 4,
                     "cpuMemSize" : 5,
                     "npuMemSize" : -1,
