@@ -19,7 +19,7 @@ do
     hccn_tool -i $i -net_health -g
     hccn_tool -i $i -netdetect -g
     hccn_tool -i $i -gateway -g
+    sudo hccn_tool -i $i -tls -s enable 0
     sudo hccn_tool -i $i -tls -g | grep switch
-    # sudo hccn_tool -i $i -tls -s enable 0
     echo
 done
