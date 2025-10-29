@@ -6,6 +6,7 @@ set -e
 
 CONF_PATH=${CONF_PATH:-/data/config.json}
 MULTI=${MULTI:-1}
+MODEL_NAME=${MODEL_NAME:-DeepSeek-V3}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
 
@@ -115,7 +116,8 @@ cd $MIES_INSTALL_PATH
 
 echo Copy and edit config.json...
 cp $CONF_PATH conf/config.json
-sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
+sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
+sed -i "/modelWeightPath/s/MODEL_NAME/$MODEL_NAME/" conf/config.json
 
 echo Starting mindieservice_daemon... 
 mkdir -p /data/log

@@ -3,7 +3,7 @@
 
     "ServerConfig" :
     {
-        "ipAddress" : "172.20.84.67",
+        "ipAddress" : "IP_ADDR",
         "managementIpAddress" : "127.0.0.2",
         "port" : 1025,
         "managementPort" : 1026,
@@ -69,7 +69,7 @@
                 {
                     "modelInstanceType" : "Standard",
                     "modelName" : "deepseek-v3",
-                    "modelWeightPath" : "/data2/hf/models/deepseek-v3-bf16",
+                    "modelWeightPath" : "/data2/hf/models/MODEL_NAME",
                     "worldSize" : 4,
                     "cpuMemSize" : 5,
                     "npuMemSize" : -1,
