@@ -4,6 +4,9 @@
 
 set -e
 
+CONF_PATH={$CONF_PATH:-/data/config.json}
+echo CONF_PATH is $CONF_PATH
+
 #hostname=$(< /etc/hostname)
 declare -A addr
 addr[gx1]=172.20.84.67
@@ -107,7 +110,7 @@ chmod 750 $MINDIE_LOG_PATH
 cd $MIES_INSTALL_PATH
 
 echo Copy and edit config.json...
-cp /data/config.json conf/config.json
+cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/172.20.84.67/${addr[$HOSTNAME]}/" conf/config.json
 
 echo Starting mindieservice_daemon... 
