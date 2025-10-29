@@ -2,13 +2,13 @@
 #
 # vim:ft=bash
 
-#tag=2.1.RC2-800I-A2-py311-openeuler24.03-lts
-tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
-#tag=2.2.T30-800I-A2-py311-openeuler24.03-lts-arm64
-#name=mindie
+tag=2.1.RC2-800I-A2-py311-openeuler24.03-lts
+name=mindie
 #name=mindie2.1
+#tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
+#name=mindie2.0
+#tag=2.2.T30-800I-A2-py311-openeuler24.03-lts-arm64
 #name=mindie2.2
-name=mindie2.0
 
 docker run -itd --user root --privileged --rm --name=$name --net=host \
    --shm-size 500g \
@@ -32,6 +32,3 @@ docker run -itd --user root --privileged --rm --name=$name --net=host \
    -v /mnt/data2:/data2 \
    swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:$tag \
    bash
-
-
-docker cp config.json $name:/root

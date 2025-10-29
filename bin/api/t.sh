@@ -22,4 +22,5 @@ curl --location 'http://172.20.84.67:1025/v1/chat/completions' \
     }]
 }
 '
+echo
 
