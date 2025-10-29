@@ -1,0 +1,500 @@
+[2025-10-29 09:46:16.274+08:00] [54643] [54645] [mindie-server] ===init log===
+[2025-10-29 09:46:16.274+08:00] [54643] ===init log===
+Start to parse ranktable file
+Finished parsing ranktable file.
+Update worldSize and npuDeviceIds of backend config successfully for Multi Nodes Inference.
+[2025-10-29 09:46:20.927+08:00] [54658] [54658] [mindie-server] ===init log===
+[2025-10-29 09:46:20.928+08:00] [54658] ===init log===
+[2025-10-29 09:46:20.928+08:00] [54660] [54660] [mindie-server] ===init log===
+[2025-10-29 09:46:20.928+08:00] [54662] [54662] [mindie-server] ===init log===
+[2025-10-29 09:46:20.929+08:00] [54660] ===init log===
+[2025-10-29 09:46:20.929+08:00] [54662] ===init log===
+[2025-10-29 09:46:20.929+08:00] [54664] [54664] [mindie-server] ===init log===
+[2025-10-29 09:46:20.929+08:00] [54664] ===init log===
+[2025-10-29 09:46:20.929+08:00] [54666] [54666] [mindie-server] ===init log===
+[2025-10-29 09:46:20.930+08:00] [54666] ===init log===
+[2025-10-29 09:46:20.931+08:00] [54668] [54668] [mindie-server] ===init log===
+[2025-10-29 09:46:20.931+08:00] [54668] ===init log===
+[2025-10-29 09:46:20.933+08:00] [54670] [54670] [mindie-server] ===init log===
+[2025-10-29 09:46:20.934+08:00] [54670] ===init log===
+[2025-10-29 09:46:20.935+08:00] [54673] [54673] [mindie-server] ===init log===
+[2025-10-29 09:46:20.935+08:00] [54673] ===init log===
+[2025-10-29 09:56:51.625138] [54673] [281464206455136] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:51.625220] [54673] [281464206455136] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:51.625294] [54673] [281464206455136] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:51.625330] [error] [54791] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:51.029+0800] [54673] [281465266041184] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:51.029+0800] [54673] [281465266041184] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 09:56:51.659+08:00] [54643] [54645] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54673 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-29 09:56:54.213074] [54662] [281469168578912] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:54.213157] [54662] [281469168578912] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:54.213175] [54662] [281469168578912] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:54.213216] [error] [54768] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:54.029+0800] [54662] [281470228164960] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:54.029+0800] [54662] [281470228164960] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 09:56:54.312+08:00] [54643] [54643] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54662 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-29 09:56:54.918556] [54658] [281459986067808] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:54.918640] [54658] [281459986067808] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:54.918655] [54658] [281459986067808] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:54.918709] [error] [54784] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:54.029+0800] [54658] [281460875391328] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:54.029+0800] [54658] [281460875391328] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 09:56:55.141+08:00] [54643] [54648] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54658 exit, Please check the service log or python log.
+[2025-10-29 09:56:55.150916] [54664] [281467631694176] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:55.151052] [54664] [281467631694176] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:55.151065] [54664] [281467631694176] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:55.151370] [error] [54792] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:55.029+0800] [54664] [281468691345760] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:55.029+0800] [54664] [281468691345760] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-29 09:56:55.529+08:00] [54643] [54651] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54664 exit, Please check the service log or python log.
+[2025-10-29 09:56:55.557479] [54670] [281456100700512] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:55.557595] [54670] [281456100700512] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:55.557642] [54670] [281456100700512] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:55.557679] [error] [54779] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:55.558113] [54668] [281467192078688] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:55.558221] [54668] [281467192078688] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:55.558234] [54668] [281467192078688] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:55.558291] [error] [54780] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:55.563824] [54666] [281466386772320] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:55.563977] [54666] [281466386772320] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:55.029+0800] [54668] [281468223811936] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:55.564034] [54666] [281466386772320] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:55.029+0800] [54668] [281468223811936] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-29 09:56:55.564342] [error] [54772] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-29 09:56:55.029+0800] [54670] [281456991531360] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:55.029+0800] [54670] [281456991531360] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 09:56:55.029+0800] [54666] [281467418505568] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:55.029+0800] [54666] [281467418505568] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 09:56:55.584548] [54660] [281458154467680] [llm] [ERROR] [acl_nn_operation.cpp:143] gmmNode call SetAclNNWorkspaceExecutor fail, error:161002
+[2025-10-29 09:56:55.584653] [54660] [281458154467680] [llm] [ERROR] [acl_nn_operation.cpp:116] gmmNode call CreateAclNNOpCache fail, error:12
+[2025-10-29 09:56:55.584666] [54660] [281458154467680] [llm] [ERROR] [acl_nn_operation.cpp:59] gmmNode call UpdateAclNNOpCache, error:12
+[2025-10-29 09:56:55.584748] [error] [54764] [graph_runner.cpp:762] integrated_gmmRunner_5_4_9_0_2:0  node[0] setup fail, error code:12
+mki_log log dir:/root/atb/log exist
+[2025-10-29 09:56:55.029+0800] [54660] [281458971242848] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 125, in __init__
+    self.warm_up(max_prefill_tokens, max_seq_len, max_input_len, max_iter_times, inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 316, in warm_up
+    raise e
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 309, in warm_up
+    self._generate_inputs_warm_up_backend(input_metadata, inference_mode, dummy=True)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 392, in _generate_inputs_warm_up_backend
+    self.generator_backend._warm_up(model_inputs, inference_mode=inference_mode)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 204, in _warm_up
+    super()._warm_up(model_inputs)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 176, in _warm_up
+    _ = self.forward(model_inputs, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/utils/decorators/time_decorator.py", line 73, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 170, in forward
+    logits = self.model_wrapper.forward(model_inputs, self.cache_pool.npu_cache, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 109, in forward
+    logits = self.forward_tensor(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 136, in forward_tensor
+    logits = self.model_runner.forward(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 220, in forward
+    return self.model.forward(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 466, in forward
+    logits = self.execute_ascend_operator(acl_inputs, acl_param, is_prefill)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/flash_causal_lm.py", line 418, in execute_ascend_operator
+    acl_model_out = self.acl_encoder_operation.execute(acl_inputs, acl_param)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Setup fail, enable log: export ASDOPS_LOG_LEVEL=ERROR, export ASDOPS_LOG_TO_STDOUT=1 to find the first error. For more details, see the MindIE official document. 
+
+[2025-10-29 09:56:55.029+0800] [54660] [281458971242848] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+[2025-10-29 09:56:56.278+08:00] [54643] [54652] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54670 exit, Please check the service log or python log.
+[2025-10-29 09:56:56.278+08:00] [54643] [54653] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54660 exit, Please check the service log or python log.
+[2025-10-29 09:56:56.278+08:00] [54643] [54654] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54666 exit, Please check the service log or python log.
+[2025-10-29 09:56:56.278+08:00] [54643] [54655] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 54668 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+Daemon is killing...

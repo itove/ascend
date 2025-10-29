@@ -1,0 +1,132 @@
+[2025-10-29 09:46:15.396+08:00] [76758] [76760] [mindie-server] ===init log===
+[2025-10-29 09:46:15.396+08:00] [76758] ===init log===
+Start to parse ranktable file
+Finished parsing ranktable file.
+Update worldSize and npuDeviceIds of backend config successfully for Multi Nodes Inference.
+[2025-10-29 09:46:20.105+08:00] [76773] [76773] [mindie-server] ===init log===
+[2025-10-29 09:46:20.106+08:00] [76773] ===init log===
+[2025-10-29 09:46:20.106+08:00] [76775] [76775] [mindie-server] ===init log===
+[2025-10-29 09:46:20.106+08:00] [76777] [76777] [mindie-server] ===init log===
+[2025-10-29 09:46:20.106+08:00] [76779] [76779] [mindie-server] ===init log===
+[2025-10-29 09:46:20.107+08:00] [76775] ===init log===
+[2025-10-29 09:46:20.107+08:00] [76777] ===init log===
+[2025-10-29 09:46:20.107+08:00] [76779] ===init log===
+[2025-10-29 09:46:20.111+08:00] [76781] [76781] [mindie-server] ===init log===
+[2025-10-29 09:46:20.112+08:00] [76781] ===init log===
+[2025-10-29 09:46:20.113+08:00] [76783] [76783] [mindie-server] ===init log===
+[2025-10-29 09:46:20.113+08:00] [76790] [76790] [mindie-server] ===init log===
+[2025-10-29 09:46:20.113+08:00] [76790] ===init log===
+[2025-10-29 09:46:20.113+08:00] [76783] ===init log===
+[2025-10-29 09:46:20.114+08:00] [76807] [76807] [mindie-server] ===init log===
+[2025-10-29 09:46:20.115+08:00] [76807] ===init log===
+[2025-10-29 10:01:04.029+0800] [76781] [281464462176608] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:NPU out of memory. Tried to allocate 450.00 MiB (NPU 4; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 22.66 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 85, in __init__
+    self.generator_backend = get_generator_backend(model_config)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/__init__.py", line 26, in get_generator_backend
+    return generator_cls(model_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 97, in __init__
+    super().__init__(model_config)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 113, in __init__
+    self.model_wrapper = get_model_wrapper(model_config, backend_type)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/__init__.py", line 15, in get_model_wrapper
+    return wrapper_cls(**model_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 52, in __init__
+    self.model_runner.load_weights()
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 179, in load_weights
+    self.model.to(weights.device)
+  File "/usr/local/lib64/python3.11/site-packages/torch_npu/utils/_module.py", line 78, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch_npu/utils/_module.py", line 76, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: NPU out of memory. Tried to allocate 450.00 MiB (NPU 4; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 22.66 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+[2025-10-29 10:01:04.029+0800] [76781] [281464462176608] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 10:01:04.029+0800] [76807] [281465537950048] [mindie-server] [ERROR] [model.py:40] : [Model]	>>> Exception:NPU out of memory. Tried to allocate 450.00 MiB (NPU 7; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 21.29 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/model.py", line 38, in initialize
+    return self.python_model.initialize(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/model_wrapper/standard_model.py", line 93, in initialize
+    self.generator = Generator(
+                     ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/generator.py", line 85, in __init__
+    self.generator_backend = get_generator_backend(model_config)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/__init__.py", line 26, in get_generator_backend
+    return generator_cls(model_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_torch.py", line 97, in __init__
+    super().__init__(model_config)
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/text_generator/adapter/generator_backend.py", line 113, in __init__
+    self.model_wrapper = get_model_wrapper(model_config, backend_type)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/__init__.py", line 15, in get_model_wrapper
+    return wrapper_cls(**model_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/mindie_llm/modeling/model_wrapper/atb/atb_model_wrapper.py", line 52, in __init__
+    self.model_runner.load_weights()
+  File "/usr/local/Ascend/atb-models/atb_llm/runner/model_runner.py", line 179, in load_weights
+    self.model.to(weights.device)
+  File "/usr/local/lib64/python3.11/site-packages/torch_npu/utils/_module.py", line 78, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/usr/local/lib64/python3.11/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/usr/local/lib64/python3.11/site-packages/torch_npu/utils/_module.py", line 76, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: NPU out of memory. Tried to allocate 450.00 MiB (NPU 7; 60.97 GiB total capacity; 14.67 GiB already allocated; 14.67 GiB current active; 21.29 MiB free; 14.71 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+[2025-10-29 10:01:04.029+0800] [76807] [281465537950048] [mindie-server] [ERROR] [model.py:43] : [MIE04E13030A] [Model]	>>> return initialize error result: {'status': 'error', 'npuBlockNum': '0', 'cpuBlockNum': '0'}
+[2025-10-29 10:01:06.167+08:00] [76758] [76760] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 76781 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[2025-10-29 10:01:07.094+08:00] [76758] [76758] [mindie-server] [ERROR] [llm_daemon.cpp:76] : [MIE04E010109] [daemon] Daemon wait pid with 76807 exit, Please check the service log or python log.
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+[ERROR] TBE Subprocess[task_distribute] raise error[], main process disappeared!
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/lib64/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 30 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+Daemon is killing...
