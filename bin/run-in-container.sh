@@ -79,20 +79,20 @@ if [ ${mindie_ver%.*} = 2.0 ]; then
     export MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
     export RANKTABLEFILE=/data/rank_table.json
 else
-    unset ATB_LOG_TO_FILE=1 # deprecated, use MINDIE_LOG_TO_FILE 
-    unset ATB_LOG_TO_FILE_FLUSH=0
-    unset ATB_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-    unset ATB_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    unset OCK_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    unset OCK_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-    unset MINDIE_LLM_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    unset MINDIE_LLM_PYTHON_LOG_TO_STDOUT=ERROR # deprecated, use MINDIE_LOG_TO_STDOUT
-    unset MINDIE_LLM_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset ATB_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+    unset ATB_LOG_TO_FILE_FLUSH
+    unset ATB_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset ATB_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+    unset OCK_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+    unset OCK_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
+    unset MINDIE_LLM_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+    unset MINDIE_LLM_PYTHON_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT
+    unset MINDIE_LLM_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
     unset MINDIE_LLM_PYTHON_LOG_PATH # deprecated, use MINDIE_LOG_PATH 
     unset MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
     unset MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
     unset MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    unset RANKTABLEFILE=/data/rank_table.json
+    unset RANKTABLEFILE
 fi
 
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
