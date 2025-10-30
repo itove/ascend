@@ -77,7 +77,11 @@
                     "trustRemoteCode" : false,
                     "async_scheduler_wait_time": 120,
                     "kv_trans_timeout": 10,
-                    "kv_link_timeout": 1080
+                    "kv_link_timeout": 1080,
+                    "dp": 4,
+                    "tp": 8,
+                    "moe_tp": 1,
+                    "moe_ep": 32
                 }
             ]
         },
