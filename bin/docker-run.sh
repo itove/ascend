@@ -13,6 +13,9 @@ name=mindie
 echo Stopping previous one...
 docker stop $name
 
+echo Wait 2 sec...
+sleep 2
+
 echo Starting new...
 docker run -itd --user root --privileged --rm --name=$name --net=host \
    --shm-size 500g \
