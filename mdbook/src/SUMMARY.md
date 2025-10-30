@@ -33,6 +33,7 @@
     - [配置](./conf.md)
     - [log](./log.md)
     - [Issue 1](./issue-1.md)
+    - [Issue 2](./issue-2.md)
 
 # 其它资料
 - [DeepSeekV3-多机部署文档](./deepseekv3-multi-nodes-deploy.md)

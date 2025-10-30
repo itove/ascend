@@ -18,7 +18,7 @@ curl --location 'http://gx1:1025/v1/chat/completions' \
     "model": "deepseek-v3",
     "messages": [{
         "role": "user",
-        "content": "讲个小故事"
+        "content": "你是谁"
     }]
 }
 '
