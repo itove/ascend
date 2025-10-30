@@ -27,6 +27,7 @@
     - [下载权重](./weights-download.md)
     - [权重转换](./weights-cast.md)
     - [权重分片](./sharding.md)
+- [Result](./result.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本信息 2.0.T3](./ver-2.0.md)
     - [版本信息 2.1.RC2](./ver-2.1.md)
