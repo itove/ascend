@@ -10,6 +10,10 @@ name=mindie
 #tag=2.2.T30-800I-A2-py311-openeuler24.03-lts-arm64
 #name=mindie2.2
 
+echo Stopping previous one...
+docker stop mindie
+
+echo Starting new...
 docker run -itd --user root --privileged --rm --name=$name --net=host \
    --shm-size 500g \
    --device=/dev/davinci0 \
