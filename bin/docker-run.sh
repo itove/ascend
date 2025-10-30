@@ -36,3 +36,6 @@ docker run -itd --user root --privileged --rm --name=$name --net=host \
    -v /mnt/data2:/data2 \
    swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:$tag \
    bash
+
+echo Entering...
+docker exec -it mindie bash
