@@ -73,12 +73,7 @@
 ```
 {
     "Version" : "1.0.0",
-    "LogConfig": {
-        "logLevel": "Info",
-        "logFileSize": 20,
-        "logFileNum": 20,
-        "logPath": "/usr/local/Ascend/mindie/latest/mindie-service/logs/mindservice.log"
-    },
+
     "ServerConfig" :
     {
         "ipAddress" : "172.20.84.67",
@@ -123,7 +118,7 @@
 
     "BackendConfig" : {
         "backendName" : "mindieservice_llm_engine",
-	"npuDeviceIds" : [[0,1,2,3]],
+        "npuDeviceIds" : [[0,1,2,3]],
         "modelInstanceNumber" : 1,
         "tokenizerProcessNumber" : 8,
         "multiNodesInferEnabled" : true,
