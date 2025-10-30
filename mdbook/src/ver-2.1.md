@@ -1,4 +1,6 @@
-# 版本信息 MindIE 2.1.RC2-800I-A2-py311-openeuler24.03-lts
+# 版本信息
+
+MindIE 2.1.RC2-800I-A2-py311-openeuler24.03-lts
 
 ```
 # cat /usr/local/Ascend/ascend-toolkit/latest/version.cfg
