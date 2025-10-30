@@ -11,7 +11,7 @@ name=mindie
 #name=mindie2.2
 
 echo Stopping previous one...
-docker stop mindie
+docker stop $name
 
 echo Starting new...
 docker run -itd --user root --privileged --rm --name=$name --net=host \
@@ -38,4 +38,4 @@ docker run -itd --user root --privileged --rm --name=$name --net=host \
    bash
 
 echo Entering...
-docker exec -it mindie bash
+docker exec -it $name bash
