@@ -16,5 +16,6 @@
 * [ ] deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B **(成功启动。乱码)**
 * [x] deepseek-ai/DeepSeek-R1-Distill-Llama-8B
 * [x] NousResearch/Meta-Llama-3-8B
-* [ ] deepseek-ai/DeepSeek-V3 **(成功启动。乱码)**
-* [ ] deepseek-ai/DeepSeek-V3-0324 **(成功启动。乱码)**
+* [ ] Qwen/Qwen3-30B-A3B **（报错，启动失败）**
+* [x] deepseek-ai/DeepSeek-V3 **(成功启动。乱码)**
+* [x] deepseek-ai/DeepSeek-V3-0324 **(成功启动。乱码)**
