@@ -14,6 +14,7 @@
 - [故障案例](https://www.hiascend.com/document/caselibrary)
 - [环境变量](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0300.html)
 - [错误码参考](https://www.hiascend.com/document/detail/zh/mindie/21RC2/ref/errorcodereference/mindie_log_0072.html)
+- [2.1.RC2版本配套文档](https://www.hiascend.com/document/detail/zh/mindie/21RC2/releasenote/releasenote_0018.html)
 
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
