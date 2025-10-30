@@ -60,40 +60,21 @@ export ASDOPS_LOG_TO_FILE=1
 export ASDOPS_LOG_TO_STDOUT=1
 export ASDOPS_LOG_LEVEL=ERROR
 
-if [ ${mindie_ver%.*} = 2.0 ]; then 
-    echo export ENVs for MindIE version $mindie_ver
-    # 加速库日志
-    export ATB_LOG_TO_FILE=1 # deprecated, use MINDIE_LOG_TO_FILE 
-    export ATB_LOG_TO_FILE_FLUSH=0
-    export ATB_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-    export ATB_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    # OCK后处理日志
-    export OCK_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    export OCK_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-    export MINDIE_LLM_LOG_LEVEL=ERROR # deprecated, use MINDIE_LOG_LEVEL 
-    export MINDIE_LLM_PYTHON_LOG_TO_STDOUT=ERROR # deprecated, use MINDIE_LOG_TO_STDOUT
-    export MINDIE_LLM_LOG_TO_STDOUT=1 # deprecated, use MINDIE_LOG_TO_STDOUT 
-    export MINDIE_LLM_PYTHON_LOG_PATH # deprecated, use MINDIE_LOG_PATH 
-    export MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
-    export MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    export MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    export RANKTABLEFILE=/data/rank_table.json
-else
-    unset ATB_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    unset ATB_LOG_TO_FILE_FLUSH
-    unset ATB_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
-    unset ATB_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
-    unset OCK_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
-    unset OCK_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
-    unset MINDIE_LLM_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
-    unset MINDIE_LLM_PYTHON_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT
-    unset MINDIE_LLM_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
-    unset MINDIE_LLM_PYTHON_LOG_PATH # deprecated, use MINDIE_LOG_PATH 
-    unset MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
-    unset MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    unset MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
-    unset RANKTABLEFILE
-fi
+# unset deprecated ENVs to aviod log complain
+unset ATB_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+unset ATB_LOG_TO_FILE_FLUSH
+unset ATB_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
+unset ATB_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+unset OCK_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+unset OCK_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
+unset MINDIE_LLM_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+unset MINDIE_LLM_PYTHON_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT
+unset MINDIE_LLM_LOG_TO_STDOUT # deprecated, use MINDIE_LOG_TO_STDOUT 
+unset MINDIE_LLM_PYTHON_LOG_PATH # deprecated, use MINDIE_LOG_PATH 
+unset MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL 
+unset MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+unset MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
+unset RANKTABLEFILE # 2.0
 
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
