@@ -3,20 +3,18 @@
 # vim:ft=bash
 #
 # example:
-# run signle node for small model with **custom** config.json
-# CONF_PATH=/config.json MULTI=0 MODEL_PATH=/data/hf/models/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
-#
-# run multi nodes for large model with **default** config.json
-# MODEL_PATH=DeepSeek-V3 /data/run-in-container.sh
+# MODEL_PATH=DeepSeek-V3 RANK_ID_START=8 /data/test-in-container.sh
 
 set -e
 
 CONF_PATH=${CONF_PATH:-/data/config.json}
 MULTI=${MULTI:-1}
-MODEL_PATH=${MODEL_PATH:-/data2/hf/models/DeepSeek-V3}
+MODEL_PATH=${MODEL_PATH:-/data2/hf/models/DeepSeek-V3-0324-bf16}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
 echo MODEL_PATH is: $MODEL_PATH
+RANK_ID_START=${RANK_ID_START:-0}
+echo rank id start: $RANK_ID_START
 
 #hostname=$(< /etc/hostname)
 declare -A addr
@@ -118,13 +116,12 @@ export OMP_NUM_THREADS=1
 export NPU_MEMORY_FRACTION=0.95
 
 master_address=172.20.84.67
-rank_id_start=0
 model_name=deepseekv2
 
 cd /usr/local/Ascend/atb-models/tests/modeltest/
 
-./run.sh pa_bf16 full_CEval 5 1 $model_name /data2/hf/models/deepseek-v3-0324-bf16/ /data/rank_table.json 32 4 $rank_id_start $master_address 2>&1 | tee $MIES_INSTALL_PATH/logs/test.log
+./run.sh pa_bf16 full_CEval 5 1 $model_name $MODEL_PATH /data/rank_table.json 32 4 $RANK_ID_START $master_address 2>&1 | tee $MIES_INSTALL_PATH/logs/test.log
 
-# bash run.sh pa_bf16 full_GSM8K 8 $model_name /data2/hf/models/deepseek-v3-bf16/ /data/rank_table.json 32 4 $rank_id_start $master_address
+# bash run.sh pa_bf16 full_GSM8K 8 $model_name /data2/hf/models/deepseek-v3-bf16/ /data/rank_table.json 32 4 $RANK_ID_START $master_address
 
-# bash run.sh pa_bf16 performance [[256,256]] 1 $model_name /data2/hf/models/deepseek-v3-bf16 /data/rank_table.json 32 4 $rank_id_start $master_address
+# bash run.sh pa_bf16 performance [[256,256]] 1 $model_name /data2/hf/models/deepseek-v3-bf16 /data/rank_table.json 32 4 $RANK_ID_START $master_address
