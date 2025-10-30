@@ -1,35 +1,36 @@
-# 版本
+# 版本信息 MindIE 2.1.RC2-800I-A2-py311-openeuler24.03-lts
 
 ```
 # cat /usr/local/Ascend/ascend-toolkit/latest/version.cfg
 # version: 1.0
-runtime_running_version=[7.6.T13.0.B094:8.0.T63]
-compiler_running_version=[7.6.T13.0.B094:8.0.T63]
-hccl_running_version=[7.6.T13.0.B094:8.0.T63]
-opp_running_version=[7.6.T13.0.B094:8.0.T63]
-toolkit_running_version=[7.6.T13.0.B094:8.0.T63]
-aoe_running_version=[7.6.T13.0.B094:8.0.T63]
-ncs_running_version=[7.6.T13.0.B094:8.0.T63]
-opp_kernel_running_version=[7.6.T13.0.B094:8.0.T63]
-runtime_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-compiler_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-hccl_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-opp_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-toolkit_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-aoe_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-ncs_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-opp_kernel_upgrade_version=[7.6.T13.0.B094:8.0.T63]
-runtime_installed_version=[7.6.T13.0.B094:8.0.T63]
-compiler_installed_version=[7.6.T13.0.B094:8.0.T63]
-hccl_installed_version=[7.6.T13.0.B094:8.0.T63]
-opp_installed_version=[7.6.T13.0.B094:8.0.T63]
-toolkit_installed_version=[7.6.T13.0.B094:8.0.T63]
-aoe_installed_version=[7.6.T13.0.B094:8.0.T63]
-ncs_installed_version=[7.6.T13.0.B094:8.0.T63]
-opp_kernel_installed_version=[7.6.T13.0.B094:8.0.T63]
+runtime_running_version=[8.2.0.2.220:8.2.RC2]
+compiler_running_version=[8.2.0.2.220:8.2.RC2]
+hccl_running_version=[8.2.0.2.220:8.2.RC2]
+opp_running_version=[8.2.0.2.220:8.2.RC2]
+toolkit_running_version=[8.2.0.2.220:8.2.RC2]
+aoe_running_version=[8.2.0.2.220:8.2.RC2]
+ncs_running_version=[8.2.0.2.220:8.2.RC2]
+opp_kernel_running_version=[8.2.0.2.220:8.2.RC2]
+runtime_upgrade_version=[8.2.0.2.220:8.2.RC2]
+compiler_upgrade_version=[8.2.0.2.220:8.2.RC2]
+hccl_upgrade_version=[8.2.0.2.220:8.2.RC2]
+opp_upgrade_version=[8.2.0.2.220:8.2.RC2]
+toolkit_upgrade_version=[8.2.0.2.220:8.2.RC2]
+aoe_upgrade_version=[8.2.0.2.220:8.2.RC2]
+ncs_upgrade_version=[8.2.0.2.220:8.2.RC2]
+opp_kernel_upgrade_version=[8.2.0.2.220:8.2.RC2]
+runtime_installed_version=[8.2.0.2.220:8.2.RC2]
+compiler_installed_version=[8.2.0.2.220:8.2.RC2]
+hccl_installed_version=[8.2.0.2.220:8.2.RC2]
+opp_installed_version=[8.2.0.2.220:8.2.RC2]
+toolkit_installed_version=[8.2.0.2.220:8.2.RC2]
+aoe_installed_version=[8.2.0.2.220:8.2.RC2]
+ncs_installed_version=[8.2.0.2.220:8.2.RC2]
+opp_kernel_installed_version=[8.2.0.2.220:8.2.RC2]
 ```
+
 ```
-[root@gx4 /]# ll /usr/local/Ascend/ascend-toolkit/latest/
+# ll /usr/local/Ascend/ascend-toolkit/latest/
 total 20
 dr-xr-xr-x 14 root root  280 Sep 21 17:01 aarch64-linux
 lrwxrwxrwx  1 root root   18 Sep 21 16:55 acllib -> ../8.2.RC2/runtime
@@ -78,29 +79,29 @@ package_version=24.1.rc2.2
 ```
 # cat /usr/local/Ascend/atb-models/version.info
 MindIE-ATB Tag/Branch : master
-MindIE-ATB Version : 
-ATB-Models Version : 2.0.T3.B010
-Commit id : 09e2baa48acc295e7339dd2c3ee5c1a2024f9e40
+MindIE-ATB Version :
+ATB-Models Version :
+Commit id : 8a0bb889056f2c40e256bae4aef32cdcfbf81334
 Platform : aarch64
-Time: 2025-02-05 03:45:45 PM CST
+Time: 2025-09-21 04:43:22 PM CST
 ```
 
 ```
 # cat /usr/local/Ascend/mindie/latest/version.info
-Ascend-mindie : MindIE 2.0.T3.B010
-mindie-rt: 2.0.T3.B010
-mindie-torch: 2.0.T3.B010
-mindie-service: 2.0.T3.B010
-mindie-llm: 2.0.T3.B010
-mindie-sd:2.0.T3.B010
+Ascend-mindie : MindIE 2.1.RC2.B080
+mindie-rt: 2.1.RC2.B080
+mindie-torch: 2.1.RC2.B080
+mindie-service: 2.1.RC2.B080
+mindie-llm: 2.1.RC2.B080
+mindie-sd:2.1.RC2.B080
 Platform : aarch64
 ```
 
 ```
 # cat /usr/local/Ascend/nnal/atb/latest/version.info
-    Ascend-cann-atb : 8.0.T63
-    Ascend-cann-atb Version : 8.0.T63.B020
+    Ascend-cann-atb : 8.2.RC2
+    Ascend-cann-atb Version : 8.2.RC2.B030
     Platform : aarch64
-    branch : br_feature_cann_8.0.0_POC_20250130
-    commit id : 92b4e43b9b62dca25a47b73bef75432005378e9d
+    branch : br_release_cann_8.2.RC1_20251226
+    commit id : 02a94694766ebf12d820aa4b5d9c95c4fe149379
 ```
