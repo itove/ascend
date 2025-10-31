@@ -22,5 +22,5 @@ curl --location 'http://gx1:1025/v1/chat/completions' \
     }]
 }
 '
-echo
 
+echo

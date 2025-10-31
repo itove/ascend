@@ -13,17 +13,5 @@
 # ip为主节点ip,port为主节点port
 curl --location 'http://172.20.84.67:1025/v1/models' \
 --header 'Content-Type: application/json' \
---data '
-{
-    "object": "list",
-    "data": [
-        {
-            "id": "model-id-0",
-            "object": "model",
-            "created": 1686935002,
-            "owned_by": "MindIE Server"
-        }
-    ]
-}
-'
 
+echo
