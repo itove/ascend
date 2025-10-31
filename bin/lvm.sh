@@ -29,6 +29,8 @@ sudo lvcreate -l 100%FREE -n $lvname $vgname
 echo Creating xfs filesystem...
 sudo mkfs.xfs /dev/$vgname/$lvname
 
+sleep 2
+
 uuid=$(lsblk -n -o UUID -l /dev/$vgname/$lvname)
 echo Created: /dev/$vgname/$lvname UUID: $uuid
 
