@@ -50,7 +50,8 @@ export TASK_QUEUE_ENABLE=1
 export MINDIE_LOG_TO_STDOUT=1
 export MINDIE_LOG_TO_FILE=1
 export MINDIE_LOG_LEVEL=ERROR
-export MINDIE_LOG_PATH=/gx3/mindie
+# MindIE service will chmod 750 on both MINDIE_LOG_PATH and its parent, so add a dir `local` to absorb this
+export MINDIE_LOG_PATH=/d/log/local/mindie
 # 运行时日志
 export ASCEND_SLOG_PRINT_TO_STDOUT=0
 export ASCEND_GLOBAL_LOG_LEVEL=3
