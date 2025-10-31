@@ -4,16 +4,16 @@
 #
 # example:
 # run signle node for small model with **custom** config.json
-# CONF_PATH=/config.json MULTI=0 MODEL_PATH=/data/hf/models/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
+# CONF_PATH=/data/conf/config-1.json MULTI=0 MODEL_PATH=/data/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
 #
 # run multi nodes for large model with **default** config.json
-# MODEL_PATH=DeepSeek-V3 /data/run-in-container.sh
+# MODEL_PATH=/data/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
 
 set -e
 
-CONF_PATH=${CONF_PATH:-/data/config.json}
+CONF_PATH=${CONF_PATH:-/data/conf/config.json}
 MULTI=${MULTI:-1}
-MODEL_PATH=${MODEL_PATH:-/data2/hf/models/DeepSeek-V3}
+MODEL_PATH=${MODEL_PATH:-/data/models/deepseek-v3-0324-bf16}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
 echo MODEL_PATH is: $MODEL_PATH
