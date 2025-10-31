@@ -64,9 +64,9 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 ```
 
 ## NFS
+Edit `/etc/exports`, add:
 ```
-# Edit /etc/exports
-/mnt/data *(rw,no_root_squash))
+/mnt/data *(rw,no_root_squash)
 ```
 
 ```
