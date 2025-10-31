@@ -4,16 +4,16 @@
 #
 # example:
 # run signle node for small model with **custom** config.json
-# CONF_PATH=/data/conf/config-1.json MULTI=0 MODEL_PATH=/data/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
+# CONF_PATH=/gx3/conf/config-1.json MULTI=0 MODEL_PATH=/gx3/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /gx3/run-in-container.sh
 #
 # run multi nodes for large model with **default** config.json
-# MODEL_PATH=/data/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /data/run-in-container.sh
+# MODEL_PATH=/gx3/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /gx3/run-in-container.sh
 
 set -e
 
-CONF_PATH=${CONF_PATH:-/data/conf/config.json}
+CONF_PATH=${CONF_PATH:-/gx3/conf/config.json}
 MULTI=${MULTI:-1}
-MODEL_PATH=${MODEL_PATH:-/data/models/deepseek-v3-0324-bf16}
+MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-v3-0324-bf16}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
 echo MODEL_PATH is: $MODEL_PATH
@@ -50,7 +50,7 @@ export TASK_QUEUE_ENABLE=1
 export MINDIE_LOG_TO_STDOUT=1
 export MINDIE_LOG_TO_FILE=1
 export MINDIE_LOG_LEVEL=ERROR
-export MINDIE_LOG_PATH=/data/mindie
+export MINDIE_LOG_PATH=/gx3/mindie
 # 运行时日志
 export ASCEND_SLOG_PRINT_TO_STDOUT=0
 export ASCEND_GLOBAL_LOG_LEVEL=3
@@ -79,7 +79,7 @@ unset RANKTABLEFILE # 2.0
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 if [ $MULTI -eq 1 ]; then
-    export RANK_TABLE_FILE=/data/conf/rank_table.json
+    export RANK_TABLE_FILE=/gx3/conf/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
     export ATB_LLM_COMM_BACKEND="hccl"
@@ -111,5 +111,5 @@ if [ $MULTI -ne 1 ]; then
 fi
 
 echo Starting mindieservice_daemon... 
-mkdir -p /data/log
-bin/mindieservice_daemon 2>&1 | tee /data/log/mindie-$mindie_ver-$HOSTNAME-$(date +%Y%m%d%H%M%S).log
+mkdir -p /gx3/log
+bin/mindieservice_daemon 2>&1 | tee /gx3/log/mindie-$mindie_ver-$HOSTNAME-$(date +%Y%m%d%H%M%S).log

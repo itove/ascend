@@ -35,7 +35,8 @@ docker run -itd --user root --privileged --rm --name=$name --net=host \
    -v /usr/local/sbin/npu-smi:/usr/local/sbin/npu-smi \
    -v /usr/local/sbin:/usr/local/sbin \
    -v /etc/hccn.conf:/etc/hccn.conf \
-   -v /mnt/d:/data \
+   -v /mnt/d:/d \
+   -v /mnt/gx3:/gx3 \
    swr.cn-south-1.myhuaweicloud.com/ascendhub/mindie:$tag \
    bash
 
