@@ -13,6 +13,7 @@
     - [创建用户](./setup-adduser.md)
     - [SSH密钥](./setup-ssh.md)
     - [仓库](./setup-repo.md)
+    - [逻辑卷](./setup-lvm.md)
 - [代理 proxy](./proxy.md)
     - [dnf](./proxy-dnf.md)
     - [docker](./proxy-docker.md)

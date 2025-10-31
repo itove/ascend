@@ -1,0 +1,59 @@
+# 逻辑卷
+
+4 台服务器均配有 2 块数据盘
+* `/dev/nvme0n1` 3.5T
+* `/dev/nvme1n1` 3.5T
+
+为方便管理数据，用`LVM`将两块盘合并为一个逻辑卷(LV)。  
+* 创建 2 个 PV: `/dev/nvme0n1`, `/dev/nvme1n1`
+* 创建 1 个 VG, 名称 `elwynn`, 使用所有 PV
+* 创建 1 个 LV, 名称 `stromwind`, 使用 VG `elwynn` 的所有空间
+* 挂载 LV `stromwind` 至 `/mnt/d`, 总容量 7.0T
+
+具体操作步骤可参考项目目录中`bin/lvm.sh`，也可直接运行该脚本完成操作。
+```bash
+#!/bin/bash
+#
+# vim:ft=bash
+
+set -e
+
+disks=(/dev/nvme0n1 /dev/nvme1n1)
+
+echo DANGEROUS!!!
+echo You are about to create a new filesystem, which will DESTROY your data on ${disks[@]}!!!
+echo Sure you wanna do this?
+read -p "Type YES to confirm. [YES/n] "
+[ "$REPLY" != YES ] && exit
+
+vgname=elwynn
+lvname=stromwind
+mountpoint=/mnt/d
+
+echo Creating PVs for disks: ${disks[@]}
+sudo pvcreate ${disks[@]}
+
+echo Create VG $vgname
+sudo vgcreate $vgname ${disks[@]}
+
+echo Creating LV $lvname
+sudo lvcreate -l 100%FREE -n $lvname $vgname
+# sudo lvcreate --extents 100%FREE --name $lvname $vgname
+
+echo Creating xfs filesystem...
+sudo mkfs.xfs /dev/$vgname/$lvname
+
+sleep 2
+
+uuid=$(lsblk -n -o UUID -l /dev/$vgname/$lvname)
+echo Created: /dev/$vgname/$lvname UUID: $uuid
+
+echo Creating mountpoint: $mountpoint
+sudo mkdir $mountpoint
+
+echo Append to /etc/fstab...
+sudo sed -i '$a'"UUID=$uuid $mountpoint                  xfs     defaults        0 0" /etc/fstab
+
+echo Mounting...
+sudo mount -a
+```
