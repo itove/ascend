@@ -5,11 +5,11 @@
 * `/dev/nvme1n1` 3.5T
 
 为方便管理数据，用`LVM`将两块盘合并为一个逻辑卷(LV)，得到一个 7.0T 的数据盘。  
-* 创建 2 个 PV: `/dev/nvme0n1`, `/dev/nvme1n1`
-* 创建 1 个 VG, 名称 `elwynn`, 使用所有 PV
-* 创建 1 个 LV, 名称 `stromwind`, 使用 VG `elwynn` 的所有空间
-* 格式化 LV `stromwind`, 文件系统 `xfs`
-* 挂载 LV `stromwind` 至 `/mnt/d`, 总容量 7.0T
+1. 创建 2 个 PV: `/dev/nvme0n1`, `/dev/nvme1n1`
+1. 创建 1 个 VG, 名称 `elwynn`, 使用所有 PV
+1. 创建 1 个 LV, 名称 `stromwind`, 使用 VG `elwynn` 的所有空间
+1. 格式化 LV `stromwind`, 文件系统 `xfs`
+1. 挂载 LV `stromwind` 至 `/mnt/d`, 总容量 7.0T
 
 具体操作步骤可参考项目目录中`bin/lvm.sh`，也可直接运行该脚本完成操作。
 ```bash
