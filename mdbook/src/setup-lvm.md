@@ -8,6 +8,7 @@
 * 创建 2 个 PV: `/dev/nvme0n1`, `/dev/nvme1n1`
 * 创建 1 个 VG, 名称 `elwynn`, 使用所有 PV
 * 创建 1 个 LV, 名称 `stromwind`, 使用 VG `elwynn` 的所有空间
+* 格式化 LV `stromwind`, 文件系统 `xfs`
 * 挂载 LV `stromwind` 至 `/mnt/d`, 总容量 7.0T
 
 具体操作步骤可参考项目目录中`bin/lvm.sh`，也可直接运行该脚本完成操作。
