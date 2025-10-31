@@ -26,3 +26,4 @@
 - [arxiv.org: Ascend HiFloat8 Format for Deep Learning](https://arxiv.org/abs/2409.16626)
 - [DeepSeek-V3/R1 671B Deployment Guide: GPU Requirements](https://www.theriseunion.com/en/blog/DeepSeek-V3-R1-671B-GPU-Requirements.html)
 - [【MindIE】性能较差、推理较慢问题定位总结（持续更新~）](https://www.hiascend.com/forum/thread-02107196487257628005-1-1.html)
+- [max_tokens参数调整详解：避免DeepSeek R1-0528输出被截断](https://help.apiyi.com/deepseek-r1-0528-max-tokens-parameter-optimization-guide.html)
