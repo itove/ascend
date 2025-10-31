@@ -33,7 +33,7 @@ curl --location 'http://gx1:1025/v1/chat/completions' \
     "include_stop_str_in_output": false,
     "skip_special_tokens": true,
     "ignore_eos": false,
-    "max_tokens": 32768,
+    "max_tokens": 2048,
     "best_of": 1,
     "n": 1,
     "logprobs": false,
