@@ -2,6 +2,8 @@
 #
 # vim:ft=bash
 
+set -e
+
 disks=(/dev/nvme0n1 /dev/nvme1n1)
 
 echo DANGEROUS!!!
