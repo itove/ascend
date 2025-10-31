@@ -58,3 +58,40 @@ sudo sed -i '$a'"UUID=$uuid $mountpoint                  xfs     defaults       
 echo Mounting...
 sudo mount -a
 ```
+
+运行示例：
+```
+$ bin/lvm.sh
+DANGEROUS!!!
+You are about to create a new filesystem, which will DESTROY your data on /dev/nvme0n1 /dev/nvme1n1!!!
+Sure you wanna do this?
+Type YES to confirm. [YES/n] YES
+Creating PVs for disks: /dev/nvme0n1 /dev/nvme1n1
+  Physical volume "/dev/nvme0n1" successfully created.
+  Physical volume "/dev/nvme1n1" successfully created.
+Create VG elwynn
+  Volume group "elwynn" successfully created
+Creating LV stromwind
+WARNING: atari signature detected on /dev/elwynn/stromwind at offset 478. Wipe it? [y/n]: y
+  Wiping atari signature on /dev/elwynn/stromwind.
+WARNING: atari signature detected on /dev/elwynn/stromwind at offset 490. Wipe it? [y/n]: y
+  Wiping atari signature on /dev/elwynn/stromwind.
+  Logical volume "stromwind" created.
+Creating xfs filesystem...
+meta-data=/dev/elwynn/stromwind  isize=512    agcount=7, agsize=268435455 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=1875367936, imaxpct=5
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=521728, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+Discarding blocks...Done.
+Created: /dev/elwynn/stromwind UUID: da50973c-8cd0-40d1-a43f-2cd1b4941f0a
+Creating mountpoint: /mnt/d
+Append to /etc/fstab...
+Mounting...
+```
+
