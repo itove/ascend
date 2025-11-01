@@ -27,3 +27,7 @@
 - [DeepSeek-V3/R1 671B Deployment Guide: GPU Requirements](https://www.theriseunion.com/en/blog/DeepSeek-V3-R1-671B-GPU-Requirements.html)
 - [【MindIE】性能较差、推理较慢问题定位总结（持续更新~）](https://www.hiascend.com/forum/thread-02107196487257628005-1-1.html)
 - [max_tokens参数调整详解：避免DeepSeek R1-0528输出被截断](https://help.apiyi.com/deepseek-r1-0528-max-tokens-parameter-optimization-guide.html)
+
+## open-webui
+- [Apache Reverse Proxy Setup](https://deepwiki.com/open-webui/open-webui/15.4-apache-reverse-proxy-setup)
+- [@leo9800's share](https://github.com/open-webui/open-webui/discussions/1235#discussioncomment-9666471)
