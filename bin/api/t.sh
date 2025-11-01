@@ -20,7 +20,7 @@ curl --location 'http://gx1:1025/v1/chat/completions' \
         "role": "user",
         "content": "讲一个西部风格的故事"
     }],
-    "stream": false,
+    "stream": true,
     "presence_penalty": 1.03,
     "frequency_penalty": 1.0,
     "repetition_penalty": 1.0,
