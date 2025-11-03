@@ -30,6 +30,8 @@
     - [下载权重](./weights-download.md)
     - [权重转换](./weights-cast.md)
     - [权重分片](./sharding.md)
+- [前端](./frontend.md)
+    - [open-webui](./open-webui.md)
 - [Result](./result.md)
 - [Journal](./journal.md)
     - [20251031](./journal/20251031.md)
