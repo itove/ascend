@@ -63,7 +63,7 @@
         "ModelDeployConfig" :
         {
             "maxSeqLen" : 2560,
-            "maxInputTokenLen" : 2048,
+            "maxInputTokenLen" : 8192,
             "truncation" : false,
             "ModelConfig" : [
                 {
@@ -101,7 +101,7 @@
             "decodePolicyType" : 0,
 
             "maxBatchSize" : 200,
-            "maxIterTimes" : 2048,
+            "maxIterTimes" : 8192,
             "maxPreemptCount" : 0,
             "supportSelectBatch" : false,
             "maxQueueDelayMicroseconds" : 5000
