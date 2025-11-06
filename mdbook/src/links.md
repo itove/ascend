@@ -15,6 +15,7 @@
 - [ModelZoo/DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
 - [modelers.cn MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
+- [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
