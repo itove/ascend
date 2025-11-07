@@ -19,7 +19,7 @@ chmod 640 /usr/local/lib/python3.11/site-packages/mindiebenchmark/config/config.
 chmod 640 /usr/local/lib/python3.11/site-packages/mindieclient/python/config/config.json
 chown root:root $DATASET_PATH
 
-echo Starting benchmark...
+echo Starting performance benchmark...
 
 benchmark \
 --DatasetPath "$DATASET_PATH" \
