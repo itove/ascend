@@ -22,3 +22,5 @@ addhost 172.20.84.67 gx1
 addhost 172.20.84.77 gx2
 addhost 172.20.84.189 gx3
 addhost 172.20.84.50 gx4
+
+addhost 127.0.0.1 $HOSTNAME
