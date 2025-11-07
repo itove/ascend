@@ -6,3 +6,7 @@ maxInputTokenLen #
 truncation
 
 npuMemSize
+
+https://ai.zxaicc.com/api/v1/files/
+
+https://ai.zxaicc.com/api/chat/completions
