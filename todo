@@ -1,0 +1,8 @@
+distDPServerEnabled # 是否开启分布式部署，该参数只在大规模专家并行场景下生效。
+tokenizerProcessNumber # tokenizer进程数。必填，默认值：8。 在CPU核较多时，可以适当调大该值，tokenizer性能会更好。
+
+maxSeqLen # 最大序列长度。请根据推理场景选择合适的maxSeqLen。 如果maxSeqLen大于模型支持的最大序列长度，可能会影响推理精度。 必填，默认值：2560。
+maxInputTokenLen # 
+truncation
+
+npuMemSize

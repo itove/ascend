@@ -17,6 +17,10 @@
 - [modelers.cn MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 
+## Benchmark
+- [昇腾 910B 物理机通过benchmark测试推理性能的操作指南](https://www.ctyun.cn/document/10027724/10966633)
+- [服务化调优工具](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0326.html)
+
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
 

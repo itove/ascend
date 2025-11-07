@@ -31,6 +31,7 @@
     - [下载权重](./weights-download.md)
     - [权重转换](./weights-cast.md)
     - [权重分片](./sharding.md)
+- [benchmark](./benchmark.md)
 - [前端](./frontend.md)
     - [open-webui](./open-webui.md)
 - [Result](./result.md)
