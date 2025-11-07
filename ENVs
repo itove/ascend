@@ -10,14 +10,9 @@ echo MULTI: $MULTI
 echo MODEL_PATH is: $MODEL_PATH
 
 #hostname=$(< /etc/hostname)
-declare -A addr
-addr[gx1]=172.20.84.67
-addr[gx2]=172.20.84.77
-addr[gx3]=172.20.84.189
-addr[gx4]=172.20.84.50
-
+IP=$(getent hosts $HOSTNAME | awk '{print $1}')
 echo hostname is: $HOSTNAME
-echo IP is: ${addr[$HOSTNAME]}
+echo IP is: $IP
 
 mindie_ver=$(readlink /usr/local/Ascend/mindie/latest)
 echo MindIE version: $mindie_ver
@@ -67,6 +62,8 @@ unset MINDIE_LLM_PYTHON_LOG_LEVEL # deprecated, use MINDIE_LOG_LEVEL
 unset MINDIE_LLM_PYTHON_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
 unset MINDIE_LLM_LOG_TO_FILE # deprecated, use MINDIE_LOG_TO_FILE 
 unset RANKTABLEFILE # 2.0
+
+export MIES_CONTAINER_IP=$IP
 
 if [ $MULTI -eq 1 ]; then
     export RANK_TABLE_FILE=/gx3/conf/rank_table.json
