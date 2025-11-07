@@ -10,9 +10,12 @@
 
 . .env.local
 
+URL=https://ai.zxaicc.com
+# URL=http://172.20.29.123
+
 #--header 'Authorization: Bearer API-KEY' \
 # ip为主节点ip,port为主节点port
-curl --location 'https://ai.itove.com/api/chat/completions' \
+curl --location "$URL/api/chat/completions" \
 --header "Authorization: Bearer $API_KEY" \
 --header 'Content-Type: application/json' \
 --data '

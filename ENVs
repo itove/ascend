@@ -89,5 +89,6 @@ export OMP_NUM_THREADS=1
 # 设置显存比
 export NPU_MEMORY_FRACTION=0.96
 
+# [error] [1114] [reshape_and_cache_operation.cpp:292] ReshapeAndCacheOperation_2_0_14 key and keycache headSize should be same, value and value cache headSize should be same
 export MIES_USE_MB_SWAPPER=1
 export MIES_RECOMPUTE_THRESHOLD=0.5

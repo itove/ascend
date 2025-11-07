@@ -20,6 +20,8 @@
 ## Benchmark
 - [昇腾 910B 物理机通过benchmark测试推理性能的操作指南](https://www.ctyun.cn/document/10027724/10966633)
 - [服务化调优工具](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0326.html)
+- [MindIE BenchMark](https://www.hiascend.com/developer/blog/details/02112175780912413137)
+- [hiascend 博客: MindIE BenchMark](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0150.html)
 
 ## 硬件
 - [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
