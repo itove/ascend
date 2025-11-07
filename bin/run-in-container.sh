@@ -11,7 +11,7 @@
 
 set -e
 
-. /gx3/ENVs
+. /s/ENVs
 
 mkdir -p $MINDIE_LOG_PATH 
 chmod 750 $MINDIE_LOG_PATH 
@@ -27,5 +27,5 @@ if [ $MULTI -ne 1 ]; then
 fi
 
 echo Starting mindieservice_daemon... 
-mkdir -p /gx3/log
-bin/mindieservice_daemon 2>&1 | tee /gx3/log/mindie-$mindie_ver-$HOSTNAME-$(date +%Y%m%d%H%M%S).log
+mkdir -p /s/log
+bin/mindieservice_daemon 2>&1 | tee /s/log/mindie-$mindie_ver-$HOSTNAME-$(date +%Y%m%d%H%M%S).log

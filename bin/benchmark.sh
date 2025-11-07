@@ -8,11 +8,11 @@
 
 ############### Main Part ###############
 
-. /gx3/ENVs
+. /s/ENVs
 export MINDIE_LOG_TO_STDOUT="benchmark:1; client:1"
 export MINDIE_LOG_LEVEL=INFO
 
-DATASET_PATH=/gx3/test/dataset_gxm8k.jsonl
+DATASET_PATH=/s/test/dataset_gxm8k.jsonl
 SMPL_PARAM='{"temperature":0.5,"top_k":10,"top_p":0.9,"seed":1234,"repetition_penalty":1}'  
 
 chmod 640 /usr/local/lib/python3.11/site-packages/mindiebenchmark/config/config.json
