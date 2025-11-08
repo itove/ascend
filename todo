@@ -12,3 +12,10 @@ https://ai.zxaicc.com/api/v1/files/ POST
 https://ai.zxaicc.com/api/chat/completions POST
 
 https://ai.zxaicc.com/api/v1/chats/{chatId} DELETE POST
+
+https://ai.zxaicc.com/ollama/api/version GET
+
+
+172.20.8.66 - - [08/Nov/2025:10:05:03 +0800] "POST /api/chat/completions HTTP/1.1" 200 17350 "-" "curl/8.11.1" "-"
+
+172.20.10.77 - - [08/Nov/2025:10:06:17 +0800] "POST /api/chat/completions HTTP/1.1" 200 64 "https://172.20.29.123/c/4bb53df2-8898-44aa-b4f2-de2c39af95aa" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" "-"
