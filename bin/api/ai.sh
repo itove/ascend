@@ -15,7 +15,7 @@ URL=https://ai.zxaicc.com
 
 #--header 'Authorization: Bearer API-KEY' \
 # ip为主节点ip,port为主节点port
-curl --location "$URL/api/chat/completions" \
+curl --location "$URL/api/v1/chat/completions" \
 --header "Authorization: Bearer $API_KEY" \
 --header 'Content-Type: application/json' \
 --data '
