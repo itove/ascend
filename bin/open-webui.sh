@@ -12,8 +12,9 @@ volume=open-webui
 
 docker run \
     -e DEFAULT_LOCALE=zh-CN \
-    -e ENABLE_OPENAI_API=True
+    -e ENABLE_OPENAI_API=True \
     -e OPENAI_API_BASE_URL=http://172.20.84.67:1025/v1 \
+    --rm \
     -d -p 3000:8080 \
     -v $volume:/app/backend/data \
     --name $name \
