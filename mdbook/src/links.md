@@ -12,10 +12,13 @@
 - [错误码参考](https://www.hiascend.com/document/detail/zh/mindie/21RC2/ref/errorcodereference/mindie_log_0072.html)
 - [2.1.RC2版本配套文档](https://www.hiascend.com/document/detail/zh/mindie/21RC2/releasenote/releasenote_0018.html)
 - [推理开发](https://www.hiascend.com/developer/inference)
-- [ModelZoo/DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
 - [modelers.cn MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
+
+## 模型
+- [ModelZoo/DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
+- [ModelZoo/DeepSeek-R1](https://www.hiascend.com/software/modelzoo/models/detail/68457b8a51324310aad9a0f55c3e56e3)
 
 ## Benchmark
 - [昇腾 910B 物理机通过benchmark测试推理性能的操作指南](https://www.ctyun.cn/document/10027724/10966633)
