@@ -50,5 +50,4 @@
     - [Try 2](./try/2.md)
 
 # 其它资料
-- [DeepSeekV3-多机部署文档](./deepseekv3-multi-nodes-deploy.md)
 - [相关链接](./links.md)
