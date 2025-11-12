@@ -16,15 +16,15 @@
 - [modelers.cn MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 
-## 模型
-### Hugging Face
-- [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
-- [deepseek-ai/DeepSeek-V3-0324](https://huggingface.co/deepseek-ai/DeepSeek-V3-0324)
-- [unsloth/DeepSeek-V3-0324-BF16](https://huggingface.co/unsloth/DeepSeek-V3-0324-BF16)
-- [deepseek-ai/DeepSeek-R1-0528](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528)
-### ModelZoo
-- [DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
-- [DeepSeek-R1](https://www.hiascend.com/software/modelzoo/models/detail/68457b8a51324310aad9a0f55c3e56e3)
+## 权重
+* Hugging Face
+    - [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
+    - [deepseek-ai/DeepSeek-V3-0324](https://huggingface.co/deepseek-ai/DeepSeek-V3-0324)
+    - [unsloth/DeepSeek-V3-0324-BF16](https://huggingface.co/unsloth/DeepSeek-V3-0324-BF16)
+    - [deepseek-ai/DeepSeek-R1-0528](https://huggingface.co/deepseek-ai/DeepSeek-R1-0528)
+* ModelZoo
+    - [DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
+    - [DeepSeek-R1](https://www.hiascend.com/software/modelzoo/models/detail/68457b8a51324310aad9a0f55c3e56e3)
 
 ## Hugging Face 镜像
 - [HF-Mirror](https://hf-mirror.com)
