@@ -13,7 +13,6 @@
 - [2.1.RC2版本配套文档](https://www.hiascend.com/document/detail/zh/mindie/21RC2/releasenote/releasenote_0018.html)
 - [推理开发](https://www.hiascend.com/developer/inference)
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
-- [modelers.cn MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 
 ## 权重
@@ -25,6 +24,10 @@
 * ModelZoo
     - [DeepSeek-V3](https://www.hiascend.com/software/modelzoo/models/detail/678bdeb4e1a64c9dae51d353d84ddd15)
     - [DeepSeek-R1](https://www.hiascend.com/software/modelzoo/models/detail/68457b8a51324310aad9a0f55c3e56e3)
+* modelers.cn
+    - [MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
+    - [MindIE/DeepSeek-V3-0324](https://modelers.cn/models/MindIE/DeepSeek-V3-0324)
+    - [MindIE/DeepSeek-R1](https://modelers.cn/models/MindIE/DeepSeek-R1)
 
 ## Hugging Face 镜像
 - [HF-Mirror](https://hf-mirror.com)
