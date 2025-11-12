@@ -12,4 +12,6 @@ cd $hf_dir
 uv init -p $py_ver .
 uv venv
 # . .venv/bin/activate
-uv add huggingface-hub pysocks socksio
+#uv add huggingface-hub
+uv add huggingface_hub
+uv add pysocks socksio
