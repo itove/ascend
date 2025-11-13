@@ -1,3 +1,15 @@
 mdbook/book
 mdbook/src/log/test-3.log
 .env.local
+*.swp
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
