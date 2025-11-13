@@ -25,7 +25,7 @@ gen_checksum(){
             checksum=${checksum#*:}
         else
             echo Computing sha256sum for $i
-            checksum=$(sha256sum $i)
+            checksum=$(sha256sum $i | awk '{print $1}')
         fi
         echo $i:$checksum >> $checksum_file
     done
