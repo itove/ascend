@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-if [ -z "$1"]; then
+if [ -z "$1" ]; then
     echo 'Usage: bin/diff.sh <target_dir>'
     exit
 fi
