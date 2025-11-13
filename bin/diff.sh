@@ -20,9 +20,9 @@ gen_checksum(){
     do
         file_type=$(file -b $i)
         if [ "$file_type" = data ]; then
+            echo sha256sum for $i
             cheksum=$(sha256sum $i)
         else
-            echo sha256sum for $i
             checksum=$(grep sha256 $i)
             checksum=${checksum#*:}
         fi
