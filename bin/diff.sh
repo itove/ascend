@@ -20,12 +20,12 @@ gen_checksum(){
     for i in *.safetensors
     do
         file_type=$(file -b $i)
-        if [ "$file_type" = data ]; then
-            echo Computing sha256sum for $i
-            checksum=$(sha256sum $i)
-        else
+        if [ "$file_type" = "ASCII text"]; then
             checksum=$(grep sha256 $i)
             checksum=${checksum#*:}
+        else
+            echo Computing sha256sum for $i
+            checksum=$(sha256sum $i)
         fi
         echo $i:$checksum >> $checksum_file
     done
