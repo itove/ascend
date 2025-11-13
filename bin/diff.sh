@@ -21,19 +21,21 @@ gen_checksum(){
     do
         file_type=$(file -b $i)
         if [ "$file_type" = data ]; then
-            echo sha256sum for $i
-            cheksum=$(sha256sum $i)
+            echo Computing sha256sum for $i
+            checksum=$(sha256sum $i)
         else
             checksum=$(grep sha256 $i)
             checksum=${checksum#*:}
         fi
-        echo $i:$cheksum >> $checksum_file
+        echo $i:$checksum >> $checksum_file
     done
 }
 
 gen_checksum
 cd "$1"
+pwd
 gen_checksum
 cd -
+pwd
 
 diff $checksum_file "$1"/$checksum_file
