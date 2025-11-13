@@ -24,6 +24,8 @@ REPO_ID = "deepseek-ai/DeepSeek-V3"
 #REPO_ID = "deepseek-ai/DeepSeek-V3-0324" 
 #REPO_ID = "NousResearch/Meta-Llama-3-8B" 
 #REPO_ID = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" 
+URL=https://hf-mirror.com
+#URL=https://huggingface.co
 
 # Shared variables for inter-process communication
 manager = Manager()
@@ -63,7 +65,7 @@ def verify_file(file_path):
 
     try:
         metadata = get_hf_file_metadata(
-            url=f"https://huggingface.co/{REPO_ID}/resolve/main/{file_name}?download=true"
+            url=f"{URL}/{REPO_ID}/resolve/main/{file_name}?download=true"
         )
         expected_sha256 = metadata.etag  # etag is SHA256 for regular files
         local_sha256 = sha256_hash(file_path)
