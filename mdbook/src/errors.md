@@ -109,3 +109,7 @@ to
 ```
 "quant_method": "bf16"
 ```
+
+```
+[2025-11-10 09:57:11.935] [905] [281467242278528] [llm] [ERROR] [llm_manager_impl.cpp:987] Error: Forward is notOK!This model's maximum input ids length cannot be greater than 2559,the input ids length is 2757
+```

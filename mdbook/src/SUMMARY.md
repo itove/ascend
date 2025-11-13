@@ -45,6 +45,7 @@
     - [log](./log.md)
     - [Issue 1](./issue-1.md)
     - [Issue 2](./issue-2.md)
+    - [Errors](./errors.md)
 - [Try](./try.md)
     - [Try 1](./try/1.md)
     - [Try 2](./try/2.md)
