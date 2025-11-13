@@ -32,10 +32,9 @@ gen_checksum(){
 }
 
 gen_checksum
-cd "$1"
-pwd
-gen_checksum
-cd -
-pwd
 
+pushd "$1"
+gen_checksum
+
+popd
 diff $checksum_file "$1"/$checksum_file
