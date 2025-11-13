@@ -9,9 +9,11 @@ if [ -z "$1" ]; then
     exit
 fi
 
+echo Comparing text files...
 diff -r -x '*.safetensors' -x '.cache' -x '.git' -x '__pycache__' -x 'verify.log' -x '.gitignore' . "$1"
 
-rm $checksum_file "$1"/$checksum_file
+echo Comparing lfs...
+rm -f $checksum_file "$1"/$checksum_file
 
 gen_checksum(){
     for i in *.safetensors
@@ -20,6 +22,7 @@ gen_checksum(){
         if [ "$file_type" = data ]; then
             cheksum=$(sha256sum $i)
         else
+            echo sha256sum for $i
             checksum=$(grep sha256 $i)
             checksum=${checksum#*:}
         fi
