@@ -14,6 +14,7 @@
 - [推理开发](https://www.hiascend.com/developer/inference)
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
+- [DeepSeek V3/R1基于MindIE推理框架部署多机推理服务](https://support.huawei.com/enterprise/zh/doc/EDOC1100453275/ac88bdea)
 
 ## 权重
 * Hugging Face
@@ -28,6 +29,8 @@
     - [MindIE/deepseekv3](https://modelers.cn/models/MindIE/deepseekv3)
     - [MindIE/DeepSeek-V3-0324](https://modelers.cn/models/MindIE/DeepSeek-V3-0324)
     - [MindIE/DeepSeek-R1](https://modelers.cn/models/MindIE/DeepSeek-R1)
+    - [Modelers_Park/DeepSeek-V3-0324-w8a8](https://modelers.cn/models/Modelers_Park/DeepSeek-V3-0324-w8a8)
+    - [Modelers_Park/DeepSeek-R1-0528-w8a8](https://modelers.cn/models/Modelers_Park/DeepSeek-R1-0528-w8a8)
 
 ## Hugging Face 镜像
 - [HF-Mirror](https://hf-mirror.com)
