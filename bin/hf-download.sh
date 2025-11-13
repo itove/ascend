@@ -17,10 +17,14 @@ modelname=${1:-deepseek-ai/DeepSeek-R1-0528}
 
 hf_dir=/mnt/d/hf
 
+i=0
 while :
 do
     echo Start downloading model: $modelname
     echo cache dir: $hf_dir/cache
     echo weights dir: $hf_dir/$modelname
+    let i++
     hf download $modelname --cache-dir $hf_dir/cache --local-dir $hf_dir/$modelname && break
 done
+
+echo Done. Tried $i times.
