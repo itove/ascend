@@ -2,18 +2,19 @@
 #
 # vim:ft=bash
 
-checksum_file=checksum
 
 if [ -z "$1" ]; then
     echo 'Usage: bin/diff.sh <target_dir>'
     exit
 fi
 
+checksum_file=checksum
+rm -f $checksum_file "$1"/$checksum_file
+
 echo Comparing text files...
 diff -r -x '*.safetensors' -x '.cache' -x '.git' -x '__pycache__' -x 'verify.log' -x '.gitignore' . "$1"
 
 echo Comparing lfs...
-rm -f $checksum_file "$1"/$checksum_file
 
 gen_checksum(){
     for i in *.safetensors
