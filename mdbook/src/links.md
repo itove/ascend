@@ -32,6 +32,10 @@
     - [Modelers_Park/DeepSeek-V3-0324-w8a8](https://modelers.cn/models/Modelers_Park/DeepSeek-V3-0324-w8a8)
     - [Modelers_Park/DeepSeek-R1-0528-w8a8](https://modelers.cn/models/Modelers_Park/DeepSeek-R1-0528-w8a8)
 
+## 量化
+- [DeepSeek 应用最佳实践之量化](https://www.hiascend.com/developer/techArticles/20250222-1)
+- [DeepSeek 量化案例](https://gitee.com/ascend/msit/tree/br_noncom_MindStudio_8.0.0_POC_20251231/msmodelslim/example/DeepSeek)
+
 ## Hugging Face 镜像
 - [HF-Mirror](https://hf-mirror.com)
 
