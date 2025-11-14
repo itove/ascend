@@ -4,7 +4,8 @@
 
 CONF_PATH=${CONF_PATH:-/gx3/conf/config.json}
 MULTI=${MULTI:-1}
-MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-v3-0324-bf16}
+MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-bf16}
+MODELNAME=${MODELNAME:-DeepSeek-R1-0528}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
 echo MODEL_PATH is: $MODEL_PATH

@@ -68,7 +68,7 @@
             "ModelConfig" : [
                 {
                     "modelInstanceType" : "Standard",
-                    "modelName" : "deepseek-v3",
+                    "modelName" : "MODELNAME",
                     "modelWeightPath" : "MODEL_PATH",
                     "worldSize" : 4,
                     "cpuMemSize" : 5,
