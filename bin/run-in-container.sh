@@ -15,6 +15,8 @@ set -e
 
 mkdir -p $MINDIE_LOG_PATH 
 chmod 750 $MINDIE_LOG_PATH 
+chown root:root $RANK_TABLE_FILE
+chmod 640 $RANK_TABLE_FILE
 
 cd $MIES_INSTALL_PATH
 
