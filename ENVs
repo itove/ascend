@@ -73,7 +73,7 @@ unset RANKTABLEFILE # 2.0
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 if [ $NODES -gt 1 ]; then
-    # we can symlink rank_table.json to the actual rank_table file we need
+    # rank_table file can NOT use symlink
     export RANK_TABLE_FILE=/s/conf/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
