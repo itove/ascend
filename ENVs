@@ -2,9 +2,9 @@
 #
 # container ENVs
 
-CONF_PATH=${CONF_PATH:-/gx3/conf/config.json}
+CONF_PATH=${CONF_PATH:-/s/ascend/conf/config.json}
 MULTI=${MULTI:-1}
-MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-bf16}
+MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
 MODELNAME=${MODELNAME:-DeepSeek-R1-0528}
 echo CONF_PATH is $CONF_PATH
 echo MULTI: $MULTI
@@ -72,15 +72,15 @@ unset RANKTABLEFILE # 2.0
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 if [ $MULTI -eq 1 ]; then
-    export RANK_TABLE_FILE=/gx3/conf/rank_table.json
+    export RANK_TABLE_FILE=/s/ascend/conf/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
     export ATB_LLM_COMM_BACKEND="hccl"
     export HCCL_CONNECT_TIMEOUT=7200 # 该环境变量需要配置为整数，取值范围[120,7200]，单位s
     # 双机：
-    #export WORLD_SIZE=16
+    export WORLD_SIZE=16
     # 四机：
-    export WORLD_SIZE=32
+    # export WORLD_SIZE=32
     export HCCL_EXEC_TIMEOUT=0
     export HCCL_BUFFSIZE=120
 fi
