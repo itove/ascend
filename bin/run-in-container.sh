@@ -11,7 +11,7 @@
 
 set -e
 
-. /s/ascend/ENVs
+. /s/ENVs
 
 mkdir -p $MINDIE_LOG_PATH 
 chmod 750 $MINDIE_LOG_PATH 

@@ -2,7 +2,7 @@
 #
 # container ENVs
 
-CONF_PATH=${CONF_PATH:-/s/ascend/conf/config.json}
+CONF_PATH=${CONF_PATH:-/s/conf/config.json}
 MULTI=${MULTI:-1}
 MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
 MODELNAME=${MODELNAME:-DeepSeek-R1-0528}
@@ -72,7 +72,7 @@ unset RANKTABLEFILE # 2.0
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
 if [ $MULTI -eq 1 ]; then
-    export RANK_TABLE_FILE=/s/ascend/conf/rank_table.json
+    export RANK_TABLE_FILE=/s/conf/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
     export ATB_LLM_COMM_BACKEND="hccl"
