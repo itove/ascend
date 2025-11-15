@@ -27,10 +27,10 @@ sed -i "/modelName/s:MODELNAME:$MODELNAME:" conf/config.json
 sed -i "/modelWeightPath/s:MODEL_PATH:$MODEL_PATH:" conf/config.json
 if [ $NODES -gt 1 ]; then
     sed -i "/multiNodesInferEnabled/s/false/true/" conf/config.json
-    sed -i "/DP/s:DP:$DP:" conf/config.json
-    sed -i "/TP/s:TP:$TP:" conf/config.json
-    sed -i "/MOE_TP/s:MOE_TP:$MOE_TP:" conf/config.json
-    sed -i "/MOE_EP/s:MOE_EP:$MOE_EP:" conf/config.json
+    sed -i "/DP_DP/s:DP_DP:$DP_DP:" conf/config.json
+    sed -i "/DP_TP/s:DP_TP:$DP_TP:" conf/config.json
+    sed -i "/DP_MOE_TP/s:DP_MOE_TP:$DP_MOE_TP:" conf/config.json
+    sed -i "/DP_MOE_EP/s:DP_MOE_EP:$DP_MOE_EP:" conf/config.json
 fi
 
 echo Starting mindieservice_daemon... 

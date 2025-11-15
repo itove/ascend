@@ -78,10 +78,10 @@
                     "async_scheduler_wait_time": 120,
                     "kv_trans_timeout": 10,
                     "kv_link_timeout": 1080,
-                    "dp": DP,
-                    "tp": TP,
-                    "moe_tp": MOE_TP,
-                    "moe_ep": MOE_EP 
+                    "dp": DP_DP,
+                    "tp": DP_TP,
+                    "moe_tp": DP_MOE_TP,
+                    "moe_ep": DP_MOE_EP 
                 }
             ]
         },

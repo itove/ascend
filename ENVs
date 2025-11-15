@@ -82,10 +82,10 @@ if [ $NODES -gt 1 ]; then
     export WORLD_SIZE=$(($NODES * 8))
     export HCCL_EXEC_TIMEOUT=0
     export HCCL_BUFFSIZE=120
-    DP=4
-    TP=$((2 * $NODES))
-    MOE_TP=1
-    MOE_EP=$WORLD_SIZE
+    DP_DP=4
+    DP_TP=$((2 * $NODES))
+    DP_MOE_TP=1
+    DP_MOE_EP=$WORLD_SIZE
 fi
 
 # 解决权重加载过慢问题
