@@ -48,7 +48,7 @@
         "modelInstanceNumber" : 1,
         "npuDeviceIds" : [[0,1,2,3]],
         "tokenizerProcessNumber" : 8,
-        "multiNodesInferEnabled" : true,
+        "multiNodesInferEnabled" : false,
         "multiNodesInferPort" : 1120,
         "interNodeTLSEnabled" : false,
         "interNodeTlsCaPath" : "security/grpc/ca/",
@@ -78,10 +78,10 @@
                     "async_scheduler_wait_time": 120,
                     "kv_trans_timeout": 10,
                     "kv_link_timeout": 1080,
-                    "dp": 4,
-                    "tp": 8,
-                    "moe_tp": 1,
-                    "moe_ep": 32
+                    "dp": DP,
+                    "tp": TP,
+                    "moe_tp": MOE_TP,
+                    "moe_ep": MOE_EP 
                 }
             ]
         },

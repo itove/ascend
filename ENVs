@@ -3,12 +3,13 @@
 # container ENVs
 
 CONF_PATH=${CONF_PATH:-/s/conf/config.json}
-MULTI=${MULTI:-1}
+NODES=${NODES:-2}
 MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
 MODELNAME=${MODELNAME:-DeepSeek-R1-0528}
 echo CONF_PATH is $CONF_PATH
-echo MULTI: $MULTI
+echo NODES: $NODES
 echo MODEL_PATH is: $MODEL_PATH
+echo MODELNAME is: $MODELNAME
 
 declare -A addr
 addr=(
@@ -71,18 +72,20 @@ unset RANKTABLEFILE # 2.0
 
 export MIES_CONTAINER_IP=${addr[$HOSTNAME]}
 
-if [ $MULTI -eq 1 ]; then
+if [ $NODES -gt 1 ]; then
+    # we can symlink rank_table.json to the actual rank_table file we need
     export RANK_TABLE_FILE=/s/conf/rank_table.json
     export HCCL_DETERMINISTIC=true
     export ATB_LLM_HCCL_ENABLE=1
     export ATB_LLM_COMM_BACKEND="hccl"
     export HCCL_CONNECT_TIMEOUT=7200 # 该环境变量需要配置为整数，取值范围[120,7200]，单位s
-    # 双机：
-    export WORLD_SIZE=16
-    # 四机：
-    # export WORLD_SIZE=32
+    export WORLD_SIZE=$(($NODES * 8))
     export HCCL_EXEC_TIMEOUT=0
     export HCCL_BUFFSIZE=120
+    DP=4
+    TP=$((2 * $NODES))
+    MOE_TP=1
+    MOE_EP=$WORLD_SIZE
 fi
 
 # 解决权重加载过慢问题

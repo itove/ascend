@@ -4,7 +4,7 @@
 #
 # example:
 # run signle node for small model with **custom** config.json
-# CONF_PATH=/gx3/conf/config-1.json MULTI=0 MODEL_PATH=/gx3/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /gx3/run-in-container.sh
+# CONF_PATH=/gx3/conf/config-1.json NODES=1 MODEL_PATH=/gx3/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /gx3/run-in-container.sh
 #
 # run multi nodes for large model with **default** config.json
 # MODEL_PATH=/gx3/hf/deepseek-ai/DeepSeek-R1-Distill-Llama-8B /gx3/run-in-container.sh
@@ -25,8 +25,12 @@ cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
 sed -i "/modelName/s:MODELNAME:$MODELNAME:" conf/config.json
 sed -i "/modelWeightPath/s:MODEL_PATH:$MODEL_PATH:" conf/config.json
-if [ $MULTI -ne 1 ]; then
-    sed -i "/multiNodesInferEnabled/s/true/false/" conf/config.json
+if [ $NODES -gt 1 ]; then
+    sed -i "/multiNodesInferEnabled/s/false/true/" conf/config.json
+    sed -i "/DP/s:DP:$DP:" conf/config.json
+    sed -i "/TP/s:TP:$TP:" conf/config.json
+    sed -i "/MOE_TP/s:MOE_TP:$MOE_TP:" conf/config.json
+    sed -i "/MOE_EP/s:MOE_EP:$MOE_EP:" conf/config.json
 fi
 
 echo Starting mindieservice_daemon... 
