@@ -27,7 +27,7 @@ export SOCKS_SERVER=$SERVER:$PORT
 export SOCKS_VERSION=5
 ```
 
-如果需要用 **ssh remote forwarding(`ssh -R`)**，则需要确认`sshd`配置中开启了端口转发：
+如果需要用 **ssh remote port forwarding(`ssh -R`)**，则需要确认`sshd`配置中开启了端口转发：
 ```
 AllowTcpForwarding yes
 ```
