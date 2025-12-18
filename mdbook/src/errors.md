@@ -114,6 +114,12 @@ to
 [2025-11-10 09:57:11.935] [905] [281467242278528] [llm] [ERROR] [llm_manager_impl.cpp:987] Error: Forward is notOK!This model's maximum input ids length cannot be greater than 2559,the input ids length is 2757
 ```
 
+```
+[2025-11-15 11:29:26.697+08:00] [912] [916] [server] [ERROR] [endpoint.cpp:37] : [MIE04E02011C] [endpoint] Failed to init infer backend manager
+[2025-11-15 11:29:26.700+08:00] [912] [916] [server] [ERROR] [llm_daemon.cpp:160] : [MIE04E01011C] [daemon] Failed to init endpoint! Please check the service log or console output.
+```
+权重路径错误。
+
 ## 量化
 `AssertionError: Torch not compiled with CUDA enabled`
 > torch_npu没能替换cuda到npu,在文件导入处添加 from torch_npu.contrib import transfer_to_npu
