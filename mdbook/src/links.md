@@ -1,5 +1,11 @@
 # 相关链接
 
+
+## 昇腾计算
+- [昇腾计算](https://e.huawei.com/cn/products/computing/ascend)
+- [大模型推理解决方案](https://e.huawei.com/cn/solutions/computing/ascend-computing/large-model-inference)
+- [昇腾推理解决方案](https://support.huawei.com/enterprise/zh/ascend-computing/ascend-inference-solution-pid-258915651)
+
 ## MindIE
 - [MindIE](https://www.hiascend.com/document/detail/zh/mindie/)
 - [MindIE镜像](https://www.hiascend.com/developer/ascendhub/detail/af85b724a7e5469ebd7ea13c3439d48f)
