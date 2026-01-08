@@ -5,6 +5,8 @@
 - [昇腾计算](https://e.huawei.com/cn/products/computing/ascend)
 - [大模型推理解决方案](https://e.huawei.com/cn/solutions/computing/ascend-computing/large-model-inference)
 - [昇腾推理解决方案](https://support.huawei.com/enterprise/zh/ascend-computing/ascend-inference-solution-pid-258915651)
+- [推理开发](https://www.hiascend.com/developer/inference)
+- [大语言模型推理](https://www.hiascend.com/document-scene/zh/devScene/llminfer/index.html)
 
 ## MindIE
 - [MindIE](https://www.hiascend.com/document/detail/zh/mindie/)
@@ -17,7 +19,6 @@
 - [环境变量](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0300.html)
 - [错误码参考](https://www.hiascend.com/document/detail/zh/mindie/21RC2/ref/errorcodereference/mindie_log_0072.html)
 - [2.1.RC2版本配套文档](https://www.hiascend.com/document/detail/zh/mindie/21RC2/releasenote/releasenote_0018.html)
-- [推理开发](https://www.hiascend.com/developer/inference)
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 - [DeepSeek V3/R1基于MindIE推理框架部署多机推理服务](https://support.huawei.com/enterprise/zh/doc/EDOC1100453275/ac88bdea)
@@ -57,7 +58,8 @@
 - [hiascend 博客: MindIE BenchMark](https://www.hiascend.com/document/detail/zh/mindie/21RC2/mindieservice/servicedev/mindie_service0150.html)
 
 ## 硬件
-- [神州 KunTai A924 训练/推理服务器](https://www.shenzhoukuntai.com/product/detail/119/43)
+- [神州鲲泰 KunTai A924 训练/推理服务器](https://shenzhoukuntai.com/product/detail/119/43)
+- [神州鲲泰 KunTai R722 通用服务器](https://shenzhoukuntai.com/product/detail/120/6)
 
 ## 其它
 - [Floating-Point 8: An Introduction to Efficient, Lower-Precision AI Training](https://developer.nvidia.com/blog/floating-point-8-an-introduction-to-efficient-lower-precision-ai-training/)
