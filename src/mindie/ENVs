@@ -2,6 +2,8 @@
 #
 # container ENVs
 
+all_proxy=socks5://localhost:1080
+
 CONF_PATH=${CONF_PATH:-/s/conf/config.json}
 NODES=${NODES:-2}
 MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
