@@ -7,7 +7,7 @@ all_proxy=socks5://localhost:1080
 CONF_PATH=${CONF_PATH:-/s/conf/config.json}
 NODES=${NODES:-2}
 MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
-MODELNAME=${MODELNAME:-DeepSeek-R1-0528}
+MODELNAME=${MODELNAME:-deepseek-r1-0528}
 echo CONF_PATH is $CONF_PATH
 echo NODES: $NODES
 echo MODEL_PATH is: $MODEL_PATH
