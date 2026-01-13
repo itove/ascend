@@ -20,7 +20,7 @@ curl --location "$URL/api/v1/chat/completions" \
 --header 'Content-Type: application/json' \
 --data '
 {
-    "model": "DeepSeek-V3-0324",
+    "model": "deepseek-r1-0528",
     "messages": [{
         "role": "user",
         "content": "你是谁"
