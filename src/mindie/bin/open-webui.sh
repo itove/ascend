@@ -14,6 +14,7 @@ volume=open-webui
     # -e ENV=dev \
 docker run \
     -e DEFAULT_LOCALE=zh-CN \
+    -e ENABLE_API_KEYS=True \
     -e ENABLE_OPENAI_API=True \
     -e OPENAI_API_BASE_URL="http://172.20.84.67:1025/v1" \
     -e CORS_ALLOW_ORIGIN="https://ai.zxaicc.com" \
