@@ -13,6 +13,8 @@
 
 # uv tool install huggingface_hub
 
+export HF_ENDPOINT=https://hf-mirror.com
+
 modelname=${1:-deepseek-ai/DeepSeek-R1-0528}
 
 hf_dir=/mnt/d/hf
