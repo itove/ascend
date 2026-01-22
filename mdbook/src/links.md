@@ -24,6 +24,10 @@
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 - [DeepSeek V3/R1基于MindIE推理框架部署多机推理服务](https://support.huawei.com/enterprise/zh/doc/EDOC1100453275/ac88bdea)
 
+## 模型
+* Qwen
+    - [Key Concepts](https://qwen.readthedocs.io/en/latest/getting_started/concepts.html)
+
 ## 权重
 * Hugging Face
     - [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
