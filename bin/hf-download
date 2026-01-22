@@ -2,22 +2,20 @@
 #
 # vim:ft=bash
 
-############### Variables ###############
-
-############### Functions ###############
-
-############### Main Part ###############
-
-# uv
-#
-
-# uv tool install huggingface_hub
-
 export HF_ENDPOINT=https://hf-mirror.com
-
-modelname=${1:-deepseek-ai/DeepSeek-R1-0528}
-
 hf_dir=/mnt/d/hf
+
+_help(){
+    echo Download weight into $hf_dir
+    echo 'Usage: hf-download <user/model_name>'
+}
+
+modelname="$1"
+
+if [ -z "$modelname" ]; then
+    _help
+    exit
+fi
 
 i=0
 while :
