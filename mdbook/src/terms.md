@@ -1,0 +1,5 @@
+- DPO Direct Preference Optimization
+- RLHF Reinforcement Learning from Human Feedback
+- SFT Supervised Fine-Tuning
+- LoRA Low-Rank Adaptation
+- MoE Mixture of experts
