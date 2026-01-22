@@ -7,6 +7,7 @@
 - [昇腾推理解决方案](https://support.huawei.com/enterprise/zh/ascend-computing/ascend-inference-solution-pid-258915651)
 - [推理开发](https://www.hiascend.com/developer/inference)
 - [大语言模型推理](https://www.hiascend.com/document-scene/zh/devScene/llminfer/index.html)
+- [MindSpeed-LLM](https://gitcode.com/Ascend/MindSpeed-LLM)
 
 ## MindIE
 - [MindIE](https://www.hiascend.com/document/detail/zh/mindie/)
