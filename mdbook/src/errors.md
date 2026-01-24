@@ -125,3 +125,8 @@ to
 > torch_npu没能替换cuda到npu,在文件导入处添加 from torch_npu.contrib import transfer_to_npu
 >
 > <https://gitee.com/ascend/msit/issues/ICD01Q#note_42593184_link>
+
+## GLM
+```
+RuntimeError: Please export DP_MOVE_UP_ENABLE=1 when set attn_dp > 1.
+```
