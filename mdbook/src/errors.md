@@ -130,3 +130,12 @@ to
 ```
 RuntimeError: Please export DP_MOVE_UP_ENABLE=1 when set attn_dp > 1.
 ```
+
+## MindIE 2.3.0 DynamicConfigHandler exception
+<https://www.hiascend.com/forum/thread-0296204606804118605-1-1.html>
+MindIE 版本 2.1.RC2 和 2.2.RC1 都正常启动，无报错。
+更新至 2.3.0 后，服务能正常启动，但日志中持续报错：
+```
+DynamicConfigHandler exception: [json.exception.out_of_range.403] key 'EnableDynamicAdjustTimeoutConfig' not found
+```
+文档中没有找到相关内容，请问这个具体是什么配置，该怎么配置？
