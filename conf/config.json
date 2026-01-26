@@ -106,5 +106,7 @@
             "supportSelectBatch" : false,
             "maxQueueDelayMicroseconds" : 5000
         }
-    }
+    },
+
+    "EnableDynamicAdjustTimeoutConfig": false
 }
