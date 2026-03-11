@@ -139,3 +139,10 @@ MindIE 版本 2.1.RC2 和 2.2.RC1 都正常启动，无报错。
 DynamicConfigHandler exception: [json.exception.out_of_range.403] key 'EnableDynamicAdjustTimeoutConfig' not found
 ```
 文档中没有找到相关内容，请问这个具体是什么配置，该怎么配置？
+
+## MindIE 2.3.0 / qwen3.5-122b-a10b eos_token_id error
+```
+  File "/usr/local/Ascend/atb-models/atb_llm/models/base/router.py", line 52, in check_value
+    raise ValueError(f"self._config.{attr_ins} must be between {min_val} and {max_val}")
+ValueError: self._config.eos_token_id must be between 0 and 151935
+```
