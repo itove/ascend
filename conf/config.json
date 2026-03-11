@@ -68,7 +68,7 @@
             "ModelConfig" : [
                 {
                     "modelInstanceType" : "Standard",
-                    "modelName" : "MODELNAME",
+                    "modelName" : "MODEL_NAME",
                     "modelWeightPath" : "MODEL_PATH",
                     "worldSize" : 4,
                     "cpuMemSize" : 5,

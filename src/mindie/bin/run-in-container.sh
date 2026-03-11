@@ -15,15 +15,13 @@ set -e
 
 mkdir -p $MINDIE_LOG_PATH 
 chmod 750 $MINDIE_LOG_PATH 
-chown root:root $RANK_TABLE_FILE
-chmod 640 $RANK_TABLE_FILE
 
 cd $MIES_INSTALL_PATH
 
 echo Copy and edit config.json...
 cp $CONF_PATH conf/config.json
 sed -i "/ipAddress/s/IP_ADDR/${addr[$HOSTNAME]}/" conf/config.json
-sed -i "/modelName/s:MODELNAME:$MODELNAME:" conf/config.json
+sed -i "/modelName/s:MODEL_NAME:$MODEL_NAME:" conf/config.json
 sed -i "/modelWeightPath/s:MODEL_PATH:$MODEL_PATH:" conf/config.json
 if [ $NODES -gt 1 ]; then
     sed -i "/multiNodesInferEnabled/s/false/true/" conf/config.json
@@ -31,6 +29,9 @@ if [ $NODES -gt 1 ]; then
     sed -i "/DP_TP/s:DP_TP:$DP_TP:" conf/config.json
     sed -i "/DP_MOE_TP/s:DP_MOE_TP:$DP_MOE_TP:" conf/config.json
     sed -i "/DP_MOE_EP/s:DP_MOE_EP:$DP_MOE_EP:" conf/config.json
+
+    chown root:root $RANK_TABLE_FILE
+    chmod 640 $RANK_TABLE_FILE
 fi
 
 echo Starting mindieservice_daemon... 
