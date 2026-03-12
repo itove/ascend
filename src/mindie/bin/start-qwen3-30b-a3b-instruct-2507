@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# vim:ft=bash
+
+NODES=1 MODEL_PATH=/s/hf/Qwen/Qwen3-30B-A3B-Instruct-2507 /s/bin/run-in-container.sh

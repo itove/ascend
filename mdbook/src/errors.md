@@ -146,3 +146,16 @@ DynamicConfigHandler exception: [json.exception.out_of_range.403] key 'EnableDyn
     raise ValueError(f"self._config.{attr_ins} must be between {min_val} and {max_val}")
 ValueError: self._config.eos_token_id must be between 0 and 151935
 ```
+
+## 
+```
+maxSeqLen: 262144
+maxInputTokenLen: 184320
+maxPrefillTokens: 184320
+maxIterTimes: 77824
+```
+```
+RuntimeError: Warmup failed. This issue could be caused by setting both `max_prefill_tokens` and `max_input_length` to very large values, or setting insufficient `npu_mem`. Reducing either `max_prefill_tokens` or
+`max_input_length` may help resolve this issue. If `npu_mem` is -1, try to increase the environment value `NPU_MEMORY_FRACTION` or `npu_mem` in configuration directly. Increase `world_size` can be another choice.
+```
+Reduce `maxIterTimes` to 8192 fix it.
