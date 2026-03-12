@@ -1,5 +1,4 @@
-mdbook/book
-mdbook/src/log/test-3.log
+docs/book
 .env.local
 *.swp
 
