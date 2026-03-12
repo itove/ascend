@@ -2,8 +2,8 @@
 #
 # vim:ft=bash
 
-tag=2.2.RC1-800I-A2-py311-openeuler24.03-lts
 name=mindie
+tag=tag=2.3.0-800I-A2-py311-openeuler24.03-lts
 #name=mindie2.1
 #tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
 #name=mindie2.0
