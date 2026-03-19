@@ -18,7 +18,7 @@ is_lfs_pointer(){
     return $ret
 }
 
-checksum(){
+check_sum(){
     files=`find . \( -path './.git' -o -path './.cache' \) -prune -o -type f -print`
 
     for i in $files
@@ -30,6 +30,7 @@ checksum(){
             echo Computing sha256sum for $i
             checksum=$(sha256sum "$i" | awk '{print $1}')
         fi
+        echo "$checksum  $i" >> $checksum_file
     done
 }
 
@@ -43,11 +44,11 @@ fi
 rm -f $checksum_file "$1"/$checksum_file
 
 # compute file sums in current dir
-checksum
+check_sum
 
 # compute file sums in target dir
 pushd "$1"
-checksum
+check_sum
 popd
 
 diff $checksum_file "$1"/$checksum_file
