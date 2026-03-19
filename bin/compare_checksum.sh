@@ -53,4 +53,5 @@ pushd "$1"
 check_sum
 popd
 
+echo Compare checksum diff:
 diff $checksum_file "$1"/$checksum_file
