@@ -24,6 +24,7 @@ check_sum(){
     for i in $files
     do
         if is_lfs_pointer "$i"; then
+            echo LFS pointer found: $i, extracting sha256sum
             checksum=$(grep sha256 "$i")
             checksum=${checksum#*:}
         else
