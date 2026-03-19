@@ -20,7 +20,7 @@ is_lfs_pointer(){
 }
 
 check_sum(){
-    files=`find . \( -path './.git' -o -path './.cache' \) -prune -o -type f -print`
+    files=`find . \( -path './.git' -o -path './.cache' \) -prune -o -type f -print | sort`
 
     for i in $files
     do
