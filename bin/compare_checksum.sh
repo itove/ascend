@@ -7,9 +7,10 @@ checksum_file=checksum
 
 ############### Functions ###############
 is_lfs_pointer(){
-    local ret
+    local ret file_type
     ret=-1
-    if [ "$1" = "ASCII text" ]; then
+    file_type=$(file -b "$1")
+    if [ "$file_type" = "ASCII text" ]; then
         if head -n 1 "$1" | grep -q "git-lfs.github.com/spec"; then
             ret=0
         fi
