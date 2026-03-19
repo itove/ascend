@@ -3,6 +3,7 @@
 # vim:ft=bash
 
 export HF_ENDPOINT=https://hf-mirror.com
+#export HF_HUB_ENABLE_HF_TRANSFER=1
 hf_dir=/mnt/d/hf
 
 _help(){
@@ -24,7 +25,10 @@ do
     echo cache dir: $hf_dir/cache
     echo weights dir: $hf_dir/$modelname
     let i++
-    hf download $modelname --cache-dir $hf_dir/cache --local-dir $hf_dir/$modelname && break
+    hf download $modelname\
+        --cache-dir $hf_dir/cache\
+        --local-dir $hf_dir/$modelname\
+        && break
 done
 
 echo Done. Tried $i times.
