@@ -166,3 +166,5 @@ huggingface_hub.errors.HfHubHTTPError: 403 Forbidden: None.
 Cannot access content at: https://hf-mirror.com/api/resolve-cache/models/Wan-AI/Wan2.2-I2V-A14B/206a9ee1b7bfaaf8f7e4d81335650533490646a3/nohup.out.
 Make sure your token has the correct permissions.
 ```
+
+add option `--exclude "nohup.out"` to hf download
