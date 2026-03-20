@@ -3,12 +3,7 @@
 # vim:ft=bash
 
 name=${1:-mindie}
-tag=tag=2.3.0-800I-A2-py311-openeuler24.03-lts
-#name=mindie2.1
-#tag=2.0.T3.1-800I-A2-py311-openeuler24.03-lts 
-#name=mindie2.0
-#tag=2.2.T30-800I-A2-py311-openeuler24.03-lts-arm64
-#name=mindie2.2
+tag=2.3.0-800I-A2-py311-openeuler24.03-lts
 
 echo Stopping previous one...
 docker stop $name
