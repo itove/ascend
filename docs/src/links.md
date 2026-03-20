@@ -8,6 +8,7 @@
 - [推理开发](https://www.hiascend.com/developer/inference)
 - [大语言模型推理](https://www.hiascend.com/document-scene/zh/devScene/llminfer/index.html)
 - [MindSpeed-LLM](https://gitcode.com/Ascend/MindSpeed-LLM)
+- [昇腾开源文档中心](https://ascend.github.io/docs/)
 
 ## MindIE
 - [MindIE](https://www.hiascend.com/document/detail/zh/mindie/)
