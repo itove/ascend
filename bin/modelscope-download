@@ -25,8 +25,8 @@ do
     let i++
     modelscope download \
         --model $modelname\
-        --cache-dir $pdir/cache\
-        --local-dir $pdir/$modelname\
+        --cache_dir $pdir/cache\
+        --local_dir $pdir/$modelname\
         && break
 done
 
