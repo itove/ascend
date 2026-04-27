@@ -89,3 +89,4 @@
 ## DeepSeek-V4
 - [昇腾MindStudio支持DeepSeek-V4模型W8A8量化](https://www.hiascend.com/forum/thread-02165212419023613086-1-1.html)
 - [DeepSeek-V4适配安装常见问题](https://www.hiascend.com/forum/thread-02166212399514973086-1-1.html)
+- [DeepSeek-V4适配安装常见问题(博客)](https://www.hiascend.com/developer/blog/details/02166212399514973086)
