@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+# vim:ft=bash
+
+pdir=/mnt/d/modelscope
+
+_help(){
+    echo Download weight into $pdir
+    echo 'Usage: modelscope-download <user/model_name>'
+}
+
+modelname="$1"
+
+if [ -z "$modelname" ]; then
+    _help
+    exit
+fi
+
+i=0
+while :
+do
+    echo Start downloading model: $modelname
+    echo cache dir: $pdir/cache
+    echo weights dir: $pdir/$modelname
+    let i++
+    modelscope download \
+        --model $modelname\
+        --cache-dir $pdir/cache\
+        --local-dir $pdir/$modelname\
+        && break
+done
+
+echo Done. Tried $i times.
