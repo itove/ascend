@@ -24,6 +24,7 @@
 - [MindIE服务化部署](https://www.mindspore.cn/mindformers/docs/zh-CN/r1.3.0/usage/mindie_deployment.html)
 - [使用MindIE启动DeepSeekV3-0324量化版本推理服务，最大输入长度配置为40K时执行长输入推理报错](https://www.hiascend.com/developer/blog/details/0292180348701373077)
 - [DeepSeek V3/R1基于MindIE推理框架部署多机推理服务](https://support.huawei.com/enterprise/zh/doc/EDOC1100453275/ac88bdea)
+- [【FAQ】MindIE安装部署、模型适配、配置类常见问题](https://www.hiascend.com/forum/thread-02152210598111181005-1-1.html)
 
 ## 模型
 * Qwen
@@ -81,3 +82,10 @@
 ## open-webui
 - [Apache Reverse Proxy Setup](https://deepwiki.com/open-webui/open-webui/15.4-apache-reverse-proxy-setup)
 - [@leo9800's share](https://github.com/open-webui/open-webui/discussions/1235#discussioncomment-9666471)
+
+## Qwen3.5
+- [【FAQ】Qwen3.5系列安装部署类常见问题](https://www.hiascend.com/forum/thread-02149210599313553007-1-1.html)
+
+## DeepSeek-V4
+- [昇腾MindStudio支持DeepSeek-V4模型W8A8量化](https://www.hiascend.com/forum/thread-02165212419023613086-1-1.html)
+- [DeepSeek-V4适配安装常见问题](https://www.hiascend.com/forum/thread-02166212399514973086-1-1.html)
