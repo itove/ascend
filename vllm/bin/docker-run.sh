@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-name=vllm-ascend-env
+name=vllm-ascend
 
 echo Stopping previous one...
 docker stop $name
@@ -15,13 +15,14 @@ echo Starting new...
 # Update --device according to your device (Atlas A2: /dev/davinci[0-7] Atlas A3:/dev/davinci[0-15]).
 # Update the vllm-ascend image according to your environment.
 # Note you should download the weight to /root/.cache in advance.
-export IMAGE=quay.io/ascend/vllm-ascend:v0.13.0rc1-openeuler
+export IMAGE=quay.io/ascend/vllm-ascend:v0.13.0rc3
+
 docker run --rm \
     --user root \
     --privileged \
     --name $name \
-    --shm-size=1g \
     --net=host \
+    --shm-size=1g \
     --device /dev/davinci0 \
     --device /dev/davinci1 \
     --device /dev/davinci2 \
@@ -39,10 +40,11 @@ docker run --rm \
     -v /usr/local/Ascend/driver/lib64/:/usr/local/Ascend/driver/lib64/ \
     -v /usr/local/Ascend/driver/version.info:/usr/local/Ascend/driver/version.info \
     -v /etc/ascend_install.info:/etc/ascend_install.info \
-    -v /root/.cache:/root/.cache \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
-    -itd $IMAGE bash
+    -v /etc/hccn.conf:/etc/hccn.conf \
+    -v /mnt/sfs_turbo/.cache:/root/.cache \
+    -it $IMAGE bash
 
 echo Entering...
 docker exec -it $name bash
