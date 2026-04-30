@@ -39,6 +39,8 @@ if [ $NODES -gt 1 ]; then
         --gpu-memory-utilization 0.94 \
         --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY"}' \
         --additional-config '{"enable_cpu_binding": "true", "multistream_overlap_shared_expert": true}' \
+        --tool-call-parser "deepseek_v32" \
+        --enable-auto-tool-choice \
         --speculative-config '{"num_speculative_tokens": 3, "method": "deepseek_mtp"}'
 else
     vllm serve $MODEL_PATH \
@@ -58,5 +60,7 @@ else
         --async-scheduling \
         --additional-config '{"enable_cpu_binding": "true", "multistream_overlap_shared_expert": true}' \
         --speculative-config '{"num_speculative_tokens": 1,"method": "deepseek_mtp"}' \
+        --tool-call-parser "deepseek_v32" \
+        --enable-auto-tool-choice \
         --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}'
 fi
