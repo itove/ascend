@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-model_base="/s/hf/Wan-AI/Wan2.2-T2V-A14B/"
+model_base="/s/hf/Wan-AI/Wan2.2-I2V-A14B/"
 
 export ALGO=1
 export PYTORCH_NPU_ALLOC_CONF='expandable_segments:True'
@@ -27,7 +27,7 @@ torchrun --nproc_per_node=8 generate.py \
     --task i2v-A14B \
     --size 1280*720 \
     --ckpt_dir ${model_base} \
-    --image examples/i2v_input.JPG \
+    --image "$image" \
     --dit_fsdp \
     --t5_fsdp \
     --cfg_size 1 \
