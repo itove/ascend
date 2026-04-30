@@ -27,7 +27,7 @@ if [ $NODES -gt 1 ]; then
         --tensor-parallel-size 8 \
         --quantization ascend \
         --seed 1024 \
-        --served-model-name deepseek-v4-flash \
+        --served-model-name $MODEL_NAME \
         --enable-expert-parallel \
         --max-num-seqs 64 \
         --max-model-len 131072 \
@@ -45,7 +45,7 @@ else
         --host 0.0.0.0 \
         --max_model_len 65536 \
         --max-num-batched-tokens 8192 \
-        --served-model-name ds \
+        --served-model-name $MODEL_NAME \
         --gpu-memory-utilization 0.9 \
         --max-num-seqs 16 \
         --data-parallel-size 1 \

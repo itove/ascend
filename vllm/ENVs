@@ -6,7 +6,9 @@ all_proxy=socks5://localhost:1080
 
 NODES=${NODES:-1}
 MODEL_PATH=${MODEL_PATH:-/d/models/deepseek-R1-0528-w8a8}
-MODEL_NAME=${MODEL_NAME:-DeepSeek-R1-0528}
+model_name=$(basename $MODEL_PATH)
+model_name=${model_name,,}
+MODEL_NAME=${MODEL_NAME:-$model_name}
 echo NODES: $NODES
 echo MODEL_PATH is: $MODEL_PATH
 echo MODEL_NAME is: $MODEL_NAME
