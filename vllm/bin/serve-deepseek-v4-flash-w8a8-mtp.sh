@@ -29,7 +29,7 @@ vllm serve $MODEL_PATH \
     --safetensors-load-strategy 'prefetch' \
     --max-model-len 135168 \
     --max-num-batched-tokens 4096 \
-    --served-model-name ds \
+    --served-model-name $MODEL_NAME \
     --gpu-memory-utilization 0.92 \
     --max-num-seqs 16 \
     --data-parallel-size 1 \
