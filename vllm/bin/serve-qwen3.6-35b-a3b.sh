@@ -13,7 +13,7 @@ export HCCL_OP_EXPANSION_MODE="AIV"
 export HCCL_BUFFSIZE=1024
 export OMP_NUM_THREADS=1
 export TASK_QUEUE_ENABLE=1
-echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+# echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 sysctl -w vm.swappiness=0
 sysctl -w kernel.numa_balancing=0
 sysctl kernel.sched_migration_cost_ns=50000
