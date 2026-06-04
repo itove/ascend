@@ -43,7 +43,6 @@ docker run --rm \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
     -v /etc/hccn.conf:/etc/hccn.conf \
-    -v /mnt/sfs_turbo/.cache:/root/.cache \
     -it $IMAGE bash
 
 echo Entering...
