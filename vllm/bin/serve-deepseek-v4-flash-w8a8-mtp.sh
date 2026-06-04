@@ -4,7 +4,7 @@
 
 set -e
 
-# . /s/ascend/vllm/ENVs
+. /s/ascend/vllm/ENVs
 export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libjemalloc.so.2:$LD_PRELOAD
 export OMP_PROC_BIND=false
 export OMP_NUM_THREADS=8
@@ -19,6 +19,7 @@ export HCCL_OP_EXPANSION_MODE="AIV"
 export HCCL_BUFFSIZE=512
 
 export USE_MULTI_BLOCK_POOL=1
+unset TRITON_ALL_BLOCKS_PARALLEL
 
 sysctl -w vm.swappiness=0
 sysctl -w kernel.numa_balancing=0
