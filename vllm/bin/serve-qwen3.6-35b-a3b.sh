@@ -25,6 +25,7 @@ unset OMP_PROC_BIND
 unset ACL_OP_INIT_MODE
 unset TRITON_ALL_BLOCKS_PARALLEL
 
+    # --quantization ascend \
 vllm serve $MODEL_PATH \
     --host 0.0.0.0 \
     --port 8000 \
@@ -32,7 +33,6 @@ vllm serve $MODEL_PATH \
     --tensor-parallel-size 2 \
     --enable-expert-parallel \
     --seed 1024 \
-    --quantization ascend \
     --served-model-name $MODEL_NAME \
     --max-num-seqs 128 \
     --max-model-len 262144 \
