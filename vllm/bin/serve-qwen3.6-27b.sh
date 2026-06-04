@@ -25,7 +25,6 @@ vllm serve $MODEL_PATH \
     --port 8002 \
     --data-parallel-size 1 \
     --tensor-parallel-size 2 \
-    --enable-expert-parallel \
     --seed 1024 \
     --served-model-name $MODEL_NAME \
     --max-num-seqs 32 \
