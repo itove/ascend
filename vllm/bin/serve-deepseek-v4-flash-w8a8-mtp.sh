@@ -36,7 +36,7 @@ vllm serve $MODEL_PATH \
     --tensor-parallel-size 8 \
     --enable-expert-parallel \
     --quantization ascend \
-    --port 7000 \
+    --port 8006 \
     --block-size 128 \
     --enable-chunked-prefill \
     --enable-prefix-caching \
