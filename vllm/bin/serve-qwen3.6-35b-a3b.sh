@@ -28,7 +28,7 @@ unset TRITON_ALL_BLOCKS_PARALLEL
     # --quantization ascend \
 vllm serve $MODEL_PATH \
     --host 0.0.0.0 \
-    --port 8000 \
+    --port 8001 \
     --data-parallel-size 1 \
     --tensor-parallel-size 2 \
     --enable-expert-parallel \
