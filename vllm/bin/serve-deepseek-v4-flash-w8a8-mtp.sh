@@ -46,7 +46,7 @@ vllm serve $MODEL_PATH \
     --enable-auto-tool-choice \
     --reasoning-parser deepseek_v4 \
     --async-scheduling \
-    --additional-config '{"enable_cpu_binding":true,"multistream_overlap_shared_expert":false}' \
+    --additional-config '{"enable_cpu_binding":true,"multistream_overlap_shared_expert":false, "torchair_graph_config": {"enabled": true, "enable_multistream_mla": true}}' \
     --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY","cudagraph_capture_sizes":[2,4,6,8,10,12,14,16,18,20,22,24,32,36,40]}' \
     --model-loader-extra-config '{"enable_multithread_load":true,"num_threads":16}' \
     --speculative-config '{"num_speculative_tokens": 1,"method": "mtp"}'
