@@ -25,10 +25,11 @@ sysctl -w vm.swappiness=0
 sysctl -w kernel.numa_balancing=0
 sysctl kernel.sched_migration_cost_ns=50000
 
+    #--max-num-batched-tokens 4096 \
 vllm serve $MODEL_PATH \
     --safetensors-load-strategy 'prefetch' \
     --max-model-len 135168 \
-    --max-num-batched-tokens 4096 \
+    --max-num-batched-tokens 16384 \
     --served-model-name $MODEL_NAME \
     --gpu-memory-utilization 0.92 \
     --max-num-seqs 16 \
