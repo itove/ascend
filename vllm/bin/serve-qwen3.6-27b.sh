@@ -36,5 +36,5 @@ vllm serve $MODEL_PATH \
     --enable-prefix-caching \
     --speculative_config '{"method": "qwen3_5_mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
     --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}' \
-    --additional-config '{"enable_cpu_binding":true}' \
+    --additional-config '{"enable_cpu_binding":true, "ascend_scheduler_config": {"enabled": true}, "enable_prefill_optimizations": true}' \
     --async-scheduling
