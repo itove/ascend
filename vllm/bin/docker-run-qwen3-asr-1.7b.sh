@@ -34,7 +34,6 @@ docker run --rm \
     -v /etc/ascend_install.info:/etc/ascend_install.info \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
-    -p 8003:8003 \
     -it $IMAGE bash
 
 echo Entering...
