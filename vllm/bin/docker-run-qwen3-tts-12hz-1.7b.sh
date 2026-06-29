@@ -15,7 +15,7 @@ echo Starting new...
 # Update --device according to your device (Atlas A2: /dev/davinci[0-7] Atlas A3:/dev/davinci[0-15]).
 # Update the vllm-ascend image according to your environment.
 # Note you should download the weight to /root/.cache in advance.
-export IMAGE=quay.io/ascend/vllm-ascend:v0.21.0rc1
+export IMAGE=quay.io/ascend/vllm-omni:v0.18.0
 
 docker run --rm \
     --user root \
