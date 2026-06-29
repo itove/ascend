@@ -34,8 +34,7 @@ docker run --rm \
     -v /etc/ascend_install.info:/etc/ascend_install.info \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
-    -v /etc/hccn.conf:/etc/hccn.conf \
-    -p 8003:8003
+    -p 8003:8003 \
     -it $IMAGE bash
 
 echo Entering...
