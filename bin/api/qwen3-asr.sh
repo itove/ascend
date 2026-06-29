@@ -5,6 +5,7 @@
 . .env.local
 
 ENDPORINT=https://ai.zxaicc.com/api
+# ENDPORINT=http://ai:3000/api
 # ENDPORINT=http://gx107:8003
 
 curl $ENDPORINT/v1/chat/completions \
@@ -16,7 +17,7 @@ curl $ENDPORINT/v1/chat/completions \
     {"role": "user", "content": [
         {"type": "audio_url",
         "audio_url":
-        {"url": "https://qianwen-res.oss-cn-beijing.aliyuncs.com/Qwen3-ASR-Repo/asr_en.wav"}}
+        {"url": "https://xpx.hrisk.cn/flowspeech-single-1782703516108.wav"}}
     ]}
     ]
 }'
