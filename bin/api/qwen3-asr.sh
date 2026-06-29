@@ -17,7 +17,7 @@ curl $ENDPORINT/v1/chat/completions \
     {"role": "user", "content": [
         {"type": "audio_url",
         "audio_url":
-        {"url": "https://xpx.hrisk.cn/flowspeech-single-1782703516108.wav"}}
+        {"url": "https://xpx.hrisk.cn/output.wav"}}
     ]}
     ]
 }'
