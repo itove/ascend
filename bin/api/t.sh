@@ -8,18 +8,20 @@
 
 ############### Main Part ###############
 
+[ -f .env.local ] && . .env.local
 
-#--header 'Authorization: Bearer API-KEY' \
-# ip为主节点ip,port为主节点port
-# "max_tokens": 8192,
-curl --location 'http://gx1:1025/v1/chat/completions' \
---header 'Content-Type: application/json' \
---data '
+
+ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com/api}
+
+curl --location "$ENDPORINT/v1/chat/completions" \
+    --header "Authorization: Bearer $API_KEY" \
+    --header 'Content-Type: application/json' \
+    --data '
 {
     "model": "deepseek-v3",
     "messages": [{
         "role": "user",
-        "content": "讲一个西部风格的故事"
+        "content": "hi"
     }],
     "stream": true,
     "presence_penalty": 1.03,
