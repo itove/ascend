@@ -2,10 +2,11 @@
 #
 # vim:ft=bash
 
-name=vllm-ascend
+CONTAINER_NAME=${CONTAINER_NAME:-vllm-ascend}
+IMAGE_TAG=${IMAGE_TAG:-v0.18.0}
 
 echo Stopping previous one...
-docker stop $name
+docker stop $CONTAINER_NAME
 
 echo Wait 2 sec...
 sleep 2
@@ -15,12 +16,12 @@ echo Starting new...
 # Update --device according to your device (Atlas A2: /dev/davinci[0-7] Atlas A3:/dev/davinci[0-15]).
 # Update the vllm-ascend image according to your environment.
 # Note you should download the weight to /root/.cache in advance.
-export IMAGE=quay.io/ascend/vllm-ascend:v0.18.0
+export IMAGE=quay.io/ascend/vllm-ascend:$IMAGE_TAG
 
 docker run --rm \
     --user root \
     --privileged \
-    --name $name \
+    --name $CONTAINER_NAME \
     --net=host \
     --shm-size=1g \
     --device /dev/davinci0 \
@@ -46,4 +47,4 @@ docker run --rm \
     -it $IMAGE bash
 
 echo Entering...
-docker exec -it $name bash
+docker exec -it $CONTAINER_NAME bash
