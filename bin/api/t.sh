@@ -2,14 +2,7 @@
 #
 # vim:ft=bash
 
-############### Variables ###############
-
-############### Functions ###############
-
-############### Main Part ###############
-
 [ -f .env.local ] && . .env.local
-
 
 ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com/api}
 
