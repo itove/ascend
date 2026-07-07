@@ -23,6 +23,7 @@
         - [dnf](./proxy-dnf.md)
         - [docker](./proxy-docker.md)
         - [pip](./proxy-pip.md)
+    - [docker](./docker.md)
 - [推理引擎](./inference.md)
     - [vLLM](./vllm.md)
     - [MindIE](./mindie.md)
