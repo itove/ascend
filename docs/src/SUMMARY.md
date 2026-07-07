@@ -36,6 +36,8 @@
 - [benchmark](./benchmark.md)
     - [try](./benchmark/try.md)
 - [前端](./frontend.md)
+    - [LiteLLM](./litellm.md)
+    - [new-api](./new-api.md)
     - [open-webui](./open-webui.md)
 - [Result](./result.md)
 - [Journal](./journal.md)
