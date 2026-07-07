@@ -1,5 +1,7 @@
 # docker proxy
 
+安装请参考 [安装 docker](./docker.md)
+
 ```
 $ sudo systemctl edit docker.service
 ```
