@@ -12,3 +12,9 @@ $ sudo sed -i.bak s/\$releasever/8/ /etc/yum.repos.d/docker-ce.repo
 $ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 $ sudo systemctl enable --now docker
 ```
+
+## 添加用户至 docker 组
+添加用户至`docker`组后，无需`sudo`，可直接运行`docker`相关命令，方便日常操作
+```
+# usermod -aG docker $username
+```
