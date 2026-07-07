@@ -1,2 +1,2 @@
 # LiteLLM
-    [Quickstart](https://docs.litellm.ai/docs/)
+[Quickstart](https://docs.litellm.ai/docs/)
