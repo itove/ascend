@@ -9,6 +9,8 @@
     - [主机名及IP](./hosts.md)
     - [工作站](./workstation.md)
     - [工具链](./tools.md)
+    - [Ascend 升级驱动](./driver-upgrade.md)
+    - [相关下载](./download.md)
 - [准备工作](./preparation.md)
     - [系统配置](./setup.md)
         - [创建用户](./setup-adduser.md)
