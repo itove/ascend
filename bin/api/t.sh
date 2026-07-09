@@ -4,35 +4,19 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com/api}
+ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
 
 curl --location "$ENDPORINT/v1/chat/completions" \
     --header "Authorization: Bearer $API_KEY" \
     --header 'Content-Type: application/json' \
     --data '
 {
-    "model": "deepseek-v3",
+    "model": "qwen3.6-27b",
     "messages": [{
         "role": "user",
         "content": "hi"
     }],
-    "stream": true,
-    "presence_penalty": 1.03,
-    "frequency_penalty": 1.0,
-    "repetition_penalty": 1.0,
-    "temperature": 0.5,
-    "top_p": 0.95,
-    "top_k": -1,
-    "seed": null,
-    "stop": ["stop1", "stop2"],
-    "stop_token_ids": [2, 13],
-    "include_stop_str_in_output": false,
-    "skip_special_tokens": true,
-    "ignore_eos": false,
-    "best_of": 1,
-    "n": 1,
-    "logprobs": false,
-    "top_logprobs":null
+    "stream": true
 }
 '
 

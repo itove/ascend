@@ -4,7 +4,7 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com/api}
+ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
 # ENDPORINT=http://ai:3000/api
 # ENDPORINT=http://gx107:8003
 
