@@ -10,7 +10,7 @@
 
 . .env.local
 
-ENDPORINT=https://ai.zxaicc.com
+ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
 
 #--header 'Authorization: Bearer API-KEY' \
 # ip为主节点ip,port为主节点port
