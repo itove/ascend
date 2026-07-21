@@ -4,9 +4,9 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
+ENDPOINT=${ENDPORINT:-https://ai.zxaicc.com}
 
-curl --location "$ENDPORINT/v1/chat/completions" \
+curl --location "$ENDPOINT/v1/chat/completions" \
     --header "Authorization: Bearer $API_KEY" \
     --header 'Content-Type: application/json' \
     --data '

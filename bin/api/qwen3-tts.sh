@@ -4,12 +4,12 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com/api}
+ENDPOINT=${ENDPORINT:-https://ai.zxaicc.com/api}
 
-# ENDPORINT=https://ai.zxaicc.com/api
-# ENDPORINT=http://ai:3000/api
+# ENDPOINT=https://ai.zxaicc.com/api
+# ENDPOINT=http://ai:3000/api
 
-curl $ENDPORINT/v1/audio/speech \
+curl $ENDPOINT/v1/audio/speech \
     --header "Authorization: Bearer $API_KEY" \
     -H "Content-Type: application/json" \
    -d '{

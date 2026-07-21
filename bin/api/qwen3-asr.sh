@@ -4,11 +4,11 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
-# ENDPORINT=http://ai:3000/api
-# ENDPORINT=http://gx107:8003
+ENDPOINT=${ENDPORINT:-https://ai.zxaicc.com}
+# ENDPOINT=http://ai:3000/api
+# ENDPOINT=http://gx107:8003
 
-curl $ENDPORINT/v1/chat/completions \
+curl $ENDPOINT/v1/chat/completions \
     --header "Authorization: Bearer $API_KEY" \
     -H "Content-Type: application/json" \
     -d '{

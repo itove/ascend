@@ -10,11 +10,11 @@
 
 . .env.local
 
-ENDPORINT=${ENDPORINT:-https://ai.zxaicc.com}
+ENDPOINT=${ENDPORINT:-https://ai.zxaicc.com}
 
 #--header 'Authorization: Bearer API-KEY' \
 # ip为主节点ip,port为主节点port
-curl --location "$ENDPORINT/v1/models" \
+curl --location "$ENDPOINT/v1/models" \
     --header 'Content-Type: application/json' \
     --header "Authorization: Bearer $API_KEY" \
 

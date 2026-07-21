@@ -10,7 +10,7 @@
 
 . .env.local
 
-ENDPORINT=https://ai.zxaicc.com/api
+ENDPOINT=https://ai.zxaicc.com/api
 # URL=http://172.20.29.123
 
 #--header 'Authorization: Bearer API-KEY' \
