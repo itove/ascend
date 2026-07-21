@@ -27,6 +27,7 @@ vllm serve $MODEL_PATH \
     --data-parallel-size 1 \
     --tensor-parallel-size 2 \
     --seed 1024 \
+    --quantization ascend
     --served-model-name $MODEL_NAME \
     --max-num-seqs 32 \
     --max-model-len 262144 \
