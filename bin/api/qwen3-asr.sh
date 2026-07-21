@@ -4,7 +4,7 @@
 
 [ -f .env.local ] && . .env.local
 
-ENDPOINT=${ENDPORINT:-https://ai.zxaicc.com}
+ENDPOINT=${ENDPOINT:-https://ai.zxaicc.com}
 # ENDPOINT=http://ai:3000/api
 # ENDPOINT=http://gx107:8003
 
