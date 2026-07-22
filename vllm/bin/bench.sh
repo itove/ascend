@@ -2,24 +2,27 @@
 #
 # vim:ft=bash
 
-. /s/ascend/vllm/ENVs
+# . /s/ascend/vllm/ENVs
 
 export VLLM_USE_MODELSCOPE=true
 
 host=${1:-127.0.0.1}
 port=${2:-8006}
+model_name=${3,,}
 
 # see https://docs.vllm.ai/en/latest/cli/bench/serve/
 vllm bench serve \
-    --model $MODEL_PATH \
-    --served-model-name $MODEL_NAME \
+    --served-model-name $model_name \
     --host $host \
     --port $port \
     --backend openai-chat \
     --endpoint /v1/chat/completions \
     --dataset-name random \
-    --random-input 200 \
-    --num-prompt 200 \
-    --request-rate 1 \
+    --num-prompts 1000 \
+    --request-rate 5 \
+    --max-concurrency 32 \
+    --random-input-len 16000 \
+    --random-output-len 2048 \
+    --num-warmups 10 \
     --save-result \
     --result-dir ./
