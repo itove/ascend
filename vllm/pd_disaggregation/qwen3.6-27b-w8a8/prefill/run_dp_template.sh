@@ -25,7 +25,7 @@ export TASK_QUEUE_ENABLE=1
 export LD_LIBRARY_PATH=/usr/local/Ascend/ascend-toolkit/latest/python/site-packages/mooncake:$LD_LIBRARY_PATH
 
 export HCCL_BUFFSIZE=1024
-export VLLM_ASCEND_ENABLE_FLASHCOMM1=1
+# export VLLM_ASCEND_ENABLE_FLASHCOMM1=1
 export ASCEND_RT_VISIBLE_DEVICES=$1
 
 vllm serve $MODEL_PATH \
@@ -47,7 +47,7 @@ vllm serve $MODEL_PATH \
   --gpu-memory-utilization 0.95 \
   --enforce-eager \
   --speculative-config '{"method": "qwen3_5_mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
-  --additional-config '{"enable_cpu_binding":true}' \
+  --additional-config '{"enable_cpu_binding":true, "enable_flashcomm1": true}' \
   --kv-transfer-config \
   '{"kv_connector": "MooncakeConnectorV1",
   "kv_role": "kv_producer",
