@@ -55,11 +55,11 @@ vllm serve $MODEL_PATH \
   "engine_id": "0",
   "kv_connector_extra_config": {
             "prefill": {
-                    "dp_size": 8,
+                    "dp_size": 4,
                     "tp_size": 2
             },
             "decode": {
-                    "dp_size": 8,
+                    "dp_size": 4,
                     "tp_size": 2
         }
     }
