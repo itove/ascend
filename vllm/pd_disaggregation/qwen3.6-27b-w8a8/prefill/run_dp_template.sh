@@ -46,7 +46,7 @@ vllm serve $MODEL_PATH \
   --no-enable-prefix-caching \
   --gpu-memory-utilization 0.95 \
   --enforce-eager \
-  --speculative-config '{"method": "qwen3_5_mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
+  --speculative-config '{"method": "mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
   --additional-config '{"enable_cpu_binding":true, "enable_flashcomm1": true}' \
   --kv-transfer-config \
   '{"kv_connector": "MooncakeConnectorV1",
