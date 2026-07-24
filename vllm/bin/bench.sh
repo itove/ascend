@@ -11,6 +11,7 @@ port=${2:-8006}
 model_name=${3,,}
 
 # see https://docs.vllm.ai/en/latest/cli/bench/serve/
+# --ignore-eos
 vllm bench serve \
     --served-model-name $model_name \
     --host $host \
