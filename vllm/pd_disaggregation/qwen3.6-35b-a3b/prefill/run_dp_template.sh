@@ -7,7 +7,7 @@ set -e
 . /s/ascend/vllm/ENVs
 
 nic_name="bond0.284"
-local_ip="172.20.84.145"
+local_ip=$(ifconfig "$nic_name" | awk '/inet /{print $2}')
 
 export HCCL_IF_IP=$local_ip
 export GLOO_SOCKET_IFNAME=$nic_name
