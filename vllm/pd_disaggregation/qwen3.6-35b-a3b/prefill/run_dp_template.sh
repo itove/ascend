@@ -52,7 +52,8 @@ vllm serve $MODEL_PATH \
     --max-num-batched-tokens 16384 \
     --trust-remote-code \
     --gpu-memory-utilization 0.90 \
-    --enable-prefix-caching \
+    --no-enable-prefix-caching \
+    --enforce-eager \
     --speculative_config '{"method": "mtp", "num_speculative_tokens": 3, "enforce_eager": true}' \
     --additional-config '{"enable_cpu_binding":true, "ascend_scheduler_config": {"enabled": true}, "enable_prefill_optimizations": true, "multistream_overlap_shared_expert": true, "enable_flashcomm1": true}' \
     --tool-call-parser "qwen3_coder" \
