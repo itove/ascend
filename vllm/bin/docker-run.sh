@@ -12,6 +12,7 @@ name=${basename#docker-run-}
 name=${name%.sh}
 
 CONTAINER_NAME=${CONTAINER_NAME:-vllm-ascend-$name}
+IMAGE=${IMAGE:-quay.io/ascend/vllm-ascend}
 IMAGE_TAG=${IMAGE_TAG:-v0.18.0}
 
 SHM_SIZE=${SHM_SIZE:-512}
@@ -25,9 +26,6 @@ sleep 2
 echo Starting new...
 
 # Update --device according to your device (Atlas A2: /dev/davinci[0-7] Atlas A3:/dev/davinci[0-15]).
-# Update the vllm-ascend image according to your environment.
-# Note you should download the weight to /root/.cache in advance.
-export IMAGE=quay.io/ascend/vllm-ascend:$IMAGE_TAG
 
 docker run --rm \
     --user root \
@@ -55,7 +53,7 @@ docker run --rm \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
     -v /etc/hccn.conf:/etc/hccn.conf \
-    -it $IMAGE bash
+    -it $IMAGE:$IMAGE_TAG bash
 
 echo Entering...
 docker exec -it $CONTAINER_NAME bash
