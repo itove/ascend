@@ -2,12 +2,20 @@
 #
 # vim:ft=bash
 
+# Usage:
+# ./docker-run.sh
+# IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
+# CONTAINER_NAME=wan2.2-i2v IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
+# SHM_SIZE=1 ./docker-run.sh
+
 basename=$(basename $0)
 name=${basename#docker-run-}
 name=${name%.sh}
 
 CONTAINER_NAME=${CONTAINER_NAME:-vllm-ascend-$name}
 IMAGE_TAG=${IMAGE_TAG:-v0.18.0}
+
+SHM_SIZE=${SHM_SIZE:-512}
 
 echo Stopping previous one...
 docker stop $CONTAINER_NAME
@@ -27,7 +35,7 @@ docker run --rm \
     --privileged \
     --name $CONTAINER_NAME \
     --net=host \
-    --shm-size=1g \
+    --shm-size=${SHM_SIZE}g \
     --device /dev/davinci0 \
     --device /dev/davinci1 \
     --device /dev/davinci2 \
