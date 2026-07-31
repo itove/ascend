@@ -4,7 +4,7 @@
 
 export HF_ENDPOINT=https://hf-mirror.com
 #export HF_HUB_ENABLE_HF_TRANSFER=1
-hf_dir=/mnt/d/hf
+hf_dir=/mnt/d/s/hf
 
 _help(){
     echo Download weight into $hf_dir
