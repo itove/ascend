@@ -1,0 +1,328 @@
+#!/bin/bash
+#
+# vim:ft=bash
+
+set -euo pipefail
+
+############### Variables ###############
+
+#tools=$(declare -F | awk '/install_/{sub(/.*install_/, ""); print $1}' | xargs)
+tools=$(grep -oP '^install_\K\w+' "$0" | sort | xargs)
+tmpdir=$(mktemp -d)
+
+############### Functions ###############
+
+_clean(){
+    # echo clean $tmpdir
+    rm -rf "$tmpdir"
+}
+trap _clean EXIT
+
+install_composer(){
+    if [ ! -x ~/.local/bin/composer ];then
+        echo Installing composer...
+        local a=composer-setup.php
+        curl -L https://getcomposer.org/installer -o "$a"
+        # TODO not return
+        if echo -n "$(curl -s https://composer.github.io/installer.sig) $a" | sha384sum -c --status;then
+            php "$a" && rm "$a"
+            mkdir ~/.local/bin -p
+            mv composer.phar ~/.local/bin/composer
+        else
+            echo checksum fail!
+        fi
+    fi
+}
+
+install_symfony(){
+    curl -sS https://get.symfony.com/cli/installer | bash
+    ln -sf ../../.symfony5/bin/symfony ~/.local/bin/
+}
+
+install_deno(){
+    curl -fsSL https://deno.land/install.sh | sh
+    ln -sf ../../.deno/bin/deno ~/.local/bin/
+}
+
+install_rust(){
+    curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+    echo Generating tab-completion scripts for your shell.
+    mkdir -p ~/.local/share/bash-completion/completions/
+    ~/.cargo/bin/rustup completions bash >> ~/.local/share/bash-completion/completions/rustup
+    ~/.cargo/bin/rustup completions bash cargo >> ~/.local/share/bash-completion/completions/cargo
+    ~/.cargo/bin/rustup component add rust-analyzer
+}
+
+install_zed(){
+    curl -f https://zed.dev/install.sh | sh
+}
+
+install_uv(){
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+}
+
+install_fastapi(){
+    uv add fastapi --extra standard
+}
+
+install_nvm(){
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+    nvm install node
+    nvm alias default node
+}
+
+install_fnm(){
+    curl -fsSL https://fnm.vercel.app/install | bash
+    . ~/.bashrc
+    fnm i --latest
+    #corepack enable yarn
+    #corepack enable pnpm
+}
+
+install_openclaw(){
+    curl -fsSL https://openclaw.bot/install.sh | bash
+}
+
+install_angular(){
+    npm install -g @angular/cli
+}
+
+install_ollama(){
+    curl -fsSL https://ollama.com/install.sh | sh
+}
+
+install_huggingface(){
+    curl -LsSf https://hf.co/cli/install.sh | bash
+    # uv tool install huggingface_hub
+}
+
+install_claude(){
+    curl -fsSL https://claude.ai/install.sh | bash
+    #npm install -g @anthropic-ai/claude-code
+}
+
+install_cursor(){
+    curl https://cursor.com/install -fsS | bash
+    ln -sf cursor-agent ~/.local/bin/cursor
+}
+
+install_codex(){
+    npm i -g @openai/codex
+}
+
+install_copilot(){
+    curl -fsSL https://gh.io/copilot-install | bash
+    # npm install -g @github/copilot
+}
+
+install_gemini(){
+    npm install -g @google/gemini-cli
+}
+
+install_opencode(){
+    OPENCODE_INSTALL_DIR=$HOME/.local/bin curl -fsSL https://opencode.ai/install | env -u VERSION bash
+    # ln -s ../../.opencode/bin/opencode ~/.local/bin/
+    # npm i -g opencode-ai@latest
+}
+
+install_aichat(){
+    cargo install aichat
+    ln -sf ../../.cargo/bin/aichat ~/.local/bin/ai
+}
+
+install_shell_gpt(){
+    uv tool install shell-gpt
+}
+
+install_taro(){
+    npm install -g @tarojs/cli
+}
+
+install_mdbook(){
+    # output example: v0.5.2
+    tag=$(curl -s https://api.github.com/repos/rust-lang/mdBook/releases/latest | jq -r .tag_name)
+    echo latest release: $tag
+    filename=mdbook-$tag-$(arch)-unknown-linux-musl.tar.gz
+	url="https://github.com/rust-lang/mdBook/releases/download/${tag}/$filename"
+    curl -L -o $tmpdir/$filename $url
+    tar xf $tmpdir/$filename -C $tmpdir
+    chmod +x $tmpdir/mdbook
+    cp $tmpdir/mdbook ~/.local/bin/ # cp will have the right selinux context, mv will not
+}
+
+get_github_latest_tag(){
+    local repo tag
+    repo="$1" # namespace/repo
+
+    tag=$(curl -s https://api.github.com/repos/${repo}/releases/latest | jq -r .tag_name)
+}
+
+download_from_github(){
+    local repo tag filename install_dir url exe_name
+    repo="$1" # namespace/repo
+    exe_name=${1#*/}
+    filename="$2"
+    install_dir="${3:-~/.local/bin/}"
+
+    tag=$(curl -s https://api.github.com/repos/${repo}/releases/latest | jq -r .tag_name)
+    echo latest release: $tag
+    filename=mouseless_linux_amd64.tar.gz
+	url="https://github.com/${repo}/releases/download/${tag}/$filename"
+    curl -L -o $tmpdir/$filename $url
+    tar xf $tmpdir/$filename -C $tmpdir
+    chmod +x $tmpdir/$exe_name
+}
+
+install_mouseless(){
+    # output example: v0.3.0
+    tag=$(curl -s https://api.github.com/repos/jbensmann/mouseless/releases/latest | jq -r .tag_name)
+    echo latest release: $tag
+    filename=mouseless_linux_amd64.tar.gz
+	url="https://github.com/jbensmann/mouseless/releases/download/${tag}/$filename"
+    curl -L -o $tmpdir/$filename $url
+    tar xf $tmpdir/$filename -C $tmpdir
+    chmod +x $tmpdir/mouseless
+    sudo cp $tmpdir/mouseless /usr/local/bin/
+}
+
+install_wstunnel(){
+    # output example: v10.5.1
+    tag=$(curl -s https://api.github.com/repos/erebe/wstunnel/releases/latest | jq -r .tag_name)
+    # tag=$(gh release view --repo erebe/wstunnel  --json tagName -q .tagName)
+    echo latest release: $tag
+    arch=$(arch)
+    case $arch in
+        x86_64)
+            arch=amd64
+            ;;
+        aarch64)
+            arch=arm64
+            ;;
+    esac
+    filename=wstunnel_${tag#v}_linux_${arch}.tar.gz
+	url="https://github.com/erebe/wstunnel/releases/download/${tag}/$filename"
+    curl -L -o $tmpdir/$filename $url
+    tar xf $tmpdir/$filename -C $tmpdir
+    chmod +x $tmpdir/wstunnel
+    sudo cp $tmpdir/wstunnel /usr/local/bin/ # cp will have the right selinux context, mv will not
+}
+
+install_wireguard_compile(){
+    # Only for RHEL/CentOS 8 and derives
+    # see https://www.wireguard.com/compilation/
+    sudo yum install elfutils-libelf-devel kernel-devel pkgconfig
+    git clone https://git.zx2c4.com/wireguard-linux-compat
+    git clone https://git.zx2c4.com/wireguard-tools
+    # May need to edit wireguard-linux-compat/src/compat/compat.h to fix error: const struct ipv6_stub
+    # // #if LINUX_VERSION_CODE < KERNEL_VERSION(4, 3, 0) && !defined(ISRHEL7)
+    # #define ipv6_dst_lookup(a, b, c, d) ipv6_dst_lookup(b, c, d)
+    # // #endif
+
+    # // #if LINUX_VERSION_CODE < KERNEL_VERSION(3, 17, 0) && LINUX_VERSION_CODE >= KERNEL_VERSION(3, 16, 83     )
+    # // #define ipv6_dst_lookup_flow(a, b, c, d) ipv6_dst_lookup_flow(b, c, d)
+    # // #elif (LINUX_VERSION_CODE < KERNEL_VERSION(5, 4, 5) && LINUX_VERSION_CODE >= KERNEL_VERSION(5, 4, 0     )) || (LINUX_VERSION_CODE < KERNEL_VERSION(5, 3, 18) && LINUX_VERSION_CODE >= KERNEL_VERSION(4, 20, 0     ) && !defined(ISUBUNTU1904)) || (!defined(ISRHEL8) && !defined(ISDEBIAN) && !defined(ISUBUNTU1804) &&      LINUX_VERSION_CODE < KERNEL_VERSION(4, 19, 119) && LINUX_VERSION_CODE >= KERNEL_VERSION(4, 15, 0)) |     | (LINUX_VERSION_CODE < KERNEL_VERSION(4, 14, 181) && LINUX_VERSION_CODE >= KERNEL_VERSION(4, 10, 0))      || (LINUX_VERSION_CODE < KERNEL_VERSION(4, 9, 224) && LINUX_VERSION_CODE >= KERNEL_VERSION(4, 5, 0))      || (LINUX_VERSION_CODE < KERNEL_VERSION(4, 4, 224) && !defined(ISUBUNTU1604) && !defined(ISRHEL7))
+    # // #define ipv6_dst_lookup_flow(a, b, c, d) ipv6_dst_lookup(a, b, &dst, c) + (void *)0 ?: dst
+    # // #endif
+    make -C wireguard-linux-compat/src -j$(nproc)
+    sudo make -C wireguard-linux-compat/src install
+    make -C wireguard-tools/src -j$(nproc)
+    sudo make -C wireguard-tools/src install
+    sudo modprobe wireguard
+    echo 'wireguard' | sudo tee /etc/modules-load.d/wireguard.conf > /dev/null
+    lsmod | grep wireguard
+}
+
+install_vim_gnupg(){
+    git clone https://github.com/jamessan/vim-gnupg ~/w/vim-gnupg
+    mkdir -p ~/.vim/pack/gnupg/start/
+    ln -s ~/w/vim-gnupg ~/.vim/pack/gnupg/start/
+}
+
+install_wafw00f(){
+    uv tool install wafw00f
+}
+
+install_joycond(){
+    sudo dnf install libevdev-devel libudev-devel
+    cd w
+    git clone https://github.com/DanielOgorchock/joycond
+    cd joycond
+    cmake .
+    sudo make install
+    # Fix `use motion` uncheckable issue
+    # after this fix, there will be only one NS pro controller instead of two in API > SDL Controller,
+    # and everything will work properly. Need joycond-cemuhook NO MORE.
+    # https://github.com/cemu-project/Cemu/issues/1097#issuecomment-2638385818
+    sudo sed -i 's/0600/0666/' /usr/lib/udev/rules.d/89-joycond.rules
+    sudo systemctl enable --now joycond
+}
+
+install_mmctl(){
+    # Haven't found a link of mmctl version list, so we get version from here
+    url=$(curl -s https://releases.mattermost.com | grep mattermost-team)
+    version=${url#*com/}
+    version=${version%%/*}
+    echo Version: $version
+    arch=$(arch)
+    case $arch in
+        x86_64)
+            arch=amd64
+            ;;
+        aarch64)
+            arch=arm64
+            ;;
+    esac
+    echo Arch: $arch
+
+    url="https://releases.mattermost.com/mmctl/v${version}/linux_${arch}.tar"
+    filename=$(basename $url)
+    curl -L -o $tmpdir/$filename $url
+    tar xf $tmpdir/$filename -C $tmpdir
+    chmod +x $tmpdir/mmctl
+    cp $tmpdir/mmctl ~/.local/bin/
+}
+
+_install(){
+    if [ -z "$1" ]; then
+        echo "Error: No tool specified"
+        _help
+        return 1
+    fi
+    if declare -f "install_$1" > /dev/null; then
+        install_"$1"
+    else
+        echo "Error: Unknown tool '$1'"
+        echo "Available tools: $tools"
+        return 1
+    fi
+}
+
+_uninstall(){
+    :
+}
+
+_help(){
+    echo 'Usage: tool i <tool_name>'
+    echo tools supported:
+    echo $tools
+}
+
+############### Main Part ###############
+
+case ${1:-} in
+    i)
+        _install "${2:-}"
+        ;;
+    u)
+        _uninstall "${2:-}"
+        ;;
+    l|list)
+        echo "Available tools:"
+        for tool in $tools; do
+            echo "  - $tool"
+        done
+        ;;
+    *)
+        _help
+        ;;
+esac
