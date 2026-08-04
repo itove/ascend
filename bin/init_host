@@ -25,8 +25,12 @@ sed -i "/$host/d" known_hosts
 
 sed -i "/$host/d" config
 
+host_and_ip=$(grep $host /etc/hosts)
+
+[ -z "$host_and_ip" ] && host_and_ip=$host
+
 cat <<EOF >> config
-Host $(grep $host /etc/hosts)
+Host $host_and_ip
     IdentityFile ~/.ssh/$host
 EOF
 
