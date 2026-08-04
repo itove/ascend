@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-pdir=/mnt/d/modelscope
+pdir=/mnt/d/s/modelscope
 
 _help(){
     echo Download weight into $pdir
