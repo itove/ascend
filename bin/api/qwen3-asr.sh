@@ -17,7 +17,7 @@ curl $ENDPOINT/v1/chat/completions \
     {"role": "user", "content": [
         {"type": "audio_url",
         "audio_url":
-        {"url": "https://xpx.hrisk.cn/output.wav"}}
+        {"url": "http://172.20.29.137:8008/output.wav"}}
     ]}
     ]
 }'
