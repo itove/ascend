@@ -31,7 +31,7 @@ vllm serve $MODEL_PATH \
     --quantization ascend \
     --port 8900 \
     --block-size 128 \
-    --speculative-config '{"num_speculative_tokens": 1,"method": "mtp","enforce_eager": true}' \
+    --speculative-config '{"num_speculative_tokens": 7,"method": "dspark","draft_sample_method":"greedy","enforce_eager": true}' \
     --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY"}' \
     --additional-config '
     {"ascend_compilation_config":{
