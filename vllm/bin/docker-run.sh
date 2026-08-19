@@ -4,16 +4,16 @@
 #
 # Usage:
 # ./docker-run.sh
-# IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
-# CONTAINER_NAME=wan2.2-i2v IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
+# DOCKER_IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
+# CONTAINER_NAME=wan2.2-i2v DOCKER_IMAGE_TAG=v0.22.1rc1 ./docker-run.sh
 
 basename=$(basename $0)
-name=${basename#docker-run-}
-name=${name%.sh}
+container_name=${basename#docker-run-}
+container_name=${container_name%.sh}
 
-CONTAINER_NAME=${CONTAINER_NAME:-vllm-ascend-$name}
-IMAGE=${IMAGE:-quay.io/ascend/vllm-ascend}
-IMAGE_TAG=${IMAGE_TAG:-v0.18.0}
+CONTAINER_NAME=${CONTAINER_NAME:-vllm-ascend-$container_name}
+DOCKER_IMAGE=${DOCKER_IMAGE:-quay.io/ascend/vllm-ascend}
+DOCKER_IMAGE_TAG=${DOCKER_IMAGE_TAG:-v0.18.0}
 
 SHM_SIZE=${SHM_SIZE:-512}
 
@@ -53,7 +53,7 @@ docker run --rm \
     -v /mnt/d:/d \
     -v /mnt/s:/s \
     -v /etc/hccn.conf:/etc/hccn.conf \
-    -it $IMAGE:$IMAGE_TAG bash
+    -it $DOCKER_IMAGE:$DOCKER_IMAGE_TAG bash
 
 echo Entering...
 docker exec -it $CONTAINER_NAME bash
