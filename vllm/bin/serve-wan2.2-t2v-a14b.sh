@@ -20,9 +20,9 @@ unset ACL_OP_INIT_MODE
 unset TRITON_ALL_BLOCKS_PARALLEL
 
 vllm serve $MODEL_PATH --omni \
-	--served-model-name $MODEL_NAME
+	--served-model-name $MODEL_NAME \
 	--model-class-name WanS2VPipeline \
-	--tensor-parallel-size 2 \
+	--tensor-parallel-size 8 \
 	--flow-shift 3.0 \
 	--vae-use-slicing --vae-use-tiling \
 	--cache-backend cache_dit \
