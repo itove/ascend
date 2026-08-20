@@ -1,0 +1,479 @@
+  warnings.warn(
+/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py:205: UserWarning: The `local_dir_use_symlinks` argument is deprecated and ignored in `hf_hub_download`. Downloading to a local directory does not use symlinks anymore.
+  warnings.warn(
+Process DiffusionWorker-0:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1712, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1620, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 719, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+               ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 596, in http_backoff
+    return next(
+           ^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 504, in _http_backoff_base
+    response = client.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 977, in _send_handling_redirects
+    hook(request)
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 260, in hf_request_event_hook
+    raise OfflineModeIsEnabled(
+huggingface_hub.errors.OfflineModeIsEnabled: Cannot reach https://huggingface.co/Wan-AI/Wan2.1-T2V-14B-Diffusers/resolve/main/vae/config.json: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/configuration_utils.py", line 424, in load_config
+    config_file = hf_hub_download(
+                  ^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1013, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1165, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1872, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1177, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 824, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 852, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1249, in __init__
+    self.worker = worker_class(
+                  ^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 256, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 365, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 234, in load_model
+    self.pipeline = model_loader.load_model(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 364, in load_model
+    model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 616, in _init_from_load_format
+    model = initialize_model(self.od_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 374, in initialize_model
+    model = model_class(od_config=od_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/wan2_2/pipeline_wan2_2_s2v.py", line 513, in __init__
+    self._init_original_format(model_path, dtype)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/wan2_2/pipeline_wan2_2_s2v.py", line 623, in _init_original_format
+    self.vae = DistributedAutoencoderKLWan.from_single_file(vae_pth, torch_dtype=dtype)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/loaders/single_file_model.py", line 421, in from_single_file
+    diffusers_model_config = cls.load_config(
+                             ^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/configuration_utils.py", line 451, in load_config
+    raise EnvironmentError(
+OSError: Wan-AI/Wan2.1-T2V-14B-Diffusers does not appear to have a file named config.json.
+Process DiffusionWorker-1:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1712, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1620, in get_hf_file_metadata
+    response = _httpx_follow_relative_redirects_with_backoff(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 719, in _httpx_follow_relative_redirects_with_backoff
+    response = http_backoff(
+               ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 596, in http_backoff
+    return next(
+           ^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 504, in _http_backoff_base
+    response = client.request(method=method, url=url, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/httpx/_client.py", line 977, in _send_handling_redirects
+    hook(request)
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 260, in hf_request_event_hook
+    raise OfflineModeIsEnabled(
+huggingface_hub.errors.OfflineModeIsEnabled: Cannot reach https://huggingface.co/Wan-AI/Wan2.1-T2V-14B-Diffusers/resolve/main/vae/config.json: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/configuration_utils.py", line 424, in load_config
+    config_file = hf_hub_download(
+                  ^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1013, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1165, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1872, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1177, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 824, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 852, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1249, in __init__
+    self.worker = worker_class(
+                  ^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 256, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 365, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 234, in load_model
+    self.pipeline = model_loader.load_model(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 364, in load_model
+    model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 616, in _init_from_load_format
+    model = initialize_model(self.od_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 374, in initialize_model
+    model = model_class(od_config=od_config)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/wan2_2/pipeline_wan2_2_s2v.py", line 513, in __init__
+    self._init_original_format(model_path, dtype)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/wan2_2/pipeline_wan2_2_s2v.py", line 623, in _init_original_format
+    self.vae = DistributedAutoencoderKLWan.from_single_file(vae_pth, torch_dtype=dtype)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/loaders/single_file_model.py", line 421, in from_single_file
+    diffusers_model_config = cls.load_config(
+                             ^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/configuration_utils.py", line 451, in load_config
+    raise EnvironmentError(
+OSError: Wan-AI/Wan2.1-T2V-14B-Diffusers does not appear to have a file named config.json.
+
+
+
+
+
+ERROR 08-20 09:50:58 [multiproc_executor.py:298] Rank 0 scheduler is dead. Please check if there are relevant logs.
+ERROR 08-20 09:50:58 [multiproc_executor.py:300] Exit code: 1
+ERROR 08-20 09:50:58 [stage_runtime.py:253] [StageRuntime] Stage initialization failed; shutting down 0 initialized client(s)
+ERROR 08-20 09:50:58 [stage_runtime.py:253] Traceback (most recent call last):
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     raise primary_exc
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     client = self._initialize_replica(
+ERROR 08-20 09:50:58 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     client, resources = launch_diffusion_stage_replica(
+ERROR 08-20 09:50:58 [stage_runtime.py:253]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     client = initialize_diffusion_stage(
+ERROR 08-20 09:50:58 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     self._engine = DiffusionEngine.make_engine(self.od_config)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     engine = engine_class(config, scheduler=scheduler)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     self._init_executor(od_config)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     self.executor = executor_class(od_config)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     self._init_executor()
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     data = reader.recv()
+ERROR 08-20 09:50:58 [stage_runtime.py:253]            ^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     buf = self._recv_bytes()
+ERROR 08-20 09:50:58 [stage_runtime.py:253]           ^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     buf = self._recv(4)
+ERROR 08-20 09:50:58 [stage_runtime.py:253]           ^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [stage_runtime.py:253]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+ERROR 08-20 09:50:58 [stage_runtime.py:253]     raise EOFError
+ERROR 08-20 09:50:58 [stage_runtime.py:253] EOFError
+ERROR 08-20 09:50:58 [async_omni_engine.py:440] [AsyncOmniEngine] Orchestrator thread crashed
+ERROR 08-20 09:50:58 [async_omni_engine.py:440] Traceback (most recent call last):
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 434, in _bootstrap_orchestrator
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     loop.run_until_complete(_run_orchestrator())
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/usr/local/python3.12.13/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     return future.result()
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 392, in _run_orchestrator
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self._initialize_stages(stage_init_timeout)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 342, in _initialize_stages
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self._runtime.initialize()
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 259, in initialize
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     raise exc
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     raise primary_exc
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+ERROR 08-20 050:58 [async_omni_engine.py:440]     client = self._initialize_replica(
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     client, resources = launch_diffusion_stage_replica(
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     client = initialize_diffusion_stage(
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self._engine = DiffusionEngine.make_engine(self.od_config)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     engine = engine_class(config, scheduler=scheduler)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self._init_executor(od_config)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self.executor = executor_class(od_config)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     self._init_executor()
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     data = reader.recv()
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]            ^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     buf = self._recv_bytes()
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]           ^^^^^^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     buf = self._recv(4)
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]           ^^^^^^^^^^^^^
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+ERROR 08-20 09:50:58 [async_omni_engine.py:440]     raise EOFError
+ERROR 08-20 09:50:58 [async_omni_engine.py:440] EOFError
+INFO 08-20 09:50:58 [async_omni_engine.py:1827] [AsyncOmniEngine] Shutting down Orchestrator
+Exception in thread orchestrator:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/local/python3.12.13/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 434, in _bootstrap_orchestrator
+    loop.run_until_complete(_run_orchestrator())
+  File "/usr/local/python3.12.13/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 392, in _run_orchestrator
+    self._initialize_stages(stage_init_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 342, in _initialize_stages
+    self._runtime.initialize()
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 259, in initialize
+    raise exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+    initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+    raise primary_exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+    client = self._initialize_replica(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 529, in _initialize_replica
+    return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+    client, resources = launch_diffusion_stage_replica(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+    client = initialize_dif           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+    return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+    return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+    self._engine = DiffusionEngine.make_engine(self.od_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+    engine = engine_class(config, scheduler=scheduler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+    self._init_executor(od_config)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+    self.executor = executor_class(od_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+    self._init_executor()
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+    processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+    data = reader.recv()
+           ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Traceback (most recent call last):
+  File "/usr/local/python3.12.13/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/local/python3.12.13/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 434, in _bootstrap_orchestrator
+    loop.run_until_complete(_run_orchestrator())
+  File "/usr/local/python3.12.13/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 392, in _run_orchestrator
+    self._initialize_stages(stage_init_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/async_omni_engine.py", line 342, in _initialize_stages
+    self._runtime.initialize()
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 259, in initialize
+    raise exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 240, in initialize
+    initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 504, in _initialize_stage_replicas
+    raise primary_exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 465, in _init_group
+    client = self._initialize_replica(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_run529, in _initialize_replica
+    return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 650, in _initialize_local_diffusion_replica
+    client, resources = launch_diffusion_stage_replica(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1506, in launch_diffusion_stage_replica
+    client = initialize_diffusion_stage(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 1241, in initialize_diffusion_stage
+    return create_diffusion_client(model, od_config, metadata, stage_init_timeout, batch_size, use_inline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 55, in create_diffusion_client
+    return InlineStageDiffusionClient(model, od_config, metadata, batch_size=batch_size)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 62, in __init__
+    self._engine = DiffusionEngine.make_engine(self.od_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 685, in make_engine
+    engine = engine_class(config, scheduler=scheduler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 180, in __init__
+    self._init_executor(od_config)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 215, in _init_executor
+    self.executor = executor_class(od_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 64, in __init__
+    self._init_executor()
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 87, in _init_executor
+    processes, result_handle = self._launch_workers(broadcast_handle, self.wake_events)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 296, in _launch_workers
+    data = reader.recv()
+           ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/vllm-workspace/vllm-omni/examples/offline_inference/speech_to_video/speech_to_video.py", line 418, in <module>
+    main()
+  File "/vllm-workspace/vllm-omni/examples/offline_inference/speech_to_video/speech_to_video.py", line
