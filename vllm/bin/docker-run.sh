@@ -50,7 +50,7 @@ docker run --rm \
     -v /usr/local/Ascend/driver/lib64/:/usr/local/Ascend/driver/lib64/ \
     -v /usr/local/Ascend/driver/version.info:/usr/local/Ascend/driver/version.info \
     -v /etc/ascend_install.info:/etc/ascend_install.info \
-    -v /mnt/s:/mnt/s \
+    -v /mnt/s:/s \
     -v /etc/hccn.conf:/etc/hccn.conf \
     -it $DOCKER_IMAGE:$DOCKER_IMAGE_TAG bash
 
