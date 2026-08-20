@@ -3,15 +3,17 @@
 
 set -euo pipefail
 
-BASE_URL="${BASE_URL:-http://localhost:8091}"
+BASE_URL="${BASE_URL:-http://127.0.0.1:8091}"
 OUTPUT_PATH="${OUTPUT_PATH:-s2v_480p_serve.mp4}"
-IMAGE_URL="${IMAGE_URL:-https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/examples/Five%20Hundred%20Miles.png}"
-AUDIO_URL="${AUDIO_URL:-https://raw.githubusercontent.com/Wan-Video/Wan2.2/main/examples/Five%20Hundred%20Miles.MP3}"
-PROMPT="${PROMPT:-A person singing}"
-WIDTH="${WIDTH:-832}"
-HEIGHT="${HEIGHT:-480}"
-NUM_INFERENCE_STEPS="${NUM_INFERENCE_STEPS:-40}"
-GUIDANCE_SCALE="${GUIDANCE_SCALE:-4.5}"
+IMAGE_URL="${IMAGE_URL:-http://172.20.29.137:8008/samples/wang_xu_pei.jpg}"
+AUDIO_URL="${AUDIO_URL:-http://172.20.29.137:8008/samples/wang_xu_pei.m4a}"
+PROMPT="${PROMPT:-A realistic person speaking naturally, maintain the same identity and facial features, stable eyes and mouth, subtle facial expressions, minimal head movement, small hand gestures}"
+WIDTH="${WIDTH:-800}"
+HEIGHT="${HEIGHT:-1056}"
+#WIDTH="${WIDTH:-480}"
+#HEIGHT="${HEIGHT:-640}"
+NUM_INFERENCE_STEPS="${NUM_INFERENCE_STEPS:-50}"
+GUIDANCE_SCALE="${GUIDANCE_SCALE:-2.5}"
 FPS="${FPS:-16}"
 
 echo "Sending S2V request..."
