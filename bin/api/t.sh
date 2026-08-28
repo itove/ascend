@@ -15,7 +15,7 @@ curl --location "$ENDPOINT/v1/chat/completions" \
     --header 'Content-Type: application/json' \
     --data '
 {
-    "model": "qwen3.6-27b",
+    "model": "qwen3.8-27b",
     "messages": [{
         "role": "user",
         "content": "hi"
