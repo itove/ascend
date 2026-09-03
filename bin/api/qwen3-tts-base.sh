@@ -8,17 +8,16 @@ ENDPOINT=${ENDPOINT:-https://ai.zxaicc.com/api}
 
 # ENDPOINT=https://ai.zxaicc.com/api
 # ENDPOINT=http://ai:3000/api
-ENDPOINT=http://127.0.0.1:8004
+ENDPOINT=http://172.20.116.82:8011
 
+        # "stream": true,
 curl $ENDPOINT/v1/audio/speech \
     --header "Authorization: Bearer $API_KEY" \
     -H "Content-Type: application/json" \
    -d '{
         "model": "qwen3-tts-12hz-1.7b-base",
-        "input": "Mao Zedong[a] (26 December 1893 – 9 September 1976) was a Chinese communist revolutionary, political theorist and the founder of the Peoples Republic of China (PRC). He led China from the PRCs establishment in October 1949 until his death in September 1976, primarily through his role as the Chairman of the Chinese Communist Party (CCP).[b] His theories, which he advocated as a Chinese adaptation of Marxism–Leninism, are known as Mao Zedong Thought.",
-        "task_base": "base",
-        "ref_audio": "http://172.20.29.137:8008/samples/trump.wav",
-        "ref_text": "My fellow Americans: Tonight, I want to speak with you about our nations unprecedented response to the coronavirus outbreak that started in China and is now spreading throughout the world.  Today, the World Health Organization officially announced that this is a global pandemic.  We have been in frequent contact with our allies, and we are marshalling the full power of the federal government and the private sector to protect the American"
+        "input": "《红楼梦》，中国古典四大名著之首，清代作家曹雪芹创作的章回体长篇小说，又名《石头记》《金玉缘》。此书分为120回“程本”和80回“脂本”两种版本系统。新版通行本前八十回据脂本汇校，后四十回据程本汇校，署名“曹雪芹著，无名氏续，程伟元、高鹗整理”。",
+        "voice": "wang_xu_pei"
     }' --output output.wav
 
 
