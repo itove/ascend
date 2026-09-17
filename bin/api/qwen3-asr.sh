@@ -7,6 +7,7 @@
 ENDPOINT=${ENDPOINT:-https://ai.zxaicc.com}
 # ENDPOINT=http://ai:3000/api
 # ENDPOINT=http://gx107:8003
+ENDPOINT=http://172.20.29.123:4000
 
 curl $ENDPOINT/v1/chat/completions \
     --header "Authorization: Bearer $API_KEY" \
@@ -17,7 +18,7 @@ curl $ENDPOINT/v1/chat/completions \
     {"role": "user", "content": [
         {"type": "audio_url",
         "audio_url":
-        {"url": "http://172.20.29.137:8008/output.wav"}}
+        {"url": "http://172.20.29.137:8008/samples/wang_xu_pei.mp3"}}
     ]}
     ]
 }'
