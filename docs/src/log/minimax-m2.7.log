@@ -1,0 +1,40 @@
+
+(Worker_TP6_EP6 pid=286) INFO 09-20 03:22:12 [compiler_interface.py:199] Saved compiled graph to cache: /root/.cache/vllm/torch_compile_cache/ac958632b2/rank_6_0/backbone/artifact_compile_range_1_32768_subgraph_0
+(Worker_TP2_EP2 pid=282) INFO 09-20 03:22:12 [compiler_interface.py:199] Saved compiled graph to cache: /root/.cache/vllm/torch_compile_cache/ac958632b2/rank_2_0/backbone/artifact_compile_range_1_32768_subgraph_0
+(EngineCore pid=254) INFO 09-20 03:22:16 [patch_shm_broadcast.py:74] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation, weight/kv cache quantization).
+(Worker_TP4_EP4 pid=284) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_4_0/model: cannot pickle 'module' object
+(Worker_TP7_EP7 pid=287) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_7_0/model: cannot pickle 'module' object
+(Worker_TP5_EP5 pid=285) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_5_0/model: cannot pickle 'module' object
+(Worker_TP3_EP3 pid=283) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_3_0/model: cannot pickle 'module' object
+(Worker_TP1_EP1 pid=281) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_1_0/model: cannot pickle 'module' object
+(Worker_TP0_EP0 pid=280) WARNING 09-20 03:22:17 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_0_0/model: cannot pickle 'module' object
+(Worker_TP0_EP0 pid=280) INFO 09-20 03:22:17 [monitor.py:53] torch.compile took 61.87 s in total
+(Worker_TP6_EP6 pid=286) WARNING 09-20 03:22:18 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_6_0/model: cannot pickle 'module' object
+(Worker_TP2_EP2 pid=282) WARNING 09-20 03:22:18 [decorators.py:713] unable to save AOT compiled function to /root/.cache/vllm/torch_compile_cache/torch_aot_compile/a2fe7d6d1462f983d70c80b886a5ae463574a56136a31dde2f0e036c446f6b15/rank_2_0/model: cannot pickle 'module' object
+
+
+(Worker_TP0_EP0 pid=280) INFO 09-20 03:22:51 [worker.py:593] Available KV cache memory: -7.21 GiB
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195] EngineCore failed to start.
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195] Traceback (most recent call last):
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 1164, in run_engine_core
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     return func(*args, **kwargs)
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 930, in __init__
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     super().__init__(
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 132, in __init__
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     kv_cache_config = self._initialize_kv_caches(vllm_config)
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     return func(*args, **kwargs)
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 268, in _initialize_kv_caches
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     kv_cache_configs = get_kv_cache_configs(
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]                        ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/core/kv_cache_utils.py", line 2052, in get_kv_cache_configs
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     _check_enough_kv_cache_memory(
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]   File "/vllm-workspace/vllm/vllm/v1/core/kv_cache_utils.py", line 720, in _check_enough_kv_cache_memory
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195]     raise ValueError(
+(EngineCore pid=254) ERROR 09-20 03:22:51 [core.py:1195] ValueError: No available memory for the cache blocks. Try increasing `gpu_memory_utilization` when initializing the engine (this flag also controls CPU memory reservation on the CPU backend, despite its name). See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.
