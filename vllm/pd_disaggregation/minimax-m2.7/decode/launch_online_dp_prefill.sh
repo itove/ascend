@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-nic_name="bond0.284"
+nic_name="bond0.316"
 local_ip=$(ifconfig "$nic_name" | awk '/inet /{print $2}')
 head_node_ip="172.20.116.200"
 

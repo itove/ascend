@@ -11,7 +11,7 @@ sysctl -w vm.swappiness=0
 sysctl -w kernel.numa_balancing=0
 sysctl kernel.sched_migration_cost_ns=50000
 
-nic_name="bond0.284"
+nic_name="bond0.316"
 local_ip=$(ifconfig "$nic_name" | awk '/inet /{print $2}')
 
 export HCCL_BUFFSIZE=2048
