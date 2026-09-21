@@ -81,3 +81,5 @@ Per-position acceptance (%):
   Position 2:                            3.21
 ==================================================
 ```
+
+Restart server with `--enable-prefix-caching`. 2026-09-21 22:35
