@@ -168,3 +168,89 @@ Per-position acceptance (%):
   Position 2:                            2.43
 ==================================================
 ```
+
+Both maas1 and maas2 without `--random-prefix-len 12000`.
+
+maas1
+```
+████████████████████████████████| 1000/1000 [52:31<00:00,  3.15s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     1000
+Failed requests:                         0
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  3151.17
+Total input tokens:                      16038000
+Total generated tokens:                  2048000
+Request throughput (req/s):              0.32
+Output token throughput (tok/s):         649.92
+Peak output token throughput (tok/s):    481.00
+Peak concurrent requests:                37.00
+Total token throughput (tok/s):          5739.46
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1531.15
+Median TTFT (ms):                        1045.22
+P99 TTFT (ms):                           11554.96
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          47.93
+Median TPOT (ms):                        47.92
+P99 TPOT (ms):                           57.46
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           92.94
+Median ITL (ms):                         72.44
+P99 ITL (ms):                            827.52
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     31.35
+Acceptance length:                       1.94
+Drafts:                                  1055074
+Draft tokens:                            3165222
+Accepted tokens:                         992421
+Per-position acceptance (%):
+  Position 0:                            83.34
+  Position 1:                            7.33
+  Position 2:                            3.39
+==================================================
+```
+
+maas2
+```
+████████████████████████████████| 1000/1000 [52:30<00:00,  3.15s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     1000
+Failed requests:                         0
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  3150.25
+Total input tokens:                      16038000
+Total generated tokens:                  2048000
+Request throughput (req/s):              0.32
+Output token throughput (tok/s):         650.11
+Peak output token throughput (tok/s):    481.00
+Peak concurrent requests:                37.00
+Total token throughput (tok/s):          5741.12
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1558.40
+Median TTFT (ms):                        1048.21
+P99 TTFT (ms):                           11628.86
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          48.01
+Median TPOT (ms):                        47.86
+P99 TPOT (ms):                           58.42
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           92.86
+Median ITL (ms):                         72.17
+P99 ITL (ms):                            829.49
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     31.16
+Acceptance length:                       1.93
+Drafts:                                  1058225
+Draft tokens:                            3174675
+Accepted tokens:                         989298
+Per-position acceptance (%):
+  Position 0:                            83.09
+  Position 1:                            7.17
+  Position 2:                            3.23
+==================================================
+```
