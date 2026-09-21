@@ -10,9 +10,9 @@ _help(){
     echo 'Usage: modelscope-download <user/model_name>'
 }
 
-modelname="$1"
+model_name="$1"
 
-if [ -z "$modelname" ]; then
+if [ -z "$model_name" ]; then
     _help
     exit
 fi
@@ -20,14 +20,14 @@ fi
 i=0
 while :
 do
-    echo Start downloading model: $modelname
+    echo Start downloading model: $model_name
     echo cache dir: $pdir/cache
-    echo weights dir: $pdir/$modelname
+    echo weights dir: $pdir/$model_name
     let i++
     modelscope download \
-        --model $modelname\
+        --model $model_name\
         --cache_dir $pdir/cache\
-        --local_dir $pdir/$modelname\
+        --local_dir $pdir/$model_name\
         && break
 done
 
