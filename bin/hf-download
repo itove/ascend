@@ -5,6 +5,8 @@
 export HF_ENDPOINT=https://hf-mirror.com
 #export HF_HUB_ENABLE_HF_TRANSFER=1
 hf_dir=/mnt/d/s/hf
+git_dir=/mnt/d/s/git/hf
+baseurl=https://hf-mirror.com
 
 _help(){
     echo Download weight into $hf_dir
@@ -30,3 +32,7 @@ do
 done
 
 echo Done. Tried $i times.
+
+# Verify download
+GIT_LFS_SKIP_SMUDGE=1 git clone $baseurl/$model_name $git_dir && \
+    cd $hf_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name

@@ -3,6 +3,7 @@
 # vim:ft=bash
 
 pdir=/mnt/d/s/modelscope
+baseurl=https://www.modelscope.ai
 
 _help(){
     echo Download weight into $pdir
@@ -31,3 +32,7 @@ do
 done
 
 echo Done. Tried $i times.
+
+# Verify download
+GIT_LFS_SKIP_SMUDGE=1 git clone $baseurl/$model_name $git_dir && \
+    cd $hf_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name
