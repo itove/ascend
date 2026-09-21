@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # vim:ft=bash
+# see https://docs.vllm.ai/projects/ascend/en/latest/tutorials/models/Qwen3.8-27B.html
 
 set -e
 
