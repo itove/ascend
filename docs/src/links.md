@@ -2,8 +2,8 @@
 
 ## vllm
 ### CLI Reference
-[vllm serve](https://docs.vllm.ai/en/stable/cli/serve/)
-[vllm bench serve](https://docs.vllm.ai/en/stable/cli/bench/serve/)
+* [vllm serve](https://docs.vllm.ai/en/stable/cli/serve/)
+* [vllm bench serve](https://docs.vllm.ai/en/stable/cli/bench/serve/)
 
 ## 昇腾计算
 - [昇腾计算](https://e.huawei.com/cn/products/computing/ascend)
