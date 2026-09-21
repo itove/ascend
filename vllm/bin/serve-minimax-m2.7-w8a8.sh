@@ -38,6 +38,7 @@ vllm serve $MODEL_PATH \
     --max-num-batched-tokens 32768 \
     --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY"}' \
     --gpu-memory-utilization 0.9 \
+    --tool-call-parser "minimax-m2" \
     --additional-config '{"enable_cpu_binding":true}' \
     --model-loader-extra-config '{"enable_multithread_load":true,"num_threads":16}' \
     --speculative_config '{"method": "eagle3", "model": "/s/modelscope/Eco-Tech/MiniMax-M2.7-eagle-model-short/",  "num_speculative_tokens":3}'
