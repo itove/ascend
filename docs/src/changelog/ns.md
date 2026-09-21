@@ -1,6 +1,7 @@
 2026-09-21
 * 下载权重`Eco-Tech/Qwen3.8-27B-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/Qwen3.8-27B-w8a8/`
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-0.13.0rc3.tar`
+* 删除权重`Eco-Tech/Qwen3.6-27B-w8a8/`，路径`/mnt/d/s/modelscope/Eco-Tech/Qwen3.6-27B-w8a8/`
 
 2026-09-20
 * 下载权重`Eco-Tech/MiniMax-M2.7-eagle-model-short`，路径`/mnt/d/s/modelscope/Eco-Tech/MiniMax-M2.7-eagle-model-short`
