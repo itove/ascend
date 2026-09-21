@@ -7,7 +7,7 @@ baseurl=https://www.modelscope.cn
 git_dir=/mnt/d/s/git/modelscope
 
 _help(){
-    echo Download weight into $pdir
+    echo Download weight into $weight_dir
     echo 'Usage: modelscope-download <user/model_name>'
 }
 
@@ -22,13 +22,13 @@ i=0
 while :
 do
     echo Start downloading model: $model_name
-    echo cache dir: $pdir/cache
-    echo weights dir: $pdir/$model_name
+    echo cache dir: $weight_dir/cache
+    echo weights dir: $weight_dir/$model_name
     let i++
     modelscope download \
         --model $model_name\
-        --cache_dir $pdir/cache\
-        --local_dir $pdir/$model_name\
+        --cache_dir $weight_dir/cache\
+        --local_dir $weight_dir/$model_name\
         && break
 done
 
