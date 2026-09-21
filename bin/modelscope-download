@@ -35,5 +35,6 @@ done
 echo Done. Tried $i times.
 
 # Verify download
+rm -rf $git_dir/$model_name
 GIT_LFS_SKIP_SMUDGE=1 git clone $baseurl/$model_name $git_dir/$model_name && \
-    cd $weight_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name
+    { cd $weight_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name; }
