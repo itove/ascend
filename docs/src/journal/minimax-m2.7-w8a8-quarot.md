@@ -83,4 +83,4 @@ Per-position acceptance (%):
 ```
 
 Restart server with `--enable-prefix-caching`. 2026-09-21 22:35
-Bench on both maas1 and maas2, with `--random-prefix-len 12000`. 2026-09-21 22:54
+Bench on both maas1 and maas2, with `--random-prefix-len 12000`. 2026-09-21 11:03
