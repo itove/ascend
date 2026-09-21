@@ -1,6 +1,6 @@
 # bench
 
-Remove `--random-prefix-len 12000`
+Bench on both maas1 and maas2 without `--random-prefix-len 12000`.
 
 maas1
 ```
@@ -83,3 +83,4 @@ Per-position acceptance (%):
 ```
 
 Restart server with `--enable-prefix-caching`. 2026-09-21 22:35
+Bench on both maas1 and maas2, with `--random-prefix-len 12000`. 2026-09-21 22:54
