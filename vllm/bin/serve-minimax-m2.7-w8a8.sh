@@ -35,6 +35,7 @@ vllm serve $MODEL_PATH \
     --enable-expert-parallel \
     --max-num-seqs 32 \
     --seed 1024 \
+    --enable-prefix-caching \
     --max-num-batched-tokens 32768 \
     --compilation-config '{"cudagraph_mode": "FULL_DECODE_ONLY"}' \
     --gpu-memory-utilization 0.9 \
