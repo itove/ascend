@@ -42,7 +42,7 @@ Per-position acceptance (%):
 ==================================================
 ```
 
-maas1
+maas2
 ```
 ============ Serving Benchmark Result ============
 Successful requests:                     1000
