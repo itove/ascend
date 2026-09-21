@@ -4,12 +4,12 @@
 
 export HF_ENDPOINT=https://hf-mirror.com
 #export HF_HUB_ENABLE_HF_TRANSFER=1
-hf_dir=/mnt/d/s/hf
+weight_dir=/mnt/d/s/hf
 git_dir=/mnt/d/s/git/hf
 baseurl=https://hf-mirror.com
 
 _help(){
-    echo Download weight into $hf_dir
+    echo Download weight into $weight_dir
     echo 'Usage: hf-download <user/model_name>'
 }
 
@@ -24,10 +24,10 @@ i=0
 while :
 do
     echo Start downloading model: $model_name
-    echo weights dir: $hf_dir/$model_name
+    echo weights dir: $weight_dir/$model_name
     let i++
     hf download $model_name\
-        --local-dir $hf_dir/$model_name\
+        --local-dir $weight_dir/$model_name\
         && break
 done
 
@@ -35,4 +35,4 @@ echo Done. Tried $i times.
 
 # Verify download
 GIT_LFS_SKIP_SMUDGE=1 git clone $baseurl/$model_name $git_dir/$model_name && \
-    cd $hf_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name
+    cd $weight_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name

@@ -2,7 +2,7 @@
 #
 # vim:ft=bash
 
-pdir=/mnt/d/s/modelscope
+weight_dir=/mnt/d/s/modelscope
 baseurl=https://www.modelscope.cn
 git_dir=/mnt/d/s/git/modelscope
 
@@ -36,4 +36,4 @@ echo Done. Tried $i times.
 
 # Verify download
 GIT_LFS_SKIP_SMUDGE=1 git clone $baseurl/$model_name $git_dir/$model_name && \
-    cd $hf_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name
+    cd $weight_dir/$model_name; /mnt/d/s/ascend/bin/compare_checksum.sh $git_dir/$model_name
