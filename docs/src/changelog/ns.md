@@ -1,4 +1,6 @@
 2026-09-21
+* 下载权重`meituan-longcat/LongCat-Video-Avatar-1.5`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Video-Avatar-1.5`
+* 下载权重`Qwen/Qwen-Image-2.1`，路径`/mnt/d/s/hf/Qwen/Qwen-Image-2.1`
 * 下载权重`Eco-Tech/Qwen3.8-27B-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/Qwen3.8-27B-w8a8/`
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-0.13.0rc3.tar`
 * 删除权重`Eco-Tech/Qwen3.6-27B-w8a8/`，路径`/mnt/d/s/modelscope/Eco-Tech/Qwen3.6-27B-w8a8/`
