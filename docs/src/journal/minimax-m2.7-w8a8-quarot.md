@@ -255,7 +255,7 @@ Per-position acceptance (%):
 ==================================================
 ```
 
-Bench through LiteLLM
+Bench through LiteLLM, with model alias `minimax-m2.7` targeting to group `minimax-m2.7-w8a8-quarot` which have 2 models named `minimax-m2.7-w8a8-quarot`
 ```
 100%|██████████████████████████| 1000/1000 [39:41<00:00,  2.38s/it]
 Failed requests during benchmark run detected (capping to 10):
@@ -425,5 +425,178 @@ P99 TPOT (ms):                           314.75
 Mean ITL (ms):                           70.38
 Median ITL (ms):                         57.02
 P99 ITL (ms):                            808.69
+==================================================
+```
+
+Bench through LiteLLM, with model alias `minimax-m2.7` targeting to group `minimax-m2.7-w8a8-quarot` which have 1 model named `minimax-m2.7-w8a8-quarot`
+```
+100%|██████████████████████████████████████████████████████████████████████████████| 1000/1000 [52:13<00:00,  3.13s/it]
+Failed requests during benchmark run detected (capping to 10):
+Error 0: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 1: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 2: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 3: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 4: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 5: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 6: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 7: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 8: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error 9: Traceback (most recent call last):
+  File "/vllm-workspace/vllm/vllm/benchmarks/lib/endpoint_request_func.py", line 393, in async_request_openai_chat_completions
+    data = json.loads(chunk)
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.13/lib/python3.12/json/decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     988
+Failed requests:                         12
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  3133.47
+Total input tokens:                      15808000
+Total generated tokens:                  584275
+Request throughput (req/s):              0.32
+Output token throughput (tok/s):         186.46
+Peak output token throughput (tok/s):    5174.00
+Peak concurrent requests:                43.00
+Total token throughput (tok/s):          5231.34
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1965.54
+Median TTFT (ms):                        1168.35
+P99 TTFT (ms):                           12369.17
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          195.51
+Median TPOT (ms):                        190.77
+P99 TPOT (ms):                           391.86
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           93.09
+Median ITL (ms):                         71.92
+P99 ITL (ms):                            830.88
 ==================================================
 ```
