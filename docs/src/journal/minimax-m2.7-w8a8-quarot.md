@@ -600,3 +600,5 @@ Median ITL (ms):                         71.92
 P99 ITL (ms):                            830.88
 ==================================================
 ```
+
+Bench through nginx -> LiteLLM, with model alias `minimax-m2.7` targeting to group `minimax-m2.7-w8a8-quarot` which have 2 models named `minimax-m2.7-w8a8-quarot`
