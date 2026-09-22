@@ -27,4 +27,4 @@ vllm bench serve \
     --random-output-len 2048 \
     --num-warmups 10 \
     --save-result \
-    --result-dir ./
+    --result-dir /s/public/bench/
