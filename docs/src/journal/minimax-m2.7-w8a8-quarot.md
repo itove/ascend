@@ -1057,3 +1057,53 @@ Traceback (most recent call last):
 PermissionError: [Errno 13] Permission denied: '/s/public/bench/openai-chat-5.0qps-concurrency32--20260922-094012.json'
 [ERROR] 2026-09-22-09:40:12 (PID:1174, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
 ```
+
+```
+vllm bench serve \
+    --served-model-name minimax-m2.7 \
+    --model /s/modelscope/vllm-ascend/MiniMax-M2.7-w8a8-QuaRot/ \
+    --base-url "https://ai.zxaicc.com" \
+    --backend openai-chat \
+    --endpoint /v1/chat/completions \
+    --dataset-name random \
+    --num-prompts 1000 \
+    --request-rate 5 \
+    --max-concurrency 32 \
+    --random-input-len 16000 \
+    --random-output-len 2048 \
+    --num-warmups 10 \
+    --save-result \
+    --header "Authorization=Bearer sk-xxx" \
+    --result-dir /s/public/bench/
+```
+
+```
+100%|████████████████████████████████████| 1000/1000 [39:02<00:00,  2.34s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     1000
+Failed requests:                         0
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  2342.28
+Total input tokens:                      16000000
+Total generated tokens:                  591278
+Request throughput (req/s):              0.43
+Output token throughput (tok/s):         252.44
+Peak output token throughput (tok/s):    2237.00
+Peak concurrent requests:                38.00
+Total token throughput (tok/s):          7083.39
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1477.84
+Median TTFT (ms):                        1130.64
+P99 TTFT (ms):                           5565.63
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          142.71
+Median TPOT (ms):                        138.21
+P99 TPOT (ms):                           274.53
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           68.40
+Median ITL (ms):                         56.86
+P99 ITL (ms):                            807.90
+==================================================
+```
