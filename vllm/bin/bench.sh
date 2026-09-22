@@ -5,16 +5,15 @@
 # . /s/ascend/vllm/ENVs
 
 host=${1:-127.0.0.1}
-port=${2:-8006}
+port=${2:-8001}
 model_path=${3:-/s/modelscope/Eco-Tech/DeepSeek-V4-Flash-w8a8-mtp}
-model_name=$(basename $MODEL_PATH)
+model_name=$(basename $model_path)
 model_name=${model_name,,}
 key="$4"
 
 # see https://docs.vllm.ai/en/latest/cli/bench/serve/
 # --ignore-eos
 # --random-prefix-len 12000
-# --header "Authorization=Bearer sk-xxx" \
 vllm bench serve \
     --served-model-name $model_name \
     --model $model_path \
