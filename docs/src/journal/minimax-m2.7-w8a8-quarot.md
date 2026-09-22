@@ -1152,3 +1152,33 @@ Median ITL (ms):                         56.77
 P99 ITL (ms):                            804.69
 ==================================================
 ```
+
+Same parameters but only one serve in LiteLLM model group.
+```
+============ Serving Benchmark Result ============
+Successful requests:                     100
+Failed requests:                         0
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  349.13
+Total input tokens:                      1600000
+Total generated tokens:                  62316
+Request throughput (req/s):              0.29
+Output token throughput (tok/s):         178.49
+Peak output token throughput (tok/s):    1280.00
+Peak concurrent requests:                41.00
+Total token throughput (tok/s):          4761.31
+---------------Time to First Token----------------
+Mean TTFT (ms):                          11314.11
+Median TTFT (ms):                        11507.45
+P99 TTFT (ms):                           22532.91
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          170.25
+Median TPOT (ms):                        163.35
+P99 TPOT (ms):                           312.31
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           81.17
+Median ITL (ms):                         70.67
+P99 ITL (ms):                            677.58
+==================================================
+```
