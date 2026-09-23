@@ -4,21 +4,23 @@
 
 # . /s/ascend/vllm/ENVs
 
-host=${1:-127.0.0.1}
-port=${2:-8001}
-model_path=${3:-/s/modelscope/Eco-Tech/DeepSeek-V4-Flash-w8a8-mtp}
+baseurl=${1:-https://ai.zxaicc.com}
+#host=${1:-127.0.0.1}
+#port=${2:-8001}
+model_path=${2:-/s/modelscope/Eco-Tech/DeepSeek-V4-Flash-w8a8-mtp}
 model_name=$(basename $model_path)
 model_name=${model_name,,}
-key="$4"
+key="$3"
 
 # see https://docs.vllm.ai/en/latest/cli/bench/serve/
 # --ignore-eos
 # --random-prefix-len 12000
+    #--host $host \
+    #--port $port \
 vllm bench serve \
     --served-model-name $model_name \
     --model $model_path \
-    --host $host \
-    --port $port \
+    --base-url $baseurl \
     --backend openai-chat \
     --endpoint /v1/chat/completions \
     --dataset-name random \
