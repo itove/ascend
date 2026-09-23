@@ -137,3 +137,96 @@ Per-position acceptance (%):
   Position 6:                            18.53
 ==================================================
 ```
+
+```
+[032035 al@maas2 ~]$ sudo npu-smi info -t board -i 0
+[sudo] password for al:
+        NPU ID                         : 0
+        Product Name                   : IT21HMDC_Bin6
+        Model                          : NA
+        Manufacturer                   : Huawei
+        Serial Number                  : 102477131596
+        Software Version               : 24.1.rc2.2
+        Firmware Version               : 7.3.0.2.220
+        Compatibility                  : OK
+        Board ID                       : 0x62
+        PCB ID                         : A
+        BOM ID                         : 1
+        PCIe Bus Info                  : 0000:C1:00.0
+        Slot ID                        : 0
+        Class ID                       : NA
+        PCI Vendor ID                  : 0x19E5
+        PCI Device ID                  : 0xD802
+        Subsystem Vendor ID            : 0x19E5
+        Subsystem Device ID            : 0x3000
+        Chip Count                     : 1
+```
+```
+[032543 al@maas2 ~]$ sudo /mnt/s/driver/cann-9.1.0/Ascend-hdk-910b-npu-firmware_9.0.0.9.220.run --full
+Verifying archive integrity...  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND-HDK-910B-NPU FIRMWARE RUN PACKAGE  100%
+[Firmware] [2026-09-23 15:25:55] [INFO]Start time: 2026-09-23 15:25:55
+[Firmware] [2026-09-23 15:25:55] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Firmware] [2026-09-23 15:25:55] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Firmware] [2026-09-23 15:25:55] [INFO]base version is 7.3.0.2.220.
+[Firmware] [2026-09-23 15:25:55] [WARNING]Do not power off or restart the system during the installation/upgrade
+[Firmware] [2026-09-23 15:25:56] [INFO]Firmware package has been installed on the path /usr/local/Ascend, the version is 7.3.0.2.220, and the version of this package is 9.0.0.9.220,do you want to continue?  [y/n]
+y
+[Firmware] [2026-09-23 15:26:07] [INFO]upgradePercentage: 0%
+[Firmware] [2026-09-23 15:26:19] [INFO]upgradePercentage: 90%
+[Firmware] [2026-09-23 15:26:29] [INFO]upgradePercentage: 90%
+[Firmware] [2026-09-23 15:26:31] [INFO]upgradePercentage: 100%
+[Firmware] [2026-09-23 15:26:31] [INFO]The firmware of [8] chips are successfully upgraded.
+[Firmware] [2026-09-23 15:26:33] [INFO]Firmware package installed successfully! Reboot now or after driver installation for the installation/upgrade to take effect.
+[Firmware] [2026-09-23 15:26:33] [INFO]End time: 2026-09-23 15:26:33
+```
+
+```
+[033324 al@maas2 ~]$ sudo /mnt/s/driver/cann-9.1.0/Ascend-hdk-910b-npu-driver_26.1.1_linux-aarch64.run --full
+[sudo] password for al:
+Verifying archive integrity...  100%   SHA256 checksums are OK. All good.
+Uncompressing ASCEND DRIVER RUN PACKAGE  100%
+[Driver] [2026-09-23 15:33:33] [INFO]Start time: 2026-09-23 15:33:33
+[Driver] [2026-09-23 15:33:33] [INFO]LogFile: /var/log/ascend_seclog/ascend_install.log
+[Driver] [2026-09-23 15:33:33] [INFO]OperationLogFile: /var/log/ascend_seclog/operation.log
+[Driver] [2026-09-23 15:33:33] [INFO]base version is 24.1.rc2.2.
+[Driver] [2026-09-23 15:33:33] [WARNING]Do not power off or restart the system during the installation/upgrade
+[Driver] [2026-09-23 15:33:33] [INFO]set username and usergroup, HwHiAiUser:HwHiAiUser
+[Driver] [2026-09-23 15:33:34] [INFO]driver and firmware version relationship check success
+[Driver] [2026-09-23 15:33:34] [INFO]Driver package has been installed on the path /usr/local/Ascend, the version is 24.1.rc2.2, and the version of this package is 26.1.1,do you want to continue?  [y/n]
+y
+[Driver] [2026-09-23 15:34:42] [INFO]driver install type: DKMS
+[Driver] [2026-09-23 15:34:42] [INFO]upgradePercentage:10%
+[Driver] [2026-09-23 15:34:53] [INFO]upgradePercentage:30%
+[Driver] [2026-09-23 15:34:54] [INFO]upgradePercentage:40%
+[Driver] [2026-09-23 15:35:09] [INFO]upgradePercentage:90%
+[Driver] [2026-09-23 15:35:11] [INFO]upgradePercentage:100%
+[Driver] [2026-09-23 15:35:12] [INFO]Driver package installed successfully! Reboot needed for installation/upgrade to take effect!
+[Driver] [2026-09-23 15:35:13] [INFO]End time: 2026-09-23 15:35:13
+```
+
+```
+[al@maas2 ~]$ sudo npu-smi info -t board -i 0
+[sudo] password for al:
+        NPU ID                         : 0
+        Product Name                   : IT21HMDC_Bin6
+        Model                          : NA
+        Manufacturer                   : Huawei
+        Serial Number                  : 102477131596
+        Software Version               : 26.1.1
+        Firmware Version               : 9.0.0.9.220
+        Compatibility                  : OK
+        Board ID                       : 0x62
+        PCB ID                         : A
+        BOM ID                         : 1
+        PCIe Bus Info                  : 0000:C1:00.0
+        Slot ID                        : 0
+        Class ID                       : NA
+        PCI Vendor ID                  : 0x19E5
+        PCI Device ID                  : 0xD802
+        Subsystem Vendor ID            : 0x19E5
+        Subsystem Device ID            : 0x3000
+        Chip Count                     : 1
+```
+
+Restart `deepseek-v4-flash-0731`.
