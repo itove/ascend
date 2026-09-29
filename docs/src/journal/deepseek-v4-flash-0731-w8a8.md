@@ -230,3 +230,48 @@ y
 ```
 
 Restart `deepseek-v4-flash-0731`.
+
+```
+100%|████████████████████████████████████████████████████████████████████████████| 1000/1000 [2:21:56<00:00,  8.52s/it]
+tip: install termplotlib and gnuplot to plot the metrics
+============ Serving Benchmark Result ============
+Successful requests:                     1000
+Failed requests:                         0
+Maximum request concurrency:             32
+Request rate configured (RPS):           5.00
+Benchmark duration (s):                  8516.54
+Total input tokens:                      16004000
+Total generated tokens:                  2048000
+Request throughput (req/s):              0.12
+Output token throughput (tok/s):         240.47
+Peak output token throughput (tok/s):    208.00
+Peak concurrent requests:                35.00
+Total token throughput (tok/s):          2119.64
+---------------Time to First Token----------------
+Mean TTFT (ms):                          114711.15
+Median TTFT (ms):                        114916.97
+P99 TTFT (ms):                           164576.24
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          75.71
+Median TPOT (ms):                        62.78
+P99 TPOT (ms):                           177.90
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           307.33
+Median ITL (ms):                         458.44
+P99 ITL (ms):                            634.54
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     43.39
+Acceptance length:                       4.04
+Drafts:                                  507645
+Draft tokens:                            3553515
+Accepted tokens:                         1541981
+Per-position acceptance (%):
+  Position 0:                            73.28
+  Position 1:                            56.80
+  Position 2:                            47.98
+  Position 3:                            41.76
+  Position 4:                            36.75
+  Position 5:                            28.97
+  Position 6:                            18.21
+==================================================
+```
