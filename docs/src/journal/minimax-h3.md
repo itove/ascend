@@ -1,11 +1,14 @@
-[昇腾0 Dday支持MiniMax H3，加速SOTA视频模型走向“商业级生产”](https://www.hiascend.com/activities/dynamic-news/755)
-[vllm-omni](ttps://gitcode.com/Ascend/MindIE-SD/blob/dev/examples/minimax-h3/infer.md)
+links
+* [昇腾0 Dday支持MiniMax H3，加速SOTA视频模型走向“商业级生产”](https://www.hiascend.com/activities/dynamic-news/755)
+* [vllm-omni](ttps://gitcode.com/Ascend/MindIE-SD/blob/dev/examples/minimax-h3/infer.md)
 
+docker run
 ```bash
 SHM_SIZE=2000 CONTAINER_NAME=minimix-h3 DOCKER_IMAGE=quay.io/ascend/vllm-omni DOCKER_IMAGE_TAG=v0.28.0 /mnt/s/ascend/vllm/bin/docker-run.sh
 ```
 
-```
+serve
+```bash
 # serve-minimax-h3.sh
 
 set -e
@@ -44,7 +47,7 @@ vllm serve $MODEL_PATH \
 
 ```
 
-Error
+error
 ```
 (DiffusionWorker_SP3 pid=237) RuntimeError: create_config:../torch_npu/csrc/distributed/HCCLUtils.cpp:140 HCCL function error: hcclCommInitRootInfoConfig(numRanks, &rootInfo, rank, config, &(comm->hcclComm_)), error code is 1
 (DiffusionWorker_SP3 pid=237) [ERROR] 2026-10-09-08:38:05 (PID:237, Device:3, RankID:3) ERR02200 DIST call hccl api failed.
