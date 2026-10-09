@@ -44,6 +44,7 @@
 - [Journal](./journal.md)
     - [20251031](./journal/20251031.md)
     - [minimax-m2.7-w8a8-quarot](./journal/minimax-m2.7-w8a8-quarot.md)
+    - [minimax-h3](./journal/minimax-h3.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本信息 2.0.T3](./ver-2.0.md)
     - [版本信息 2.1.RC2](./ver-2.1.md)
