@@ -693,3 +693,5 @@ kend.py", line 383, in _shard_and_pin
 (DiffusionWorker_SP7 pid=1119)         Failed to allocate memory requested by RUNTIME module.
 (DiffusionWorker_SP7 pid=1119)         rtsMallocHost execution failed, reason=driver error:out of memory[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]
 ```
+
+### Tried vllm-omni v0.31.0rc1, SAME
