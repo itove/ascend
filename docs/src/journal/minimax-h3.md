@@ -591,3 +591,105 @@ runtime.py", line 846, in _init_group
 (APIServer pid=84)     self.run()
 (APIServer pid=84)   File "/usr/local/python3.12.13/lib/python3.12/threading.py", line 1012, in run
 ```
+
+### Fix 1
+```
+vim /vllm-workspace/vllm-omni/vllm_omni/model_executor/models/minimax_h3/checkpoint.py
+# replace
+return (path / "modular_model_index.json").is_file() or (path / "fastvideo_inference.json").is_file()
+# with:
+return (path / "fastvideo_inference.json").is_file()
+```
+
+```
+(DiffusionWorker_SP6 pid=1118) INFO 10-10 01:49:42 [diffusion_model_runner.py:449] Model runner: Initialization complete
+.
+(DiffusionWorker_SP7 pid=1119) Process DiffusionWorker-7:
+(DiffusionWorker_SP7 pid=1119) Traceback (most recent call last):
+(DiffusionWorker_SP7 pid=1119)   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 314, in
+ _bootstrap
+(DiffusionWorker_SP7 pid=1119)     self.run()
+(DiffusionWorker_SP7 pid=1119)   File "/usr/local/python3.12.13/lib/python3.12/multiprocessing/process.py", line 108, in
+ run
+(DiffusionWorker_SP7 pid=1119)     self._target(*self._args, **self._kwargs)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1
+634, in worker_main
+(DiffusionWorker_SP7 pid=1119)     worker_proc = WorkerProc(
+(DiffusionWorker_SP7 pid=1119)                   ^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1
+174, in __init__
+(DiffusionWorker_SP7 pid=1119)     self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pip
+eline_args)
+(DiffusionWorker_SP7 pid=1119)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1
+209, in _create_worker
+(DiffusionWorker_SP7 pid=1119)     wrapper = WorkerWrapperBase(
+(DiffusionWorker_SP7 pid=1119)               ^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1
+706, in __init__
+(DiffusionWorker_SP7 pid=1119)     worker = worker_class(
+(DiffusionWorker_SP7 pid=1119)              ^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 3
+08, in __init__
+(DiffusionWorker_SP7 pid=1119)     self.load_model(load_format=self.od_config.diffusion_load_format)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 4
+30, in load_model
+(DiffusionWorker_SP7 pid=1119)     self.model_runner.load_model(
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py",
+line 378, in load_model
+(DiffusionWorker_SP7 pid=1119)     self.pipeline, self.offload_backend = enable_offload_backend(
+(DiffusionWorker_SP7 pid=1119)                                           ^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, i
+n enable_offload_backend
+(DiffusionWorker_SP7 pid=1119)     return pipeline, enable_once(pipeline, startup_state)
+(DiffusionWorker_SP7 pid=1119)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, i
+n enable_once
+(DiffusionWorker_SP7 pid=1119)     backend.enable(model)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 1608, in enable
+(DiffusionWorker_SP7 pid=1119)     self._enable(pipeline)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 1692, in _enable
+(DiffusionWorker_SP7 pid=1119)     prepare_pipeline_components(
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/component_utils.py", line
+ 167, in prepare_pipeline_components
+(DiffusionWorker_SP7 pid=1119)     blockwise = bool(component.stacks) and enable_encoder_blocks(component)
+(DiffusionWorker_SP7 pid=1119)                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 1497, in _try_layerwise_offload_encoder
+(DiffusionWorker_SP7 pid=1119)     encoder_hooks.extend(self._install_hook_group(blocks, TEXT_ENCODER_COMPONENT))
+(DiffusionWorker_SP7 pid=1119)                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 1456, in _install_hook_group
+(DiffusionWorker_SP7 pid=1119)     apply_distributed_block_hook(
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 766, in apply_distributed_block_hook
+(DiffusionWorker_SP7 pid=1119)     registry.register_hook(DistributedLayerwiseOffloadHook._HOOK_NAME, hook)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/hooks/base.py", line 152, in wrappe
+r
+(DiffusionWorker_SP7 pid=1119)     res = func(self, *args, **kwargs)
+(DiffusionWorker_SP7 pid=1119)           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/hooks/base.py", line 235, in regist
+er_hook
+(DiffusionWorker_SP7 pid=1119)     hook.initialize_hook(self.module)
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 252, in initialize_hook
+(DiffusionWorker_SP7 pid=1119)     self.cpu_shards, self.metadata = self._shard_and_pin(
+(DiffusionWorker_SP7 pid=1119)                                      ^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119)   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/distributed_layerwise_bac
+kend.py", line 383, in _shard_and_pin
+(DiffusionWorker_SP7 pid=1119)     shard = torch.zeros(
+(DiffusionWorker_SP7 pid=1119)             ^^^^^^^^^^^^
+(DiffusionWorker_SP7 pid=1119) torch.OutOfMemoryError: allocate_host_memory_slowpath:../torch_npu/csrc/core/npu/CachingHostAllocator.cpp:252 NPU function error: aclrtMallocHostWithCfg, error code is 207001
+(DiffusionWorker_SP7 pid=1119) [ERROR] 2026-10-10-01:49:39 (PID:1119, Device:7, RankID:7) ERR00100 PTA call acl api failed
+(DiffusionWorker_SP7 pid=1119) [Error]: Failed to apply for memory.
+(DiffusionWorker_SP7 pid=1119)         Check the remaining storage space in the hardware environment.
+(DiffusionWorker_SP7 pid=1119) [PID: 1119] 2026-10-10-01:49:39.813.031 Resource_Error_Insufficient_Host_Memory(EL0018): Failed to allocate 134217728 bytes host memory requested by the RUNTIME module.
+(DiffusionWorker_SP7 pid=1119)         Possible Cause: Allocation failed due to insufficient host memory.
+(DiffusionWorker_SP7 pid=1119)         Solution: Ensure that the required memory is available. Take measures such as stopping unnecessary processes to free memory.
+(DiffusionWorker_SP7 pid=1119) TraceBack (most recent call last):
+(DiffusionWorker_SP7 pid=1119)         Failed to allocate memory requested by RUNTIME module.
+(DiffusionWorker_SP7 pid=1119)         rtsMallocHost execution failed, reason=driver error:out of memory[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:69]
+```
