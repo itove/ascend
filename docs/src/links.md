@@ -1,6 +1,12 @@
 # 相关链接
 
 ## vllm
+### docs
+* [vllm ascend](https://docs.vllm.ai/projects/ascend/en/latest/getting_started/installation.html)
+* [vllm omni](https://docs.vllm.ai/projects/vllm-omni/en/latest/getting_started/quickstart/)
+### docker image
+* [quay.io vllm-ascend](https://quay.io/repository/ascend/vllm-ascend)
+* [quay.io vllm-omni](https://quay.io/repository/ascend/vllm-omni)
 ### CLI Reference
 * [vllm serve](https://docs.vllm.ai/en/stable/cli/serve/)
 * [vllm bench serve](https://docs.vllm.ai/en/stable/cli/bench/serve/)
