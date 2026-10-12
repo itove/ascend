@@ -1,5 +1,8 @@
 # 相关链接
 
+## 数字人
+* [基于开源技术的数字人实时对话](https://developer.aliyun.com/article/1637714)
+
 ## vllm
 ### docs
 * [vllm ascend](https://docs.vllm.ai/projects/ascend/en/latest/getting_started/installation.html)
