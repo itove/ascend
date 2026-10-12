@@ -2,6 +2,7 @@
 
 ## 数字人
 * [基于开源技术的数字人实时对话](https://developer.aliyun.com/article/1637714)
+* [【成都AICC】MuseTalk模型推理指导](https://gitee.com/ascend/modelzoo/issues/IC8CJ7)
 
 ## vllm
 ### docs
