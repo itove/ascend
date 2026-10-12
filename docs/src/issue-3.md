@@ -1,4 +1,4 @@
-## glm-4.7 missing starting <think>
+## glm-4.7 missing starting `<think>`
  - <https://huggingface.co/zai-org/GLM-4.7-FP8/discussions/2>
  - <https://github.com/vllm-project/vllm/issues/31319>
  - <https://discuss.vllm.ai/t/glm-4-7-fp8-reasoning-start-issues/2146/2>
