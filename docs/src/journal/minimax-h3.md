@@ -1,7 +1,10 @@
 ### links
 * [昇腾0 Dday支持MiniMax H3，加速SOTA视频模型走向“商业级生产”](https://www.hiascend.com/activities/dynamic-news/755)
-* [vllm-omni](https://gitcode.com/Ascend/MindIE-SD/blob/dev/examples/minimax-h3/infer.md)
+* [vllm-omni](https://github.com/Ascend/MindIE-SD/blob/dev/examples/minimax-h3/infer.md)
 * [vllm recipes](https://recipes.vllm.ai/MiniMaxAI/MiniMax-H3)
+* [MiniMax-H3 × LightX2V Turbo 全量 LoRA 推理服务 — 部署指导](https://ai.gitcode.com/Ascend-SACT/MiniMax-H3-NPU)
+* [vllm-omni 框架 MiniMax-H3 A2单机部署 NPU 适配指导](https://ai.atomgit.com/Ascend-SACT/MiniMax-H3)
+* [MiniMax-H3 ComfyUI Ascend NPU 多卡适配](https://ai.atomgit.com/Ascend-SACT/MiniMax-H3-Comfy-NPU)
 
 ### docker run
 ```bash
