@@ -1,3 +1,7 @@
+2026-10-14
+* 下载权重`meituan-longcat/LongCat-Video`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Video`
+* 下载权重`meituan-longcat/LongCat-Image`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Image`
+
 2026-09-22
 * 下载权重`Eco-Tech/DeepSeek-V4.1-Flash-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/DeepSeek-V4.1-Flash-w8a8`
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-DeepSeekV4-flash-0731.tar`
