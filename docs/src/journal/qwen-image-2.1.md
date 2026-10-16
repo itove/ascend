@@ -24,7 +24,7 @@ cp -a /s/git/Ascend-SACT/Qwen-Image-2.1/ .
 # python Qwen-Image-2.1/patches/patch_rope3.py
 ```
 
-### error
+### error when patching
 ```
 root@maas2:/vllm-workspace# python Qwen-Image-2.1/patches/patch_rope.py
 [OK] patched /usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/models/transformers/transformer_qwenimage21.py
@@ -41,4 +41,28 @@ root@maas2:/vllm-workspace# P=$(python3 -c "import diffusers,os;print(os.path.jo
 [W1016 08:00:11.843363078 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
 root@maas2:/vllm-workspace# grep -c "npu patch" "$P"
 4
+```
+
+### error when serving
+```
+cd vllm-omni/
+vim serve.sh
+chmod +x serve.sh
+```
+
+```
+# serve.sh
+unset ASCEND_VISIBLE_DEVICES
+export ASCEND_RT_VISIBLE_DEVICES=0
+export VLLM_PLATFORM=ascend
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+
+vllm serve /s/hf/Qwen/Qwen-Image-2.1/ \
+  --omni \
+  --port 8091 \
+  --trust-remote-code \
+  --diffusion-load-format diffusers \
+  --diffusion-attention-backend TORCH_SDPA \
+  --tensor-parallel-size 1 \
+  --gpu-memory-utilization 0.9
 ```
