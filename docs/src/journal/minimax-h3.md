@@ -700,10 +700,12 @@ kend.py", line 383, in _shard_and_pin
 
 ### Tried vllm-omni v0.31.0rc1, SAME
 
+### Success
 ```
 SHM_SIZE=2000 CONTAINER_NAME=minimix-h3 DOCKER_IMAGE=quay.io/ascend/vllm-omni DOCKER_IMAGE_TAG=v0.28.0 /mnt/s/ascend/vllm/bin/docker-run.sh
 ```
 
 ```
+MODEL_PATH=/s/hf/MiniMaxAI/MiniMax-H3/ /s/ascend/vllm/bin/serve-minimax-h3-v1.sh
 
 ```
