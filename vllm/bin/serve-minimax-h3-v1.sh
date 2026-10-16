@@ -14,6 +14,7 @@ export MINDIE_SD_FA_TYPE="ascend_laser_attention"
 export HCCL_NPU_SOCKET_PORT_RANGE="auto"
 export PYTHONPATH="/vllm-workspace/vllm-omni/MindIE-SD:$PYTHONPATH"
 
+  # --cache-backend cache_dit \
 vllm serve "$MODEL_PATH" \
   --served-model-name 'minimax-h3' \
   --omni \
@@ -30,7 +31,6 @@ vllm serve "$MODEL_PATH" \
   --vae-patch-parallel-size 4 \
   --enable-diffusion-pipeline-profiler \
   --diffusion-attention-config '{"default": {"backend": "RAINFUSION_ATTN", "block_sparse": {"sparsity": 0.8, "start_step": 12}}}' \
-  --cache-backend cache_dit \
   --enable-cache-dit-summary \
   --cache-config '{"Fn_compute_blocks":2,"Bn_compute_blocks":1,"max_warmup_steps":4,"residual_diff_threshold":0.4,"max_continuous_cached_steps":4,"enable_taylorseer":true,"taylorseer_order":2}' \
   --dlo-no-use-allgather
