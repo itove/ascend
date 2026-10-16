@@ -14,10 +14,10 @@ cd diffusers
 git reset --hard e0118ad
 pip install .
 pip install -U transformers==5.17.0
+cd ..
 cp -a diffusers/ diffusers-main
 cp -a diffusers/ diffusers-main.bak
 
-cd ..
 cp -a /s/git/Ascend-SACT/Qwen-Image-2.1/ .
 
 # python Qwen-Image-2.1/patches/patch_rope.py
