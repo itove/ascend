@@ -1,6 +1,7 @@
 ### Links
 [Qwen-Image-2.1 在 vLLM-Omni v0.28.0 部署指导文档](https://ai.atomgit.com/Ascend-SACT/Qwen-Image-2.1)
 
+### Steps
 ```
 SHM_SIZE=256 CONTAINER_NAME=qwen-image-2.1 DOCKER_IMAGE=quay.io/ascend/vllm-omni DOCKER_IMAGE_TAG=v0.28.0 /mnt/s/ascend/vllm/bin/docker-run.sh
 ```
@@ -18,9 +19,12 @@ cp -a diffusers/ diffusers-main.bak
 
 cd ..
 cp -a /s/git/Ascend-SACT/Qwen-Image-2.1/ .
-python Qwen-Image-2.1/patches/patch_rope.py
+
+# python Qwen-Image-2.1/patches/patch_rope.py
+# python Qwen-Image-2.1/patches/patch_rope3.py
 ```
 
+### error
 ```
 root@maas2:/vllm-workspace# python Qwen-Image-2.1/patches/patch_rope.py
 [OK] patched /usr/local/python3.12.13/lib/python3.12/site-packages/diffusers/models/transformers/transformer_qwenimage21.py
