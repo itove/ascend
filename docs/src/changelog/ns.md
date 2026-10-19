@@ -1,3 +1,6 @@
+2026-10-19
+* 删除权重`meta-llama/Llama-4-Scout-17B-16E-Instruct`，路径`/mnt/d/s/hf/meta-llama/Llama-4-Scout-17B-16E-Instruct/`
+
 2026-10-14
 * 下载权重`meituan-longcat/LongCat-Video`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Video`
 * 下载权重`meituan-longcat/LongCat-Image`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Image`
