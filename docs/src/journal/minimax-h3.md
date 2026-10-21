@@ -702,7 +702,7 @@ kend.py", line 383, in _shard_and_pin
 
 ### Success
 ```
-SHM_SIZE=2000 CONTAINER_NAME=minimix-h3 DOCKER_IMAGE=quay.io/ascend/vllm-omni DOCKER_IMAGE_TAG=v0.28.0 /mnt/s/ascend/vllm/bin/docker-run.sh
+SHM_SIZE=2000 CONTAINER_NAME=minimax-h3 DOCKER_IMAGE=quay.io/ascend/vllm-omni DOCKER_IMAGE_TAG=v0.28.0 /mnt/s/ascend/vllm/bin/docker-run.sh
 ```
 
 ```
