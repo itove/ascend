@@ -1593,3 +1593,65 @@ E1021 03:08:36.009418 6168 ../torch_npu/csrc/core/npu/NPUCachingAllocator.cpp:13
 ree; 38.59 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to
 avoid fragmentation.
 ```
+
+### diagnosis
+
+The upstream NPU port never ran end to end; three bugs fail on the first forward pass.
+
+1. `MultiHeadCrossAttention` never defines `self.scale`, but the new NPU fallback branch
+   reads it — `AttributeError` on the first cross-attention.
+2. `LongCatVideoTransformer3DModel.__init__` clears `bsa_params = None` on NPU, but
+   `run_demo_text_to_video.py` calls `pipe.dit.enable_bsa()` before the refine stage,
+   which flips `enable_bsa = True` on every block again and trips
+   `assert self.bsa_params is not None`.
+3. The real cause of every OOM: their `_standard_attention` materializes the whole
+   `S x S` score matrix and runs softmax in fp32. Context parallel does not help,
+   because Ulysses splits heads, not sequence — each rank still holds the full
+   sequence with `32 / cp` heads.
+
+   | stage | tokens | heads/rank (cp=8) | score tensor | observed |
+   |-------|--------|-------------------|--------------|----------|
+   | 480x832x93 | 37440 | 4 | 37440² × 4 × fp32 ≈ 22 GB | 18.20 GiB |
+   | 448x832x93 | 34944 | 4 | 34944² × 4 × fp32 ≈ 19 GB | 18.20 GiB |
+   | 720p refine | ~86400 | 4 | ≈ 120 GB | 43.95 GiB |
+
+My own mistake was `--context_parallel_size=8`. `check_inputs` uses
+`scale_factor_spatial = vae_scale_factor_spatial * 2 * max(cp_split_hw)`, and
+`get_optimal_split(8)` returns `[2, 4]`, so the factor becomes 64 and the stock
+480x832 is rejected. With `cp=4` the split is `[2, 2]`, the factor is 32, and
+480x832 passes.
+
+### fixes applied to LongCat-Video-Ascend-model
+
+* `ascend_npu_compat.py`: added `npu_attention()`, which calls
+  `torch_npu.npu_fusion_attention(..., input_layout="BNSD")` (O(S) memory), with a
+  query-chunked softmax as fallback when the fused op is unavailable.
+* `longcat_video/modules/attention.py`: `_standard_attention` dispatches to that
+  helper instead of building the score matrix; added
+  `self.scale = self.head_dim ** -0.5` to `MultiHeadCrossAttention`; replaced
+  `assert self.bsa_params is not None` with a condition so a stray `enable_bsa()`
+  falls through to dense attention.
+* `longcat_video/modules/longcat_video_dit.py`: `enable_bsa()` is a no-op when
+  `bsa_params is None`.
+* `run_demo_text_to_video.py`: the 720p refine stage is now behind `--enable_refine`
+  (off by default) — dense attention over ~86k tokens is not viable without the
+  triton BSA kernel.
+
+### dependency pins that were needed
+
+The image ships newer packages than `requirements-npu.txt` expects, and the pinned
+`numpy==1.26.4` breaks the preinstalled scipy:
+
+```
+pip install "scipy==1.13.1"   # np.long removed in numpy 2 path
+pip install "diffusers==0.31.0"  # 0.35.1 demands peft>=0.17, which needs transformers 5.x
+```
+
+### run
+
+```
+export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+torchrun --nproc_per_node=4 run_demo_text_to_video.py \
+  --context_parallel_size=4 \
+  --checkpoint_dir=/s/hf/meituan-longcat/LongCat-Video
+```
