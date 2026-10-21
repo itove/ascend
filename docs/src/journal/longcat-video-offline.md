@@ -1655,3 +1655,24 @@ torchrun --nproc_per_node=4 run_demo_text_to_video.py \
   --context_parallel_size=4 \
   --checkpoint_dir=/s/hf/meituan-longcat/LongCat-Video
 ```
+
+### denoise succeeds, mp4 write fails
+
+```
+[rank0]:   File "av/container/output.pyx", line 168, in av.container.output.OutputContainer.start_encoding
+[rank0]: av.error.PermissionError: [Errno 13] Permission denied
+```
+
+The attention fix works — all 50 denoise steps ran and the frames came back. The
+failure is only `write_video("output_t2v.mp4", ...)`, which writes into the current
+working directory; the repo is on a share that the container cannot write to.
+
+Added `--output_dir` (default `.`) to `run_demo_text_to_video.py` and routed all
+three `write_video` calls through it:
+
+```
+torchrun --nproc_per_node=4 run_demo_text_to_video.py \
+  --context_parallel_size=4 \
+  --checkpoint_dir=/s/hf/meituan-longcat/LongCat-Video \
+  --output_dir=/tmp/longcat-out
+```
