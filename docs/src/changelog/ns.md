@@ -1,3 +1,7 @@
+2026-10-21
+* 下载权重`deepseek-ai/DeepSeek-V4.1-Flash-1017`，路径`/mnt/d/s/modelscope/deepseek-ai/DeepSeek-V4.1-Flash-1017`
+* 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-Deepseek-v4.1-flash.tar`
+
 2026-10-19
 * 删除权重`meta-llama/Llama-4-Scout-17B-16E-Instruct`，路径`/mnt/d/s/hf/meta-llama/Llama-4-Scout-17B-16E-Instruct/`
 
