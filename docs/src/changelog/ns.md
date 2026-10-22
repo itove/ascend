@@ -1,3 +1,10 @@
+2026-10-22
+* 删除权重`Eco-Tech/DeepSeek-V4-Flash-0731-w8a8/`，路径`/mnt/d/s/modelscope/Eco-Tech/DeepSeek-V4-Flash-0731-w8a8/`
+* 删除权重`deepseek-ai/DeepSeek-V4-Flash-0731`，路径`/mnt/d/s/hf/deepseek-ai/DeepSeek-V4-Flash-0731`
+* 删除权重`deepseek-ai/DeepSeek-V4.1-Flash`，路径`/mnt/d/s/hf/deepseek-ai/DeepSeek-V4.1-Flash`
+* 删除权重`deepseek-ai/DeepSeek-V4.1-Flash-1017`，路径`/mnt/d/s/hf/deepseek-ai/DeepSeek-V4.1-Flash-1017`
+
+
 2026-10-21
 * 下载权重`deepseek-ai/DeepSeek-V4.1-Flash-1017`，路径`/mnt/d/s/modelscope/deepseek-ai/DeepSeek-V4.1-Flash-1017`
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-Deepseek-v4.1-flash.tar`
