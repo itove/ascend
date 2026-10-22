@@ -1633,9 +1633,8 @@ My own mistake was `--context_parallel_size=8`. `check_inputs` uses
   falls through to dense attention.
 * `longcat_video/modules/longcat_video_dit.py`: `enable_bsa()` is a no-op when
   `bsa_params is None`.
-* `run_demo_text_to_video.py`: the 720p refine stage is now behind `--enable_refine`
-  (off by default) — dense attention over ~86k tokens is not viable without the
-  triton BSA kernel.
+* `run_demo_text_to_video.py`: the 720p refine stage is behind `--skip_refine`
+  (on by default) — see below, dense attention turned out to be affordable there.
 
 ### dependency pins that were needed
 
@@ -1676,3 +1675,30 @@ torchrun --nproc_per_node=4 run_demo_text_to_video.py \
   --checkpoint_dir=/s/hf/meituan-longcat/LongCat-Video \
   --output_dir=/tmp/longcat-out
 ```
+
+### refine works with dense attention
+
+`run_demo_long_video.py` has its own refine loop (it calls `pipe.dit.enable_bsa()`
+at line 144, which my guard now ignores), and it ran fine on 4x 910B3:
+
+```
+Denoising: 100%|...| 56/56 [06:57<00:00,  7.45s/it]   <- 480p base per segment
+[Ascend NPU] enable_bsa() ignored; bsa kernel unavailable, keeping standard attention.
+Refine segment 1/12...
+Denoising:  80%|...| 4/5 [04:42<01:11, 71.05s/it]     <- 720p refine
+```
+
+Refine is cheap in step count, not in step cost: `t_thresh=0.5` truncates the
+schedule to 5 steps and there is no CFG, so even at 768x1280 x 186 frames
+(~184k tokens) it is ~6 min per segment. The 480p base stage is 56 steps because
+`enhance_hf=True` splices a 10-step uniform tail into the schedule.
+
+Two things this settled:
+
+* VAE tiling is not needed. The 720p encode of a `[1, 3, 192, 768, 1280]` tensor
+  and the matching decode both run untiled, so `enable_tiling()` stays unused.
+* Refine is cheaper than generating at 720p directly: 5 forwards versus 100
+  (50 steps x CFG), and it yields 30 fps via temporal interpolation.
+
+So refine is now on by default in `run_demo_text_to_video.py`; pass `--skip_refine`
+to stop after the 480p stages.
