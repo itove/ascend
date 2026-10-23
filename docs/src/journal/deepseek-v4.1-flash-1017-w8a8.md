@@ -118,3 +118,5 @@ error
 (APIServer pid=171)     For further information visit https://errors.pydantic.dev/2.14/v/value_error
 (APIServer pid=171) [ERROR] 2026-10-23-03:21:29 (PID:171, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
 ```
+
+### change num_speculative_tokens from 7 to 5
