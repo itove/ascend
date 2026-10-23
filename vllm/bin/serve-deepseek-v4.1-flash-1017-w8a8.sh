@@ -43,8 +43,8 @@ vllm serve "$MODEL_PATH" \
             "enable_static_kernel":false
         },
         "enable_cpu_binding":true,
-        "enable_fused_mc2":1,
         "enable_dsa_cp":true,
         "enable_flashcomm1":true,
-        "enable_shared_expert_dp":true
+        "enable_shared_expert_dp":true,
+        "multistream_overlap_shared_expert": true
     }'
