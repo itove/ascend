@@ -51,6 +51,7 @@
         - [longcat-video-online](./journal/longcat-video-online.md)
         - [longcat-video-offline](./journal/longcat-video-offline.md)
     - [longcat-video-avatar-1.5](./journal/longcat-video-avatar-1.5.md)
+    - [deepseek-v4.1-flash-1017-w8a8](./journal/deepseek-v4.1-flash-1017-w8a8.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本信息 2.0.T3](./ver-2.0.md)
     - [版本信息 2.1.RC2](./ver-2.1.md)
