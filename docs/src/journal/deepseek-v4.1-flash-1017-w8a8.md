@@ -1,13 +1,18 @@
-docker run
+### docker run
 
+```
 CONTAINER_NAME=deepseek-v4.1-flash_1017 DOCKER_IMAGE_TAG=v0.30.0rc2 ./docker-run.sh
+```
 
 
 
-serve
+### serve
+```
 MODEL_PATH=/s/modelscope/Eco-Tech/DeepSeek-V4.1-Flash-1017-w8a8/ /s/ascend/vllm/bin/serve-deepseek-v4.1-flash-1017-w8a8.sh
+```
 
 
+```
 set -e
 
 . /s/ascend/vllm/ENVs
@@ -54,10 +59,12 @@ vllm serve "$MODEL_PATH" \
         "enable_flashcomm1":true,
         "multistream_overlap_shared_expert": true
     }'
+```
 
 
 
 
+```
 error
 
 (APIServer pid=171) Traceback (most recent call last):
@@ -110,12 +117,4 @@ error
 (APIServer pid=171)   Value error, num_speculative_tokens:7 must be divisible by n_predict=5 [type=value_error, input_value=ArgsKwargs((), {'num_spec...very_timeout_sec=120))}), input_type=ArgsKwargs]
 (APIServer pid=171)     For further information visit https://errors.pydantic.dev/2.14/v/value_error
 (APIServer pid=171) [ERROR] 2026-10-23-03:21:29 (PID:171, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
-
-
-
-
-
-
-
-
-
+```
