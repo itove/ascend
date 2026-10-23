@@ -16,6 +16,7 @@ export OMP_PROC_BIND=false
 export OMP_NUM_THREADS=10
 
     # --async-scheduling \
+        # "enable_shared_expert_dp":true,
 vllm serve "$MODEL_PATH" \
     --host 0.0.0.0 \
     --port 8900 \
@@ -45,6 +46,5 @@ vllm serve "$MODEL_PATH" \
         "enable_cpu_binding":true,
         "enable_dsa_cp":true,
         "enable_flashcomm1":true,
-        "enable_shared_expert_dp":true,
         "multistream_overlap_shared_expert": true
     }'
