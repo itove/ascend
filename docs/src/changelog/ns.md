@@ -1,4 +1,8 @@
 
+2026-10-28
+
+* 下载权重`Eco-Tech/MiniMax-M3.1-Flash-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/MiniMax-M3.1-Flash-w8a8/`
+
 2026-10-23
 
 * 下载权重`Eco-Tech/DeepSeek-V4.1-Flash-1017-w8a8/`，路径`/mnt/d/s/modelscope/Eco-Tech/DeepSeek-V4.1-Flash-1017-w8a8/`
