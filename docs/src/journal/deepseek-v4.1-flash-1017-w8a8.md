@@ -12,6 +12,7 @@ MODEL_PATH=/s/modelscope/Eco-Tech/DeepSeek-V4.1-Flash-1017-w8a8/ /s/ascend/vllm/
 ```
 
 
+
 ```
 set -e
 
@@ -63,9 +64,8 @@ vllm serve "$MODEL_PATH" \
 
 
 
-
+### error
 ```
-error
 
 (APIServer pid=171) Traceback (most recent call last):
 (APIServer pid=171)   File "/usr/local/python3.12.13/bin/vllm", line 6, in <module>
@@ -120,3 +120,17 @@ error
 ```
 
 ### change num_speculative_tokens from 7 to 5
+
+
+```bash
+MODEL_PATH=/s/modelscope/Eco-Tech/DeepSeek-V4.1-Flash-1017-w8a8/ ./serve-deepseek-v4.1-flash-1017-w8a8.sh
+```
+### erorr
+
+```
+ File "/usr/local/python3.12.13/lib/python3.12/site-packages/torch/utils/_device.py", line 109, in __torch_function__
+(Worker_TP7_EP7 pid=1565) ERROR 10-23 07:03:01 [multiproc_executor.py:944]     return func(*args, **kwargs)
+(Worker_TP7_EP7 pid=1565) ERROR 10-23 07:03:01 [multiproc_executor.py:944]            ^^^^^^^^^^^^^^^^^^^^^
+(Worker_TP7_EP7 pid=1565) ERROR 10-23 07:03:01 [multiproc_executor.py:944] torch.OutOfMemoryError: NPU out of memory. Tried to allocate 1.06 GiB (NPU 7; 60.96 GiB total capacity; 59.98 GiB already allocated; 59.98 GiB current active; 553.60 MiB free; 59.99 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+(EngineCore pid=624) INFO 10-23 07:03:01 [multiproc_executor.py:472] [shutdown] Executor: waiting for worker exit count=8
+```
