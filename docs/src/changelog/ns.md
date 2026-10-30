@@ -1,7 +1,7 @@
 
 2026-10-28
-
 * 下载权重`Eco-Tech/MiniMax-M3.1-Flash-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/MiniMax-M3.1-Flash-w8a8/`
+* 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-minimax-m3.1-flash.tar`
 
 2026-10-23
 
