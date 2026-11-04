@@ -1182,3 +1182,43 @@ Median ITL (ms):                         70.67
 P99 ITL (ms):                            677.58
 ==================================================
 ```
+
+### 单并发Benchmark
+
+```
+============ Serving Benchmark Result ============
+Successful requests:                     1000
+Failed requests:                         0
+Maximum request concurrency:             1
+Benchmark duration (s):                  35322.59
+Total input tokens:                      16038000
+Total generated tokens:                  2048000
+Request throughput (req/s):              0.03
+Output token throughput (tok/s):         57.98
+Peak output token throughput (tok/s):    33.00
+Peak concurrent requests:                2.00
+Total token throughput (tok/s):          512.02
+---------------Time to First Token----------------
+Mean TTFT (ms):                          918.71
+Median TTFT (ms):                        920.57
+P99 TTFT (ms):                           944.01
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          16.81
+Median TPOT (ms):                        16.65
+P99 TPOT (ms):                           19.04
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           32.50
+Median ITL (ms):                         32.48
+P99 ITL (ms):                            34.84
+---------------Speculative Decoding---------------
+Acceptance rate (%):                     31.18
+Acceptance length:                       1.94
+Drafts:                                  1057942
+Draft tokens:                            3173826
+Accepted tokens:                         989549
+Per-position acceptance (%):
+  Position 0:                            83.30
+  Position 1:                            7.07
+  Position 2:                            3.16
+==================================================
+```

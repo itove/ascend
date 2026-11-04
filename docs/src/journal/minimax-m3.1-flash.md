@@ -133,7 +133,105 @@ WARNING 10-28 09:11:25 [ascend_config.py:770] FlashComm1 is enabled, but the cur
 (Worker pid=11651) ERROR 10-28 09:11:25 [multiproc_executor.py:944] [Error]: Invalid device ID.
 (Worker pid=11651) ERROR 10-28 09:11:25 [multiproc_executor.py:944]         Check whether the device ID is valid.
 
-
-
 ```
+
+
+
+
+
+
+### serve
+```
+#!/bin/bash
+#
+# vim:ft=bash
+
+set -e
+
+. /s/ascend/vllm/ENVs
+
+
+export MODEL_PATH="$MODEL_PATH"
+export MAX_MODEL_LEN=133000
+
+export VLLM_USE_V2_MODEL_RUNNER=1
+export HCCL_BUFFSIZE=1024
+export HCCL_OP_EXPANSION_MODE="AIV"
+export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
+
+vllm serve ${MODEL_PATH} \
+        --host 0.0.0.0 \
+        --port 11223 \
+        --served-model-name minimax-m3.1-flash \
+        --trust-remote-code \
+        --max-model-len "$MAX_MODEL_LEN" \
+        --tensor-parallel-size 8 \
+        --data-parallel-size 1 \
+        --enable-expert-parallel \
+        --max-num-seqs 32 \
+        --disable-hybrid-kv-cache-manager \
+        --gpu-memory-utilization 0.95 \
+        --quantization ascend \
+        --reasoning-parser minimax_m3 \
+        --enable-auto-tool-choice \
+        --tool-call-parser minimax_m3 \
+        --limit-mm-per-prompt '{"image":1,"video":0}' \
+        --enable-chunked-prefill \
+        --enable-prefix-caching \
+        --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}' \
+        --additional-config '{
+        "enable_cpu_binding": true,
+        "enable_flashcomm1": true,
+        "multistream_overlap_shared_expert": true,
+        "enable_shared_expert_dp":true,
+        "weight_nz_mode": 2
+}' \
+        --speculative-config '{
+        "method":"dspark",
+        "num_speculative_tokens":7,
+        "enforce_eager":true,
+        "draft_sample_method":"probabilistic"
+}' \
+        --safetensors-load-strategy prefetch
+```
+### error
+```
+ (e.g., dropping the KV cache outside the sliding window). The compute of layers like sliding window is still saved.
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366] EngineCore failed to start.
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366] Traceback (most recent call last):
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 1328, in run_engine_core
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     return func(*args, **kwargs)
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 1085, in __init__
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     super().__init__(
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm-ascend/vllm_ascend/patch/platform/patch_profiling_chunk.py", line 198, in _patched_engine_core_init
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     original_init(self, *args, **kwargs)
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 145, in __init__
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     kv_cache_config = self._initialize_kv_caches(vllm_config)
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     return func(*args, **kwargs)
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/engine/core.py", line 319, in _initialize_kv_caches
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     kv_cache_configs = get_kv_cache_configs(
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]                        ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/core/kv_cache_utils.py", line 2737, in get_kv_cache_configs
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     _check_enough_kv_cache_memory(
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]   File "/vllm-workspace/vllm/vllm/v1/core/kv_cache_utils.py", line 899, in _check_enough_kv_cache_memory
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366]     raise ValueError(
+(EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366] ValueError: To serve at least one request with the model's max seq len (133000), (6.03 GiB KV cache is needed, which is larger than the available KV cache memory (0.45 GiB). Based on the available memory, the estimated maximum model length is 9856. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.
+```
+
+
+
+
+
+
+
+
+
+
 
