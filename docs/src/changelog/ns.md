@@ -1,3 +1,8 @@
+2026-11-05
+* 下载权重`TMElyralab/MuseTalk`，路径`/mnt/d/s/hf/TMElyralab/MuseTalk`
+* 下载权重`stabilityai/sd-vae-ft-mse`，路径`/mnt/d/s/hf/stabilityai/sd-vae-ft-mse`
+* 下载权重`openai/whisper-tiny`，路径`/mnt/d/s/hf/openai/whisper-tiny`
+* 下载权重`ManyOtherFunctions/face-parse-bisent`，路径`/mnt/d/s/hf/ManyOtherFunctions/face-parse-bisent`
 
 2026-10-28
 * 下载权重`Eco-Tech/MiniMax-M3.1-Flash-w8a8`，路径`/mnt/d/s/modelscope/Eco-Tech/MiniMax-M3.1-Flash-w8a8/`
