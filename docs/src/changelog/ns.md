@@ -1,10 +1,3 @@
-2026-11-05
-* 下载权重`TMElyralab/MuseTalk`，路径`/mnt/d/s/hf/TMElyralab/MuseTalk`
-* 下载权重`stabilityai/sd-vae-ft-mse`，路径`/mnt/d/s/hf/stabilityai/sd-vae-ft-mse`
-* 下载权重`openai/whisper-tiny`，路径`/mnt/d/s/hf/openai/whisper-tiny`
-* 下载权重`ManyOtherFunctions/face-parse-bisent`，路径`/mnt/d/s/hf/ManyOtherFunctions/face-parse-bisent`
-
-
 2026-11-11
 * 删除权重`Qwen/Qwen3-0.6B`，路径`/mnt/d/s/hf/Qwen/Qwen3-0.6B/`
 * 删除权重`Qwen/Qwen3-235B-A22B-Instruct-2507`，路径`/mnt/d/s/hf/Qwen/Qwen3-235B-A22B-Instruct-2507/`
@@ -16,6 +9,13 @@
 
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-ascend-v0.30.0.tar`
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-omni-v0.32.0.tar`
+
+
+2026-11-05
+* 下载权重`TMElyralab/MuseTalk`，路径`/mnt/d/s/hf/TMElyralab/MuseTalk`
+* 下载权重`stabilityai/sd-vae-ft-mse`，路径`/mnt/d/s/hf/stabilityai/sd-vae-ft-mse`
+* 下载权重`openai/whisper-tiny`，路径`/mnt/d/s/hf/openai/whisper-tiny`
+* 下载权重`ManyOtherFunctions/face-parse-bisent`，路径`/mnt/d/s/hf/ManyOtherFunctions/face-parse-bisent`
 
 
 2026-10-28
