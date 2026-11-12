@@ -1,3 +1,12 @@
+
+
+2026-11-12
+* 下载权重`MiniMax/MiniMax-H3-Image`，路径`/mnt/d/s/modelscope/MiniMax/MiniMax-H3-Image`
+* 下载权重`MiniMax/MiniMax-H3-Image-PE`，路径`/mnt/d/s/modelscope/MiniMax/MiniMax-H3-Image-PE`
+* 下载权重`MiniMax/MiniMax-Music3`，路径`/mnt/d/s/modelscope/MiniMax/MiniMax-Music3`
+* 下载权重`Qwen/Qwen-Image-2.1-Turbo`，路径`/mnt/d/s/modelscope/Qwen/Qwen-Image-2.1-Turbo/`
+
+
 2026-11-11
 * 删除权重`Qwen/Qwen3-0.6B`，路径`/mnt/d/s/hf/Qwen/Qwen3-0.6B/`
 * 删除权重`Qwen/Qwen3-235B-A22B-Instruct-2507`，路径`/mnt/d/s/hf/Qwen/Qwen3-235B-A22B-Instruct-2507/`
