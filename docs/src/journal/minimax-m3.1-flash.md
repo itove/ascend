@@ -225,13 +225,45 @@ vllm serve ${MODEL_PATH} \
 (EngineCore pid=12959) ERROR 11-03 01:53:44 [core.py:1366] ValueError: To serve at least one request with the model's max seq len (133000), (6.03 GiB KV cache is needed, which is larger than the available KV cache memory (0.45 GiB). Based on the available memory, the estimated maximum model length is 9856. Try increasing `gpu_memory_utilization` (which also controls CPU memory on the CPU backend) or decreasing `max_model_len` when initializing the engine. See https://docs.vllm.ai/en/latest/configuration/conserving_memory/ for more details.
 ```
 
+### change MAX_MODEL_LEN from 133000 for 8192
 
+```
+MODEL_PATH=/s/modelscope/Eco-Tech/MiniMax-M3.1-Flash-w8a8/ ./serve-minimax-m3.1-flash.sh
+```
 
-
-
-
-
-
+### success
+```
+(APIServer pid=19437) INFO 11-04 04:02:49 [entry.py:139] Starting vLLM server on http://0.0.0.0:11223
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:61] Available routes are:
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /openapi.json, Methods: HEAD, GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /docs, Methods: HEAD, GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /redoc, Methods: HEAD, GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /load, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /version, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /health, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /metrics, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /tokenize, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /detokenize, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/models, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /ping, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /ping, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /invocations, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/responses, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/completions, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/messages, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /generative_scoring, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=19437) INFO 11-04 04:02:49 [launcher.py:70] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=19437) INFO:     Started server process [19437]
+(APIServer pid=19437) INFO:     Waiting for application startup.
+(APIServer pid=19437) INFO:     Application startup complete.
+```
 
 
 
