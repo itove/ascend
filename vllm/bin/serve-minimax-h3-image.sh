@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # vim:ft=bash
+# see https://gitcode.com/Ascend/MindIE-SD/blob/dev/examples/minimax-h3-image/infer.md
 
 set -e
 
