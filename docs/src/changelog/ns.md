@@ -1,4 +1,5 @@
-
+2026-11-18
+* 下载 docker 镜像`/mnt/d/s/docker_images/vllm-omni-minimax-h3-image.tar`
 
 2026-11-12
 * 下载权重`MiniMax/MiniMax-H3-Image`，路径`/mnt/d/s/modelscope/MiniMax/MiniMax-H3-Image`
