@@ -23,3 +23,4 @@ vllm serve $MODEL_PATH \
     --num-gpus 1 \
     --diffusion-offload-config '{"mode":"layer","components":["dit","text_encoder"]}' \
     2>&1 | tee /s/public/logs/$MODEL_NAME.$(date +%Y%m%d%H%M%S).log
+    #> /s/public/logs/$MODEL_NAME.$(date +%Y%m%d%H%M%S).log 2>&1 
