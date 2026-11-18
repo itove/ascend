@@ -1,0 +1,192 @@
+[W1118 11:41:10.558488874 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+(MainProcess pid=88) INFO 11-18 11:42:01 [serve.py:363] Detected diffusion model: /s/modelscope/MiniMax/MiniMax-H3-Image
+(MainProcess pid=88) INFO 11-18 11:42:01 [logo.py:52]        █     █     █▄   ▄█       ▄▀▀▀▀▄ █▄   ▄█ █▄    █ ▀█▀ 
+(MainProcess pid=88) INFO 11-18 11:42:01 [logo.py:52]  ▄▄ ▄█ █     █     █ ▀▄▀ █  ▄▄▄  █    █ █ ▀▄▀ █ █ ▀▄  █  █  
+(MainProcess pid=88) INFO 11-18 11:42:01 [logo.py:52]   █▄█▀ █     █     █     █       █    █ █     █ █   ▀▄█  █  
+(MainProcess pid=88) INFO 11-18 11:42:01 [logo.py:52]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀        ▀▀▀▀  ▀     ▀ ▀     ▀ ▀▀▀ 
+(MainProcess pid=88) INFO 11-18 11:42:01 [logo.py:52] 
+(APIServer pid=88) INFO 11-18 11:42:01 [startup.py:38] vLLM server version 0.33.0, serving model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=88) INFO 11-18 11:42:01 [startup.py:96] non-default args: {'model_tag': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'port': 8011, 'model': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'trust_remote_code': True, 'enforce_eager': True, 'served_model_name': ['minimax-h3-image']}
+(APIServer pid=88) INFO 11-18 11:42:01 [omni_base.py:216] [AsyncOmni] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=88) INFO 11-18 11:42:01 [omni_engine_base.py:173] [OmniEngine] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=88) INFO 11-18 11:42:01 [config_factory.py:695] Resolved generic diffusion final_output_type='image' for model_class_name='MiniMaxH3ImagePipeline'.
+(APIServer pid=88) INFO 11-18 11:42:01 [omni_engine_base.py:328] [OmniEngine] Launching Orchestrator thread with 1 stages
+(APIServer pid=88) WARNING 11-18 11:42:02 [ring_globals.py:76] FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+(APIServer pid=88) INFO 11-18 11:42:04 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(APIServer pid=88) INFO 11-18 11:42:04 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(APIServer pid=88) WARNING 11-18 11:42:04 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(APIServer pid=88) INFO 11-18 11:42:04 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=88) INFO 11-18 11:42:04 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(APIServer pid=88) WARNING 11-18 11:42:06 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(APIServer pid=88) INFO 11-18 11:42:07 [ascend_config.py:336] Dynamic EPLB is False
+(APIServer pid=88) INFO 11-18 11:42:07 [ascend_config.py:337] The number of redundant experts is 0
+(APIServer pid=88) INFO 11-18 11:42:07 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(APIServer pid=88) INFO 11-18 11:42:07 [diffusion_worker.py:420] Worker 0: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(APIServer pid=88) INFO 11-18 11:42:07 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(APIServer pid=88) INFO 11-18 11:42:07 [parallel_state.py:801] SP group details for rank 0: sp_group=[0], ulysses_group=[0], ring_group=[0]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(DiffusionWorker pid=88) INFO 11-18 11:42:08 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker pid=88) INFO 11-18 11:42:08 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker pid=88) INFO 11-18 11:42:10 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker pid=88) INFO 11-18 11:42:16 [encoder.py:1201] MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=1, vision replicated
+[rank0]:[W1118 11:42:28.730332066 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+Multi-thread loading shards:   0% Completed | 0/12 [00:00<?, ?it/s]
+Multi-thread loading shards:   8% Completed | 1/12 [00:09<01:44,  9.48s/it]
+Multi-thread loading shards:  17% Completed | 2/12 [00:17<01:25,  8.56s/it]
+Multi-thread loading shards:  25% Completed | 3/12 [00:25<01:16,  8.51s/it]
+Multi-thread loading shards:  33% Completed | 4/12 [00:33<01:05,  8.21s/it]
+Multi-thread loading shards:  42% Completed | 5/12 [00:41<00:56,  8.10s/it]
+Multi-thread loading shards:  50% Completed | 6/12 [00:50<00:49,  8.28s/it]
+Multi-thread loading shards:  58% Completed | 7/12 [00:58<00:41,  8.34s/it]
+Multi-thread loading shards:  67% Completed | 8/12 [01:07<00:33,  8.39s/it]
+Multi-thread loading shards:  75% Completed | 9/12 [01:15<00:25,  8.49s/it]
+Multi-thread loading shards:  83% Completed | 10/12 [01:24<00:16,  8.44s/it]
+Multi-thread loading shards:  92% Completed | 11/12 [01:33<00:08,  8.62s/it]
+Multi-thread loading shards: 100% Completed | 12/12 [01:40<00:00,  8.22s/it]
+Multi-thread loading shards: 100% Completed | 12/12 [01:40<00:00,  8.37s/it]
+
+Multi-thread loading shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+Multi-thread loading shards:   7% Completed | 1/14 [00:11<02:27, 11.31s/it]
+Multi-thread loading shards:  14% Completed | 2/14 [00:18<01:49,  9.16s/it]
+Multi-thread loading shards:  21% Completed | 3/14 [00:26<01:33,  8.52s/it]
+Multi-thread loading shards:  29% Completed | 4/14 [00:34<01:23,  8.35s/it]
+Multi-thread loading shards:  36% Completed | 5/14 [00:42<01:13,  8.12s/it]
+Multi-thread loading shards:  43% Completed | 6/14 [00:50<01:03,  7.96s/it]
+Multi-thread loading shards:  50% Completed | 7/14 [00:57<00:55,  7.89s/it]
+Multi-thread loading shards:  57% Completed | 8/14 [01:05<00:47,  7.90s/it]
+Multi-thread loading shards:  64% Completed | 9/14 [01:13<00:39,  7.82s/it]
+Multi-thread loading shards:  71% Completed | 10/14 [01:20<00:30,  7.72s/it]
+Multi-thread loading shards:  79% Completed | 11/14 [01:23<00:18,  6.11s/it]
+Multi-thread loading shards: 100% Completed | 14/14 [01:26<00:00,  3.21s/it]
+Multi-thread loading shards: 100% Completed | 14/14 [01:26<00:00,  6.17s/it]
+
+(DiffusionWorker pid=88) INFO 11-18 11:45:35 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+(DiffusionWorker pid=88) WARNING 11-18 11:45:35 [torch_utils.py:269] OMP_NUM_THREADS=10 is set; leaving Torch threads at 4 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(DiffusionWorker pid=88) INFO 11-18 11:45:35 [diffusers_loader.py:1242] Loading weights took 186.98 seconds
+(DiffusionWorker pid=88) INFO 11-18 11:45:36 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 208.916301 seconds
+(DiffusionWorker pid=88) INFO 11-18 11:45:36 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker pid=88) INFO 11-18 11:45:36 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+(DiffusionWorker pid=88) INFO 11-18 11:45:40 [layerwise_backend.py:363] Enabled rank-local layerwise offload for encoder text_encoder (77 blocks across 2 stacks)
+(DiffusionWorker pid=88) INFO 11-18 11:45:40 [component_utils.py:153] Prepared text_encoder for pipeline-managed staged offload
+(DiffusionWorker pid=88) INFO 11-18 11:45:40 [layerwise_backend.py:454] Applying layer-wise offloading on ['transformer']
+(DiffusionWorker pid=88) INFO 11-18 11:45:40 [component_utils.py:84] Applying hooks on transformer (MiniMaxH3DiTModel)
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [layerwise_backend.py:479] Layer-wise offloading enabled on 50 layers (blocks)
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [diffusion_model_runner.py:510] Model runner: Initialization complete.
+(DiffusionWorker pid=88) WARNING 11-18 11:45:46 [gpu_memory_utils.py:88] NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [manager.py:192] Initializing LoRAManager: device=npu:0, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [diffusion_worker.py:348] Worker 0: Initialization complete.
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [uniproc_executor.py:76] Diffusion worker initialized in-process (uniproc executor)
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [diffusion_engine.py:482] [RequestBatch] engine init max_num_seqs=1 max_wait_ms=0.0
+(DiffusionWorker pid=88) INFO 11-18 11:45:46 [diffusion_engine.py:1867] dummy run to warm up the model
+  0%|          | 0/2 [00:00<?, ?it/s](DiffusionWorker pid=88) WARNING 11-18 11:45:52 [warnings.py:112] /usr/local/python3.12.16/lib/python3.12/site-packages/triton/backends/ascend/compiler.py:1570: FutureWarning: Ascend environment variable 'TRITON_ALL_BLOCKS_PARALLEL' is deprecated and will be removed in a future release; it is ignored; automatic block mapping is managed by backend policy.
+ 50%|█████     | 1/2 [00:15<00:15, 15.54s/it]100%|██████████| 2/2 [00:18<00:00,  8.08s/it]100%|██████████| 2/2 [00:18<00:00,  9.20s/it]
+[W1118 11:46:16.836735400 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+(DiffusionWorker pid=88) WARNING 11-18 11:46:22 [warnings.py:112] /usr/local/python3.12.16/lib/python3.12/site-packages/torch/nn/functional.py:2954: UserWarning: Mismatch dtype between input and weight: input dtype = float, weight dtype = c10::BFloat16, Cannot dispatch to fused implementation. (Triggered internally at /pytorch/aten/src/ATen/native/layer_norm.cpp:344.)
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [inline_stage_diffusion_client.py:83] [InlineStageDiffusionClient] stage-0 [rep-0] initialized inline (max_num_seqs=1)
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [stage_runtime.py:1399] [StageRuntime] Stage 0 replica 0 initialized (diffusion)
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [orchestrator.py:547] [Orchestrator] Starting event loop
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [omni_engine_base.py:361] [OmniEngine] Orchestrator ready with 1 stages
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [orchestrator.py:1458] [Orchestrator] Event-driven orchestration loop enabled (VLLM_OMNI_EVENT_DRIVEN_ORCH): 0 LLM replica readers, 1 diffusion pollers
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [omni_base.py:237] [AsyncOmni] AsyncOmniEngine initialized in 292.71 seconds
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [omni_base.py:256] [AsyncOmni] Initialized with 1 stages for model /s/modelscope/MiniMax/MiniMax-H3-Image
+(DiffusionWorker pid=88) INFO 11-18 11:46:54 [factories.py:105] Scale-out endpoints are disabled. Restart vllm serve with --enable-scale-out to enable them.
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [api_server.py:988] Detected diffusion mode (1 diffusion stage(s))
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [serving_video.py:185] Video response frame conversion pool configured: workers=8
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [serving_speech.py:411] Speech cache configuration: SpeechCacheConfig(resolve_max_bytes=4294967296, resolve_max_entries=2048, speaker_max_bytes=536870912)
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [speaker_cache.py:245] Speaker cache ready (max_bytes=536870912)
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [serving_speech.py:427] Speaker storage: dir=/root/.cache/vllm-omni/speakers, max_speakers=1000, restored=0
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [serving.py:108] Robot OpenPI serving disabled for model minimax-h3-image
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [api_server.py:1081] Pure diffusion API server initialized for model: minimax-h3-image
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [api_server.py:522] Starting vLLM API server (pure diffusion mode) on http://0.0.0.0:8011
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:188] Available routes are:
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /openapi.json, Methods: HEAD, GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /docs, Methods: HEAD, GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /redoc, Methods: HEAD, GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /load, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /version, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /kv_event_sources, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /metrics, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/systemone, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/decisions, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /ping, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /ping, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /invocations, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/responses, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/responses/{response_id}, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/completions, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/messages, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/messages/count_tokens, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /generative_scoring, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /scale_elastic_ep, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /is_scaling_elastic_ep, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/chat/completions/render, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/messages/render, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/completions/render, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/responses/render, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/chat/completions/derender, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/completions/derender, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /inference/v1/generate, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /inference/v1/abort_requests, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/chat/completions, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/chat/completions/batch, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/speech, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/speech/batch, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/generate, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/voices, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/voices, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/audio/voices/{name}, Methods: DELETE
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/realtime/sessions, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/realtime/sessions/{session_id}/step, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/realtime/sessions/{session_id}/reset, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/realtime/sessions/{session_id}/close, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/realtime/sessions/{session_id}/status, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /health, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/models, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/images/generations, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/images/edits, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/images/segmentations, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/segmentations, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/depth, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/sync, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/{video_id}, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/{video_id}, Methods: DELETE
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/videos/{video_id}/content, Methods: GET
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/omni/sleep, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/omni/wakeup, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:197] Route: /v1/run, Methods: POST
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/audio/speech/stream, Endpoint: streaming_speech
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/video/chat/stream, Endpoint: streaming_video_chat
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/realtime/video, Endpoint: streaming_video_output
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/realtime, Endpoint: realtime_websocket
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/duplex, Endpoint: duplex_websocket
+(DiffusionWorker pid=88) INFO 11-18 11:46:55 [launcher.py:208] Route: /v1/realtime/robot/openpi, Endpoint: realtime_robot_openpi
+INFO:     Started server process [88]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
