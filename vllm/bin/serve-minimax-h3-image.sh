@@ -13,4 +13,4 @@ vllm serve $MODEL_PATH \
     --port 8011 \
     --trust-remote-code \
     --enforce-eager \
-    2>&1 | tee $MODEL_NAME.$(date +%Y%m%d%H%M%S).log
+    2>&1 | tee /s/public/logs/$MODEL_NAME.$(date +%Y%m%d%H%M%S).log
