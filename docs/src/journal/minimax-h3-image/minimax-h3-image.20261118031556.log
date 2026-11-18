@@ -1,0 +1,485 @@
+[W1118 03:15:59.886844326 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+(MainProcess pid=83) INFO 11-18 03:16:50 [serve.py:363] Detected diffusion model: /s/modelscope/MiniMax/MiniMax-H3-Image
+(MainProcess pid=83) INFO 11-18 03:16:50 [logo.py:52]        █     █     █▄   ▄█       ▄▀▀▀▀▄ █▄   ▄█ █▄    █ ▀█▀ 
+(MainProcess pid=83) INFO 11-18 03:16:50 [logo.py:52]  ▄▄ ▄█ █     █     █ ▀▄▀ █  ▄▄▄  █    █ █ ▀▄▀ █ █ ▀▄  █  █  
+(MainProcess pid=83) INFO 11-18 03:16:50 [logo.py:52]   █▄█▀ █     █     █     █       █    █ █     █ █   ▀▄█  █  
+(MainProcess pid=83) INFO 11-18 03:16:50 [logo.py:52]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀        ▀▀▀▀  ▀     ▀ ▀     ▀ ▀▀▀ 
+(MainProcess pid=83) INFO 11-18 03:16:50 [logo.py:52] 
+(APIServer pid=83) INFO 11-18 03:16:50 [startup.py:38] vLLM server version 0.33.0, serving model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=83) INFO 11-18 03:16:50 [startup.py:96] non-default args: {'model_tag': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'port': 8011, 'model': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'trust_remote_code': True, 'enforce_eager': True, 'served_model_name': ['minimax-h3-image']}
+(APIServer pid=83) INFO 11-18 03:16:50 [omni_base.py:216] [AsyncOmni] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=83) INFO 11-18 03:16:50 [omni_engine_base.py:173] [OmniEngine] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=83) INFO 11-18 03:16:50 [config_factory.py:695] Resolved generic diffusion final_output_type='image' for model_class_name='MiniMaxH3ImagePipeline'.
+(APIServer pid=83) INFO 11-18 03:16:50 [omni_engine_base.py:328] [OmniEngine] Launching Orchestrator thread with 1 stages
+(APIServer pid=83) WARNING 11-18 03:16:51 [ring_globals.py:76] FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+(APIServer pid=83) INFO 11-18 03:17:03 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(APIServer pid=83) INFO 11-18 03:17:03 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(APIServer pid=83) WARNING 11-18 03:17:03 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(APIServer pid=83) INFO 11-18 03:17:03 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=83) INFO 11-18 03:17:03 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(APIServer pid=83) WARNING 11-18 03:17:05 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(APIServer pid=83) INFO 11-18 03:17:06 [ascend_config.py:336] Dynamic EPLB is False
+(APIServer pid=83) INFO 11-18 03:17:06 [ascend_config.py:337] The number of redundant experts is 0
+(APIServer pid=83) INFO 11-18 03:17:06 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(APIServer pid=83) INFO 11-18 03:17:06 [diffusion_worker.py:420] Worker 0: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(APIServer pid=83) INFO 11-18 03:17:06 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(APIServer pid=83) INFO 11-18 03:17:06 [parallel_state.py:801] SP group details for rank 0: sp_group=[0], ulysses_group=[0], ring_group=[0]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[rank0]:[W1118 03:17:07.463861549 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+(DiffusionWorker pid=83) INFO 11-18 03:17:08 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker pid=83) INFO 11-18 03:17:08 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+E1118 03:17:13.070330 83 ../torch_npu/csrc/core/npu/NPUCachingAllocator.cpp:1380] [rank:0] NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323] [StageRuntime] Stage initialization failed; shutting down 0 initialized client(s)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323] Traceback (most recent call last):
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     raise primary_exc
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     client = self._initialize_replica(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     client, resources = launch_diffusion_stage_replica(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     client = initialize_diffusion_stage(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     return InlineStageDiffusionClient(model, od_config, metadata)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self._engine = DiffusionEngine.make_engine(self.od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     engine = engine_class(config, scheduler=scheduler)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self._init_executor(od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.executor = executor_class(od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self._init_executor()
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/uniproc_executor.py", line 67, in _init_executor
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.driver_worker = WorkerWrapperBase(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                          ^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     worker = worker_class(**worker_init_kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.load_model(load_format=self.od_config.diffusion_load_format)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.model_runner.load_model(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 400, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.pipeline = model_loader.load_model(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                     ^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 795, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 1364, in _init_from_load_format
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     model = initialize_model(self.od_config, model_init_kwargs=model_init_kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 576, in initialize_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     model = model_class(od_config=od_config, **(model_init_kwargs or {}))
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3_image.py", line 396, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.transformer = MiniMaxH3DiTModel(od_config, quant_config=transformer_quant_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_transformer.py", line 913, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     MiniMaxH3DiTBlock(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 774, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.attn = attention_cls(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                 ^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 219, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.qkv_proj = QKVParallelLinear(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]                     ^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 1080, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     super().__init__(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 536, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     self.quant_method.create_weights(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 194, in create_weights
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     data=torch.empty(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]          ^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]   File "/usr/local/python3.12.16/lib/python3.12/site-packages/torch/utils/_device.py", line 109, in __torch_function__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]     return func(*args, **kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [stage_runtime.py:323] torch.OutOfMemoryError: NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513] [OmniEngine] Orchestrator thread crashed
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513] Traceback (most recent call last):
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     loop.run_until_complete(_run_orchestrator())
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     return future.result()
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self._initialize_stages(stage_init_timeout)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self._runtime.initialize()
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     raise exc
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     raise primary_exc
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     client = self._initialize_replica(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     client, resources = launch_diffusion_stage_replica(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     client = initialize_diffusion_stage(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     return InlineStageDiffusionClient(model, od_config, metadata)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self._engine = DiffusionEngine.make_engine(self.od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     engine = engine_class(config, scheduler=scheduler)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self._init_executor(od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.executor = executor_class(od_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self._init_executor()
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/uniproc_executor.py", line 67, in _init_executor
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.driver_worker = WorkerWrapperBase(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                          ^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     worker = worker_class(**worker_init_kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.load_model(load_format=self.od_config.diffusion_load_format)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.model_runner.load_model(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 400, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.pipeline = model_loader.load_model(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                     ^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 795, in load_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 1364, in _init_from_load_format
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     model = initialize_model(self.od_config, model_init_kwargs=model_init_kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 576, in initialize_model
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     model = model_class(od_config=od_config, **(model_init_kwargs or {}))
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3_image.py", line 396, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.transformer = MiniMaxH3DiTModel(od_config, quant_config=transformer_quant_config)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_transformer.py", line 913, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     MiniMaxH3DiTBlock(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 774, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.attn = attention_cls(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                 ^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 219, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.qkv_proj = QKVParallelLinear(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]                     ^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 1080, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     super().__init__(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 536, in __init__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     self.quant_method.create_weights(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 194, in create_weights
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     data=torch.empty(
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]          ^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/site-packages/torch/utils/_device.py", line 109, in __torch_function__
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]     return func(*args, **kwargs)
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^
+(DiffusionWorker pid=83) ERROR 11-18 03:17:14 [omni_engine_base.py:513] torch.OutOfMemoryError: NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+(DiffusionWorker pid=83) INFO 11-18 03:17:14 [omni_engine_base.py:941] [OmniEngine] Shutting down Orchestrator
+Exception in thread orchestrator:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+    loop.run_until_complete(_run_orchestrator())
+  File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+    self._initialize_stages(stage_init_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+    self._runtime.initialize()
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+    raise exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+    initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+    raise primary_exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+    client = self._initialize_replica(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+    return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+    client, resources = launch_diffusion_stage_replica(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+    client = initialize_diffusion_stage(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+    return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+    return InlineStageDiffusionClient(model, od_config, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+    self._engine = DiffusionEngine.make_engine(self.od_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+    engine = engine_class(config, scheduler=scheduler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+    self._init_executor(od_config)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+    self.executor = executor_class(od_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+    self._init_executor()
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/uniproc_executor.py", line 67, in _init_executor
+    self.driver_worker = WorkerWrapperBase(
+                         ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 400, in load_model
+    self.pipeline = model_loader.load_model(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 795, in load_model
+    model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 1364, in _init_from_load_format
+    model = initialize_model(self.od_config, model_init_kwargs=model_init_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 576, in initialize_model
+    model = model_class(od_config=od_config, **(model_init_kwargs or {}))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3_image.py", line 396, in __init__
+    self.transformer = MiniMaxH3DiTModel(od_config, quant_config=transformer_quant_config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_transformer.py", line 913, in __init__
+    MiniMaxH3DiTBlock(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 774, in __init__
+    self.attn = attention_cls(
+                ^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 219, in __init__
+    self.qkv_proj = QKVParallelLinear(
+                    ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 1080, in __init__
+    super().__init__(
+  File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 536, in __init__
+    self.quant_method.create_weights(
+  File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 194, in create_weights
+    data=torch.empty(
+         ^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/site-packages/torch/utils/_device.py", line 109, in __torch_function__
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+[rank0]:     self.run()
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1012, in run
+[rank0]:     self._target(*self._args, **self._kwargs)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+[rank0]:     loop.run_until_complete(_run_orchestrator())
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+[rank0]:     return future.result()
+[rank0]:            ^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+[rank0]:     self._initialize_stages(stage_init_timeout)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+[rank0]:     self._runtime.initialize()
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+[rank0]:     raise exc
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+[rank0]:     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+[rank0]:     raise primary_exc
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+[rank0]:     client = self._initialize_replica(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+[rank0]:     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+[rank0]:     client, resources = launch_diffusion_stage_replica(
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+[rank0]:     client = initialize_diffusion_stage(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+[rank0]:     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+[rank0]:     return InlineStageDiffusionClient(model, od_config, metadata)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+[rank0]:     self._engine = DiffusionEngine.make_engine(self.od_config)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+[rank0]:     engine = engine_class(config, scheduler=scheduler)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+[rank0]:     self._init_executor(od_config)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+[rank0]:     self.executor = executor_class(od_config)
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+[rank0]:     self._init_executor()
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/uniproc_executor.py", line 67, in _init_executor
+[rank0]:     self.driver_worker = WorkerWrapperBase(
+[rank0]:                          ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+[rank0]:     worker = worker_class(**worker_init_kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+[rank0]:     self.load_model(load_format=self.od_config.diffusion_load_format)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+[rank0]:     self.model_runner.load_model(
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 400, in load_model
+[rank0]:     self.pipeline = model_loader.load_model(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 795, in load_model
+[rank0]:     model = self._init_from_load_format(load_format, target_device, custom_pipeline_name, is_hsdp=False)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/model_loader/diffusers_loader.py", line 1364, in _init_from_load_format
+[rank0]:     model = initialize_model(self.od_config, model_init_kwargs=model_init_kwargs)
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/registry.py", line 576, in initialize_model
+[rank0]:     model = model_class(od_config=od_config, **(model_init_kwargs or {}))
+[rank0]:             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/pipeline_minimax_h3_image.py", line 396, in __init__
+[rank0]:     self.transformer = MiniMaxH3DiTModel(od_config, quant_config=transformer_quant_config)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_transformer.py", line 913, in __init__
+[rank0]:     MiniMaxH3DiTBlock(
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 774, in __init__
+[rank0]:     self.attn = attention_cls(
+[rank0]:                 ^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/models/minimax_h3/minimax_h3_blocks.py", line 219, in __init__
+[rank0]:     self.qkv_proj = QKVParallelLinear(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 1080, in __init__
+[rank0]:     super().__init__(
+[rank0]:   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 536, in __init__
+[rank0]:     self.quant_method.create_weights(
+[rank0]:   File "/vllm-workspace/vllm/vllm/model_executor/layers/linear.py", line 194, in create_weights
+[rank0]:     data=torch.empty(
+[rank0]:          ^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/site-packages/torch/utils/_device.py", line 109, in __torch_function__
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]: torch.OutOfMemoryError: NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/usr/local/python3.12.16/bin/vllm", line 6, in <module>
+[rank0]:     sys.exit(main())
+[rank0]:              ^^^^^^
+[rank0]:   File "/vllm-workspace/vllm/vllm/entrypoints/cli/main.py", line 40, in main
+[rank0]:     if maybe_run_omni():
+[rank0]:        ^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm/vllm/entrypoints/cli/main.py", line 34, in maybe_run_omni
+[rank0]:     omni_main()
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/cli/main.py", line 77, in main
+[rank0]:     args.dispatch_function(args)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/cli/serve.py", line 197, in cmd
+[rank0]:     uvloop.run(omni_run_server(args))
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+[rank0]:     return __asyncio.run(
+[rank0]:            ^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/asyncio/runners.py", line 195, in run
+[rank0]:     return runner.run(main)
+[rank0]:            ^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/asyncio/runners.py", line 118, in run
+[rank0]:     return self._loop.run_until_complete(task)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "uvloop/loop.pyx", line 1515, in uvloop.loop.Loop.run_until_complete
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+[rank0]:     return await main
+[rank0]:            ^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 285, in omni_run_server
+[rank0]:     await omni_run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 411, in omni_run_server_worker
+[rank0]:     async with build_async_omni(
+[rank0]:                ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/contextlib.py", line 210, in __aenter__
+[rank0]:     return await anext(self.gen)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 652, in build_async_omni
+[rank0]:     async with build_async_omni_from_stage_config(
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/contextlib.py", line 210, in __aenter__
+[rank0]:     return await anext(self.gen)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 762, in build_async_omni_from_stage_config
+[rank0]:     async_omni = AsyncOmni(model=model, **kwargs)
+[rank0]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni.py", line 114, in __init__
+[rank0]:     AsyncOmniBase.__init__(self, *args, model=model, **kwargs)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni_base.py", line 109, in __init__
+[rank0]:     OmniBase.__init__(self, model=model, **kwargs)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/omni_base.py", line 223, in __init__
+[rank0]:     self.engine = self._create_engine(
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni.py", line 110, in _create_engine
+[rank0]:     return AsyncOmniEngine(**engine_kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 344, in __init__
+[rank0]:     self._wait_for_orchestrator_init(startup_future, startup_timeout)
+[rank0]:   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 567, in _wait_for_orchestrator_init
+[rank0]:     self.orchestrator_loop = startup_future.result(timeout=min(remaining, _STARTUP_POLL_INTERVAL_S))
+[rank0]:                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+[rank0]:     return self.__get_result()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/usr/local/python3.12.16/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+[rank0]:     raise self._exception
+[rank0]: RuntimeError: Orchestrator initialization failed: NPU out of memory. Tried to allocate 222.00 MiB (NPU 0; 60.96 GiB total capacity; 60.47 GiB already allocated; 60.47 GiB current active; 101.39 MiB free; 60.48 GiB reserved in total by PyTorch).If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.
+[ERROR] 2026-11-18-03:17:16 (PID:83, Device:0, RankID:-1) ERR99999 UNKNOWN applicaiton exception

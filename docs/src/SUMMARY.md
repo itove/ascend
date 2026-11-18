@@ -55,6 +55,7 @@
     - [minimax-m3.1-flash](./journal/minimax-m3.1-flash.md)
     - [minimax-h3-image](./journal/minimax-h3-image.md)
         - [test-1](./journal/minimax-h3-image/test-1.md)
+        - [test-2](./journal/minimax-h3-image/test-2.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本信息 2.0.T3](./ver-2.0.md)
     - [版本信息 2.1.RC2](./ver-2.1.md)
