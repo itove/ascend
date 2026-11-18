@@ -23,7 +23,7 @@ curl --request POST \
 {
   "model": "minimax-h3-image",
   "prompt": "An orange cat lying on a windowsill basking in the sun, warm afternoon light, film texture",
-  "size": "2720x1536",
+  "size": "3840x2160",
   "n": 1,
   "response_format": "file"
 }
