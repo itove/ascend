@@ -57,6 +57,8 @@
         - [test-1](./journal/minimax-h3-image/test-1.md)
         - [test-2](./journal/minimax-h3-image/test-2.md)
         - [test-3](./journal/minimax-h3-image/test-3.md)
+        - [test-4 8 NPUs](./journal/minimax-h3-image/test-4.md)
+        - [test-5 8 NPUs](./journal/minimax-h3-image/test-5.md)
 - [Troubleshooting](./troubleshooting.md)
     - [版本信息 2.0.T3](./ver-2.0.md)
     - [版本信息 2.1.RC2](./ver-2.1.md)

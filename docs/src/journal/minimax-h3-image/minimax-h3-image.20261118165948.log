@@ -1,0 +1,1016 @@
+[W1118 16:59:50.424586403 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+(MainProcess pid=1913) INFO 11-18 17:00:24 [serve.py:363] Detected diffusion model: /s/modelscope/MiniMax/MiniMax-H3-Image
+(MainProcess pid=1913) INFO 11-18 17:00:24 [logo.py:52]        █     █     █▄   ▄█       ▄▀▀▀▀▄ █▄   ▄█ █▄    █ ▀█▀ 
+(MainProcess pid=1913) INFO 11-18 17:00:24 [logo.py:52]  ▄▄ ▄█ █     █     █ ▀▄▀ █  ▄▄▄  █    █ █ ▀▄▀ █ █ ▀▄  █  █  
+(MainProcess pid=1913) INFO 11-18 17:00:24 [logo.py:52]   █▄█▀ █     █     █     █       █    █ █     █ █   ▀▄█  █  
+(MainProcess pid=1913) INFO 11-18 17:00:24 [logo.py:52]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀        ▀▀▀▀  ▀     ▀ ▀     ▀ ▀▀▀ 
+(MainProcess pid=1913) INFO 11-18 17:00:24 [logo.py:52] 
+(APIServer pid=1913) INFO 11-18 17:00:24 [startup.py:38] vLLM server version 0.33.0, serving model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=1913) INFO 11-18 17:00:25 [startup.py:96] non-default args: {'model_tag': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'port': 8011, 'model': '/s/modelscope/MiniMax/MiniMax-H3-Image', 'trust_remote_code': True, 'enforce_eager': True, 'served_model_name': ['minimax-h3-image']}
+(APIServer pid=1913) INFO 11-18 17:00:25 [omni_base.py:216] [AsyncOmni] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=1913) INFO 11-18 17:00:25 [omni_engine_base.py:173] [OmniEngine] Initializing with model /s/modelscope/MiniMax/MiniMax-H3-Image
+(APIServer pid=1913) INFO 11-18 17:00:25 [config_factory.py:695] Resolved generic diffusion final_output_type='image' for model_class_name='MiniMaxH3ImagePipeline'.
+(APIServer pid=1913) INFO 11-18 17:00:25 [omni_engine_base.py:328] [OmniEngine] Launching Orchestrator thread with 1 stages
+(APIServer pid=1913) WARNING 11-18 17:00:25 [ring_globals.py:76] FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+(APIServer pid=1913) INFO 11-18 17:00:27 [multiproc_executor.py:379] Starting server...
+[W1118 17:00:29.674459065 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:29.674459155 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:29.674557407 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:30.740705353 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:30.740705223 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:30.816315628 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:30.859624140 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+[W1118 17:00:30.861430001 FunctionLoader.cpp:48] Warning: LD_PRELOAD detected, FunctionLoader prefers RTLD_DEFAULT for symbol resolution. (function operator())
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.16/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+/vllm-workspace/vllm-omni/vllm_omni/version.py:55: RuntimeWarning: vLLM and vLLM-Omni appear to have mismatched major/minor versions:
+ --> vLLM-Omni version 0.1.dev1+geb8b991ff.npu
+ --> vLLM version 0.33.0
+This will likely cause compatibility issues.
+  warn_if_misaligned_vllm_version()
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+FlashInfer ring kernels are unavailable. Reason: No module named 'flashinfer'
+(DiffusionWorker pid=1964) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1969) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1970) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1964) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1969) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1970) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1964) INFO 11-18 17:01:04 [diffusion_worker.py:1392] Worker 1 created result MessageQueue
+(DiffusionWorker pid=1969) INFO 11-18 17:01:04 [diffusion_worker.py:1392] Worker 6 created result MessageQueue
+(DiffusionWorker pid=1970) INFO 11-18 17:01:04 [diffusion_worker.py:1392] Worker 7 created result MessageQueue
+(DiffusionWorker pid=1968) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1968) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1968) INFO 11-18 17:01:04 [diffusion_worker.py:1392] Worker 5 created result MessageQueue
+(DiffusionWorker pid=1967) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1967) INFO 11-18 17:01:04 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1967) INFO 11-18 17:01:04 [diffusion_worker.py:1392] Worker 4 created result MessageQueue
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1966) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [diffusion_worker.py:1392] Worker 0 created result MessageQueue
+(DiffusionWorker pid=1966) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1966) INFO 11-18 17:01:05 [diffusion_worker.py:1392] Worker 3 created result MessageQueue
+(DiffusionWorker pid=1965) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.netloader.netloader.ModelNetLoaderElastic'>` with load format `netloader`
+(DiffusionWorker pid=1965) INFO 11-18 17:01:05 [__init__.py:113] Registered model loader `<class 'vllm_ascend.model_loader.rfork.rfork_loader.RForkModelLoader'>` with load format `rfork`
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1963) WARNING 11-18 17:01:05 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1963) INFO 11-18 17:01:05 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1965) INFO 11-18 17:01:05 [diffusion_worker.py:1392] Worker 2 created result MessageQueue
+(DiffusionWorker pid=1963) WARNING 11-18 17:01:07 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1963) INFO 11-18 17:01:08 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1963) INFO 11-18 17:01:08 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1963) INFO 11-18 17:01:08 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:14 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:14 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:14 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1968) WARNING 11-18 17:01:14 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:14 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1968) INFO 11-18 17:01:14 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1967) INFO 11-18 17:01:14 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1967) INFO 11-18 17:01:14 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1967) INFO 11-18 17:01:14 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1967) WARNING 11-18 17:01:14 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1967) INFO 11-18 17:01:14 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1967) INFO 11-18 17:01:14 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1964) INFO 11-18 17:01:15 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1964) INFO 11-18 17:01:15 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1964) INFO 11-18 17:01:15 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1964) WARNING 11-18 17:01:15 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1964) INFO 11-18 17:01:15 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1964) INFO 11-18 17:01:15 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1970) INFO 11-18 17:01:15 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1970) INFO 11-18 17:01:15 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1970) INFO 11-18 17:01:15 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1970) WARNING 11-18 17:01:15 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1970) INFO 11-18 17:01:15 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1970) INFO 11-18 17:01:15 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1969) INFO 11-18 17:01:15 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1969) INFO 11-18 17:01:15 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1969) INFO 11-18 17:01:15 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1969) WARNING 11-18 17:01:15 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1969) INFO 11-18 17:01:15 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1969) INFO 11-18 17:01:15 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1968) WARNING 11-18 17:01:16 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:16 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:16 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:16 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1966) WARNING 11-18 17:01:16 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:16 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1966) INFO 11-18 17:01:16 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1967) WARNING 11-18 17:01:16 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:16 [scheduler.py:310] Chunked prefill is enabled with max_num_batched_tokens=2048.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:16 [mrv2_utils.py:106] VLLM_USE_V2_MODEL_RUNNER is unset; using Model Runner V2 by default.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:16 [kernel.py:480] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1965) WARNING 11-18 17:01:16 [platform.py:579] Model config is missing. Skipping Ascend-specific config updates.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:16 [compilation.py:317] Enabled custom fusions: norm_quant, act_quant
+(DiffusionWorker pid=1965) INFO 11-18 17:01:16 [diffusion_worker.py:403] Final IR op priority after setting vLLM-Omni overrides: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'], gelu_and_mul_sparse=['native'])
+(DiffusionWorker pid=1964) WARNING 11-18 17:01:16 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1970) WARNING 11-18 17:01:17 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1969) WARNING 11-18 17:01:17 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:17 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1968) INFO 11-18 17:01:17 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1968) INFO 11-18 17:01:17 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1967) INFO 11-18 17:01:17 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1967) INFO 11-18 17:01:17 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1967) INFO 11-18 17:01:17 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1964) INFO 11-18 17:01:18 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1964) INFO 11-18 17:01:18 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1964) INFO 11-18 17:01:18 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1966) WARNING 11-18 17:01:18 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1969) INFO 11-18 17:01:18 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1969) INFO 11-18 17:01:18 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1969) INFO 11-18 17:01:18 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1970) INFO 11-18 17:01:18 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1970) INFO 11-18 17:01:18 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1970) INFO 11-18 17:01:18 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1965) WARNING 11-18 17:01:18 [patch_triton.py:69] NPU Triton causal_conv1d_update is unavailable (cannot import name 'causal_conv1d_update_npu' from 'vllm_ascend.ops.triton.mamba.causal_conv1d' (/vllm-workspace/vllm-ascend/vllm_ascend/ops/triton/mamba/causal_conv1d.py)); falling back to the PyTorch implementation, which syncs per request and therefore stalls ACL graph capture at decode-FULL.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [ascend_config.py:336] Dynamic EPLB is False
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [ascend_config.py:337] The number of redundant experts is 0
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [ascend_config.py:761] FlashComm1 is disabled. Using flashinfer_all2allv as the all2all backend.
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+(DiffusionWorker pid=1964) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 1: Initialized device and distributed environment.
+(DiffusionWorker pid=1963) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 0: Initialized device and distributed environment.
+(DiffusionWorker pid=1969) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 6: Initialized device and distributed environment.
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 3: Initialized device and distributed environment.
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 2: Initialized device and distributed environment.
+(DiffusionWorker pid=1968) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 5: Initialized device and distributed environment.
+(DiffusionWorker pid=1967) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 4: Initialized device and distributed environment.
+(DiffusionWorker pid=1970) INFO 11-18 17:01:19 [diffusion_worker.py:420] Worker 7: Initialized device and distributed environment.
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(DiffusionWorker pid=1969) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1968) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1964) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1970) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1963) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1967) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [parallel_state.py:759] Building SP subgroups from explicit sp_group_ranks (sp_size=1, ulysses=1, ring=1, use_ulysses_low=True).
+(DiffusionWorker pid=1969) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 6: sp_group=[6], ulysses_group=[6], ring_group=[6]
+(DiffusionWorker pid=1968) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 5: sp_group=[5], ulysses_group=[5], ring_group=[5]
+(DiffusionWorker pid=1964) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 1: sp_group=[1], ulysses_group=[1], ring_group=[1]
+(DiffusionWorker pid=1966) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 3: sp_group=[3], ulysses_group=[3], ring_group=[3]
+(DiffusionWorker pid=1970) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 7: sp_group=[7], ulysses_group=[7], ring_group=[7]
+(DiffusionWorker pid=1963) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 0: sp_group=[0], ulysses_group=[0], ring_group=[0]
+(DiffusionWorker pid=1967) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 4: sp_group=[4], ulysses_group=[4], ring_group=[4]
+(DiffusionWorker pid=1965) INFO 11-18 17:01:19 [parallel_state.py:801] SP group details for rank 2: sp_group=[2], ulysses_group=[2], ring_group=[2]
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:21 [selector.py:84] Resolved diffusion attention backend 'FLASH_ATTN' for role='minimax_h3.token_refiner' (role_category='self') via platform default
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:21 [selector.py:93] Resolved diffusion attention backend 'FLASH_ATTN' for role='self' via platform default
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:22 [pipeline_minimax_h3_image.py:503] MiniMax-H3-Image: using bundled text_encoder/ instead of MiniMaxAI/MiniMax-H3
+[rank4]:[W1118 17:01:27.107994146 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank6]:[W1118 17:01:27.246283388 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank5]:[W1118 17:01:27.246758463 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank2]:[W1118 17:01:27.568124875 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank7]:[W1118 17:01:27.676117956 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:28 [encoder.py:1201] MiniMax H3 Qwen3-VL encoder: 50 retained decoder layers, text_encoder_tp_size=1, vision replicated
+[rank3]:[W1118 17:01:29.604522790 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank1]:[W1118 17:01:30.090062603 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+[rank0]:[W1118 17:01:35.079714882 NPUCachingAllocator.cpp:204] Warning: The current CANN and HDK(driver) versions require processing for 32 padding size, with memory allocation. (function operator())
+Multi-thread loading shards:   0% Completed | 0/12 [00:00<?, ?it/s]
+Multi-thread loading shards:   8% Completed | 1/12 [00:00<00:09,  1.12it/s]
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:37 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+Multi-thread loading shards:  17% Completed | 2/12 [00:01<00:09,  1.00it/s]
+Multi-thread loading shards:  25% Completed | 3/12 [00:02<00:08,  1.06it/s]
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:38 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 18.406446 seconds
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:38 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP4 pid=1967) INFO 11-18 17:01:38 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+Multi-thread loading shards:  33% Completed | 4/12 [00:03<00:07,  1.03it/s]
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:39 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+Process DiffusionWorker-4:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:40 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:40 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:40 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+Multi-thread loading shards:  42% Completed | 5/12 [00:05<00:07,  1.14s/it]
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:41 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 20.852635 seconds
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:41 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP2 pid=1965) INFO 11-18 17:01:41 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:41 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 21.259430 seconds
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:41 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP6 pid=1969) INFO 11-18 17:01:41 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+Process DiffusionWorker-2:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:42 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+Multi-thread loading shards:  50% Completed | 6/12 [00:06<00:06,  1.15s/it]
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:42 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 21.824903 seconds
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:42 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP5 pid=1968) INFO 11-18 17:01:42 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:42 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 21.869400 seconds
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:42 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP7 pid=1970) INFO 11-18 17:01:42 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:42 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+Process DiffusionWorker-6:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+Multi-thread loading shards:  58% Completed | 7/12 [00:07<00:05,  1.03s/it]
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:43 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 23.102814 seconds
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:43 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP3 pid=1966) INFO 11-18 17:01:43 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+Process DiffusionWorker-7:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+Process DiffusionWorker-5:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:43 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 23.367954 seconds
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:43 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP1 pid=1964) INFO 11-18 17:01:43 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+Multi-thread loading shards:  67% Completed | 8/12 [00:08<00:03,  1.04it/s]
+Process DiffusionWorker-3:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+Process DiffusionWorker-1:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1877, in worker_main
+    worker_proc = WorkerProc(
+                  ^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1397, in __init__
+    self.worker = self._create_worker(gpu_id, od_config, worker_extension_cls, custom_pipeline_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1432, in _create_worker
+    wrapper = WorkerWrapperBase(
+              ^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 1970, in __init__
+    worker = worker_class(**worker_init_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 333, in __init__
+    self.load_model(load_format=self.od_config.diffusion_load_format)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_worker.py", line 494, in load_model
+    self.model_runner.load_model(
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/worker/diffusion_model_runner.py", line 438, in load_model
+    self.pipeline, self.offload_backend = enable_offload_backend(
+                                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 196, in enable_offload_backend
+    return pipeline, enable_once(pipeline, startup_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/__init__.py", line 180, in enable_once
+    backend.enable(model)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 416, in enable
+    self._enable(pipeline)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/layerwise_backend.py", line 429, in _enable
+    resolved = resolve_offload_plan(pipeline, self.config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/offloader/plan_resolver.py", line 330, in resolve_offload_plan
+    raise ValueError("No text encoder modules found for selected text_encoder offload")
+ValueError: No text encoder modules found for selected text_encoder offload
+Multi-thread loading shards:  75% Completed | 9/12 [00:08<00:02,  1.10it/s]
+Multi-thread loading shards:  83% Completed | 10/12 [00:09<00:01,  1.16it/s]
+Multi-thread loading shards:  92% Completed | 11/12 [00:10<00:00,  1.24it/s]
+Multi-thread loading shards: 100% Completed | 12/12 [00:11<00:00,  1.26it/s]
+Multi-thread loading shards: 100% Completed | 12/12 [00:11<00:00,  1.09it/s]
+
+Multi-thread loading shards:   0% Completed | 0/14 [00:00<?, ?it/s]
+Multi-thread loading shards:   7% Completed | 1/14 [00:00<00:08,  1.53it/s]
+Multi-thread loading shards:  14% Completed | 2/14 [00:01<00:07,  1.67it/s]
+Multi-thread loading shards:  21% Completed | 3/14 [00:02<00:08,  1.31it/s]
+Multi-thread loading shards:  29% Completed | 4/14 [00:02<00:06,  1.57it/s]
+Multi-thread loading shards:  36% Completed | 5/14 [00:03<00:05,  1.77it/s]
+Multi-thread loading shards:  43% Completed | 6/14 [00:03<00:04,  1.88it/s]
+Multi-thread loading shards:  50% Completed | 7/14 [00:03<00:03,  2.01it/s]
+Multi-thread loading shards:  57% Completed | 8/14 [00:04<00:02,  2.10it/s]
+Multi-thread loading shards:  64% Completed | 9/14 [00:04<00:02,  2.15it/s]
+Multi-thread loading shards:  71% Completed | 10/14 [00:05<00:01,  2.21it/s]
+Multi-thread loading shards:  79% Completed | 11/14 [00:05<00:01,  2.76it/s]
+Multi-thread loading shards:  93% Completed | 13/14 [00:05<00:00,  4.44it/s]
+Multi-thread loading shards: 100% Completed | 14/14 [00:05<00:00,  5.02it/s]
+Multi-thread loading shards: 100% Completed | 14/14 [00:05<00:00,  2.47it/s]
+
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:52 [pipeline_minimax_h3_image.py:534] MiniMax-H3-Image: 6 fused PDD output heads loaded from /s/modelscope/MiniMax/MiniMax-H3-Image/pdd_fused_heads.safetensors
+(DiffusionWorker_DP0 pid=1963) WARNING 11-18 17:01:52 [torch_utils.py:269] OMP_NUM_THREADS=10 is set; leaving Torch threads at 10 for serving. Multi-threaded torch CPU ops during serving can degrade performance through spin-wait contention and cgroup CPU-quota throttling.
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:52 [diffusers_loader.py:1242] Loading weights took 16.77 seconds
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:54 [diffusion_model_runner.py:411] Model loading took 2.1766 GiB and 33.569905 seconds
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:54 [diffusion_model_runner.py:417] Model runner: Model loaded successfully.
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:54 [__init__.py:179] Enabling offloader backend: LayerWiseOffloadBackend
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:57 [layerwise_backend.py:363] Enabled rank-local layerwise offload for encoder text_encoder (77 blocks across 2 stacks)
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:57 [component_utils.py:153] Prepared text_encoder for pipeline-managed staged offload
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:57 [layerwise_backend.py:454] Applying layer-wise offloading on ['transformer']
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:01:57 [component_utils.py:84] Applying hooks on transformer (MiniMaxH3DiTModel)
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:01 [layerwise_backend.py:479] Layer-wise offloading enabled on 50 layers (blocks)
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:01 [diffusion_model_runner.py:510] Model runner: Initialization complete.
+(DiffusionWorker_DP0 pid=1963) WARNING 11-18 17:02:02 [gpu_memory_utils.py:88] NVML init failed, will use profiling fallback: NVML Shared Library Not Found
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:02 [manager.py:192] Initializing LoRAManager: device=npu:0, dtype=torch.bfloat16, max_cached_adapters=1, static_lora_path=None
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:02 [diffusion_worker.py:348] Worker 0: Initialization complete.
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:02 [diffusion_worker.py:1885] Worker 0: Scheduler loop started.
+(DiffusionWorker_DP0 pid=1963) INFO 11-18 17:02:02 [diffusion_worker.py:1716] Worker 0 ready to receive requests via shared memory
+(APIServer pid=1913) ERROR 11-18 17:02:02 [multiproc_executor.py:427] Rank 1 scheduler is dead. Please check if there are relevant logs.
+(APIServer pid=1913) ERROR 11-18 17:02:02 [multiproc_executor.py:429] Exit code: 1
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323] [StageRuntime] Stage initialization failed; shutting down 0 initialized client(s)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323] Traceback (most recent call last):
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     raise primary_exc
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     client = self._initialize_replica(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     client, resources = launch_diffusion_stage_replica(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     client = initialize_diffusion_stage(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     return InlineStageDiffusionClient(model, od_config, metadata)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     self._engine = DiffusionEngine.make_engine(self.od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     engine = engine_class(config, scheduler=scheduler)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     self._init_executor(od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     self.executor = executor_class(od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     self._init_executor()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 193, in _init_executor
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     processes, result_handles = self._launch_workers(broadcast_handle, self.wake_events)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 425, in _launch_workers
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     data = reader.recv()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]            ^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     buf = self._recv_bytes()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]           ^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     buf = self._recv(4)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]           ^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323]     raise EOFError
+(APIServer pid=1913) ERROR 11-18 17:02:02 [stage_runtime.py:323] EOFError
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513] [OmniEngine] Orchestrator thread crashed
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513] Traceback (most recent call last):
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     loop.run_until_complete(_run_orchestrator())
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     return future.result()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self._initialize_stages(stage_init_timeout)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self._runtime.initialize()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     raise exc
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     raise primary_exc
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     client = self._initialize_replica(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     client, resources = launch_diffusion_stage_replica(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     client = initialize_diffusion_stage(
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     return InlineStageDiffusionClient(model, od_config, metadata)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self._engine = DiffusionEngine.make_engine(self.od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     engine = engine_class(config, scheduler=scheduler)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self._init_executor(od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self.executor = executor_class(od_config)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     self._init_executor()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 193, in _init_executor
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     processes, result_handles = self._launch_workers(broadcast_handle, self.wake_events)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 425, in _launch_workers
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     data = reader.recv()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]            ^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     buf = self._recv_bytes()
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]           ^^^^^^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     buf = self._recv(4)
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]           ^^^^^^^^^^^^^
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]   File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513]     raise EOFError
+(APIServer pid=1913) ERROR 11-18 17:02:02 [omni_engine_base.py:513] EOFError
+(APIServer pid=1913) INFO 11-18 17:02:02 [omni_engine_base.py:941] [OmniEngine] Shutting down Orchestrator
+Exception in thread orchestrator:
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+    loop.run_until_complete(_run_orchestrator())
+  File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+    self._initialize_stages(stage_init_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+    self._runtime.initialize()
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+    raise exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+    initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+    raise primary_exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+    client = self._initialize_replica(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+    return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+    client, resources = launch_diffusion_stage_replica(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+    client = initialize_diffusion_stage(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+    return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+    return InlineStageDiffusionClient(model, od_config, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+    self._engine = DiffusionEngine.make_engine(self.od_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+    engine = engine_class(config, scheduler=scheduler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+    self._init_executor(od_config)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+    self.executor = executor_class(od_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+    self._init_executor()
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 193, in _init_executor
+    processes, result_handles = self._launch_workers(broadcast_handle, self.wake_events)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 425, in _launch_workers
+    data = reader.recv()
+           ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/usr/local/python3.12.16/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 507, in _bootstrap_orchestrator
+    loop.run_until_complete(_run_orchestrator())
+  File "/usr/local/python3.12.16/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 478, in _run_orchestrator
+    self._initialize_stages(stage_init_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 421, in _initialize_stages
+    self._runtime.initialize()
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 329, in initialize
+    raise exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 310, in initialize
+    initialized_clients = self._initialize_stage_replicas(stage_plans, self._stage_init_timeout)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1074, in _initialize_stage_replicas
+    raise primary_exc
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1035, in _init_group
+    client = self._initialize_replica(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1264, in _initialize_replica
+    return self._initialize_local_diffusion_replica(plan, stage_init_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_runtime.py", line 1385, in _initialize_local_diffusion_replica
+    client, resources = launch_diffusion_stage_replica(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_engine_startup.py", line 1627, in launch_diffusion_stage_replica
+    client = initialize_diffusion_stage(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/stage_init_utils.py", line 2124, in initialize_diffusion_stage
+    return create_diffusion_client(model, od_config, metadata, stage_init_timeout, use_inline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/stage_diffusion_client.py", line 58, in create_diffusion_client
+    return InlineStageDiffusionClient(model, od_config, metadata)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/inline_stage_diffusion_client.py", line 71, in __init__
+    self._engine = DiffusionEngine.make_engine(self.od_config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 1394, in make_engine
+    engine = engine_class(config, scheduler=scheduler)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 318, in __init__
+    self._init_executor(od_config)
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/diffusion_engine.py", line 396, in _init_executor
+    self.executor = executor_class(od_config)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/abstract.py", line 84, in __init__
+    self._init_executor()
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 193, in _init_executor
+    processes, result_handles = self._launch_workers(broadcast_handle, self.wake_events)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/diffusion/executor/multiproc_executor.py", line 425, in _launch_workers
+    data = reader.recv()
+           ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+          ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+    raise EOFError
+EOFError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python3.12.16/bin/vllm", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/vllm-workspace/vllm/vllm/entrypoints/cli/main.py", line 40, in main
+    if maybe_run_omni():
+       ^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm/vllm/entrypoints/cli/main.py", line 34, in maybe_run_omni
+    omni_main()
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/cli/main.py", line 77, in main
+    args.dispatch_function(args)
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/cli/serve.py", line 197, in cmd
+    uvloop.run(omni_run_server(args))
+  File "/usr/local/python3.12.16/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+    return __asyncio.run(
+           ^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1515, in uvloop.loop.Loop.run_until_complete
+  File "/usr/local/python3.12.16/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+    return await main
+           ^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 285, in omni_run_server
+    await omni_run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 411, in omni_run_server_worker
+    async with build_async_omni(
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 652, in build_async_omni
+    async with build_async_omni_from_stage_config(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/openai/api_server.py", line 762, in build_async_omni_from_stage_config
+    async_omni = AsyncOmni(model=model, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni.py", line 114, in __init__
+    AsyncOmniBase.__init__(self, *args, model=model, **kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni_base.py", line 109, in __init__
+    OmniBase.__init__(self, model=model, **kwargs)
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/omni_base.py", line 223, in __init__
+    self.engine = self._create_engine(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/entrypoints/async_omni.py", line 110, in _create_engine
+    return AsyncOmniEngine(**engine_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 344, in __init__
+    self._wait_for_orchestrator_init(startup_future, startup_timeout)
+  File "/vllm-workspace/vllm-omni/vllm_omni/engine/omni_engine_base.py", line 567, in _wait_for_orchestrator_init
+    self.orchestrator_loop = startup_future.result(timeout=min(remaining, _STARTUP_POLL_INTERVAL_S))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python3.12.16/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+RuntimeError: Orchestrator initialization failed: 
+[ERROR] 2026-11-18-17:02:02 (PID:1913, Device:-1, RankID:-1) ERR99999 UNKNOWN applicaiton exception
+/usr/local/python3.12.16/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/usr/local/python3.12.16/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked shared_memory objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
