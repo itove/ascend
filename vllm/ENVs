@@ -25,6 +25,8 @@ echo IP is: ${addr[$HOSTNAME]}
 
 echo export ENVs
 
+#export NO_COLOR=1
+
 export USE_MULTI_BLOCK_POOL=1
 export OMP_PROC_BIND=false
 export OMP_NUM_THREADS=10
