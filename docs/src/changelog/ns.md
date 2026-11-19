@@ -1,3 +1,6 @@
+2026-11-19
+* 下载权重`meituan-longcat/LongCat-Video-Avatar-1.6`，路径`/mnt/d/s/hf/meituan-longcat/LongCat-Video-Avatar-1.6`
+
 2026-11-18
 * 下载 docker 镜像`/mnt/d/s/docker_images/vllm-omni-minimax-h3-image.tar`
 
