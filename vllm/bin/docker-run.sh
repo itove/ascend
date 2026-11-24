@@ -26,8 +26,8 @@ sleep 2
 echo Starting new...
 
 # Update --device according to your device (Atlas A2: /dev/davinci[0-7] Atlas A3:/dev/davinci[0-15]).
-
-docker run --rm \
+ # --rm
+docker run \
     --user root \
     --privileged \
     --name $CONTAINER_NAME \
