@@ -47,6 +47,8 @@
         - [test-1](./journal/qwen3.8-27b-w8a8/test-1.md)
     - [qwen3-asr-1.7b](./journal/qwen3-asr-1.7b.md)
         - [test-1](./journal/qwen3-asr-1.7b/test-1.md)
+    - [qwen3-tts-12hz-1.7b-base](./journal/qwen3-tts-12hz-1.7b-base.md)
+        - [test-1](./journal/qwen3-tts-12hz-1.7b-base/test-1.md)
     - [minimax-m2.7-w8a8-quarot](./journal/minimax-m2.7-w8a8-quarot.md)
     - [minimax-h3](./journal/minimax-h3.md)
     - [qwen-image-2.1](./journal/qwen-image-2.1.md)
