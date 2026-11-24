@@ -7,7 +7,7 @@ $ CONTAINER_NAME=qwen3.8-27b-w8a8 DOCKER_IMAGE_TAG=qwen3.8-a2 /mnt/s/ascend/vllm
 # MODEL_PATH=/s/modelscope/Eco-Tech/Qwen3.8-27B-w8a8/ /s/ascend/vllm/bin/serve-qwen3.8-27b-w8a8.sh
 ```
 
-```
+```bash
 #!/bin/bash
 #
 # vim:ft=bash
