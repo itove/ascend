@@ -8,7 +8,7 @@ ENDPOINT=${ENDPOINT:-https://ai.zxaicc.com/api}
 
 # ENDPOINT=https://ai.zxaicc.com/api
 # ENDPOINT=http://ai:3000/api
-ENDPOINT=http://127.0.0.1:8004
+ENDPOINT=http://172.20.116.82:8011
 
 curl $ENDPOINT/v1/audio/speech \
     --header "Authorization: Bearer $API_KEY" \
