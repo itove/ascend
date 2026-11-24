@@ -3,3 +3,7 @@ authors = ["Al Zee"]
 language = "en"
 src = "src"
 title = "国芯一号推理框架部署文档"
+
+[output.html.fold]
+enable = true
+level = 0
